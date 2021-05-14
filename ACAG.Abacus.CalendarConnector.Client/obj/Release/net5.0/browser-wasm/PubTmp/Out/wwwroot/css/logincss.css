@@ -1,0 +1,136 @@
+﻿.login-div, .login-div:before, .login-div:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.login-div {
+    height: 80vh;
+}
+
+.login-content {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 24px 24px 36px;
+}
+
+
+.login-container {
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 601px) and (min-height:500px) {
+    .login-div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .login-container {
+        width: 450px;
+    }
+
+    .login-container {
+        min-height: 0;
+    }
+
+    .login-container {
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+        border: 1px solid #dadce0;
+        display: block;
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+        margin: 0 auto;
+        min-height: 0;
+        -webkit-transition: .2s;
+        transition: .2s;
+        width: 450px;
+    }
+
+    .login-div *, .login-div *:before, .login-div *:after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+
+    .login-content {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .login-content {
+        height: auto;
+        min-height: 400px;
+        overflow-y: auto;
+        -webkit-transition: .2s;
+        transition: .2s;
+    }
+
+    .login-div:before {
+        min-height: 30px;
+    }
+
+    .login-div:before, .login-div:after {
+        content: '';
+        display: block;
+        -webkit-box-flex: 1;
+        box-flex: 1;
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        height: 24px;
+    }
+
+    .login-div, .login-div:before, .login-div:after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        .login-div:after {
+            min-height: 65.3329px;
+        }
+
+        .login-div:after {
+            min-height: 24px;
+        }
+
+        .login-div:before, .login-div:after {
+            content: '';
+            display: block;
+            -webkit-box-flex: 1;
+            box-flex: 1;
+            -webkit-flex-grow: 1;
+            flex-grow: 1;
+            height: 24px;
+        }
+}
+
+@media (min-width: 450px) {
+    .login-content {
+        padding: 48px 40px 36px;
+    }
+}
+
+@media (max-height:415px){
+    .container{
+        overflow:auto;
+    }
+}
+
+@media (max-height:550px){
+    .footer{
+        position:unset;
+    }
+}

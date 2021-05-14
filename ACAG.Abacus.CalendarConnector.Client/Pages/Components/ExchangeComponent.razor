@@ -1,0 +1,299 @@
+﻿@inject IStringLocalizer<Resource> _localizer
+@inject IJSRuntime _jSRuntime
+@inject IToastAppService _toastAppService
+@inject IJSRuntime _jSRuntime
+@inject IApiWrapper _apiWrapper
+
+<style>
+    .PasswordTextBox input { padding-right: 2em; }
+
+    .myIcon { position: absolute; right: 0.5em; z-index: 3; top: 0.55em; }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="offset-md-9 col-md-3 col-12">
+            <DxTextBox @bind-Text="@_search" 
+                       BindValueMode="BindValueMode.OnInput" 
+                       NullText="@_localizer[LangKey.SEARCH]" 
+                       SizeMode="SizeMode.Medium" style="width:100%" 
+                       @onkeyup="(async () => await SearchAsync())" />
+        </div>
+
+    </div>
+    <div class="row" style="margin-top:5px">
+        <div class="col-sm-12">
+            @if (_dataSource == null)
+            {
+                @*<p><em>@_localizer[LangKey.MSG_LOADING]</em></p>*@
+                <LoadingIcon></LoadingIcon>
+            }
+            else
+            {
+                <DxDataGrid @ref="@_grid"
+                            Data="@_dataSource.ExchangeSettings"
+                            AllowColumnDragDrop="false"
+                            CssClass="customExchangeGrid"
+                            RowEditStart="@(async (ExchangeSettingModel item) => await OnEditRowExchangeSetting(item))"
+                            PageIndex="0">
+                    <Columns>
+                        <DxDataGridCommandColumn Width="40px">
+                            <HeaderCellTemplate>
+                                <button class="btn btn-outline-primary btn-custom" @onclick="@AddNewGetDetailRowRender">
+                                    <span class="oi oi-plus"></span>
+                                </button>
+                            </HeaderCellTemplate>
+                            <CellTemplate>
+                                <a class="oi oi-pencil" @onclick="@(() => _grid.StartRowEdit(context))" href="javascript:void(0);"></a>
+                            </CellTemplate>
+                        </DxDataGridCommandColumn>
+                        <DxDataGridColumn Field="@nameof(ExchangeSettingModel.Name)"
+                                          Caption="@_localizer[LangKey.EXCHANGE_SETTING_NAME]"
+                                          SortIndex="0"
+                                          SortOrder="DataGridColumnSortOrder.Ascending" />
+                        <DxDataGridColumn Field="@nameof(ExchangeSettingModel.ExchangeVersion)" Caption="@_localizer[LangKey.EXCHANGE_SETTING_EXCHANGE_VERSION]" />
+                        <DxDataGridCheckBoxColumn Field="@nameof(ExchangeSettingModel.IsEnabled)" Caption="@_localizer[LangKey.EXCHANGE_SETTING_SELECTED]" />
+                    </Columns>
+
+                    <EditFormTemplate>
+                        @if (_editContext == null)
+                            {
+                                @*<p><em>@_localizer[LangKey.MSG_LOADING]</em></p>*@
+                                <LoadingIcon></LoadingIcon>
+                            }
+                            else
+                            {
+                            <EditForm EditContext="EditContext" Context="EditFormContext" OnValidSubmit="HandleValidSubmit" OnInvalidSubmit="HandleInvalidSubmit">
+                                <DataAnnotationsValidator />
+                                <DxFormLayout>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_NAME]<span class="validation-message">*</span></b></label>
+
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.Name" CssClass="first-focus" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.Name)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_EXCHANGE_VERSION]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxComboBox Data="@_exchangeVersionModels"
+                                                                TextFieldName="@nameof(ExchangeVersionModel.Name)"
+                                                                NullText="@_localizer[LangKey.EXCHANGE_SETTING_SELECT_EXCHANGE_VERSION]"
+                                                                @bind-Value="_editContext.ExchangeVersionModel">
+                                                    </DxComboBox>
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.ExchangeVersionModel)" />
+
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_EXCHANGE_URL]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.ExchangeUrl" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.ExchangeUrl)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_LOGIN_TYPE]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxComboBox Data="@_exchangeLoginTypeModels"
+                                                                TextFieldName="@nameof(ExchangeLoginTypeModel.Name)"
+                                                                NullText="@_localizer[LangKey.EXCHANGE_SETTING_SELECT_EXCHANGE_LOGIN_TYPE]"
+                                                                @bind-Value="_editContext.ExchangeLoginTypeModel">
+                                                    </DxComboBox>
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.ExchangeLoginTypeModel)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_AZURE_TENANT]<span class="validation-message">*</span> </b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.AzureTenant" Enabled="_editContext.ExchangeLoginTypeModel != null && _editContext.ExchangeLoginTypeModel.Type == ExchangeLoginEnumType.WebLogin" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.AzureTenant)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_AZURE_CLIENT]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.AzureClientId" Enabled="_editContext.ExchangeLoginTypeModel != null && _editContext.ExchangeLoginTypeModel.Type == ExchangeLoginEnumType.WebLogin" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.AzureClientId)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_AZURE_CLIENT_SECRET]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.AzureClientSecret" Enabled="_editContext.ExchangeLoginTypeModel != null && _editContext.ExchangeLoginTypeModel.Type == ExchangeLoginEnumType.WebLogin" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.AzureClientSecret)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_EMAIL_ADDERESS]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.EmailAddress" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.EmailAddress)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_SERVICE_USER]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.ServiceUser" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.ServiceUser)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_SERVICE_USER_PASSWORD]<span class="validation-message">*</span></b></label>
+
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <div style="position: relative;">
+                                                        <span class="oi oi-eye myIcon" @onclick="(e) => _showPassword = !_showPassword"></span>
+                                                        <InputText type="@_typePassword" class="form-control form-control-sm dxbs-form-control text-truncate PasswordTextBox" @bind-Value="_editContext.ServiceUserPassword"
+                                                                   disabled="@(_editContext.ExchangeLoginTypeModel != null && _editContext.ExchangeLoginTypeModel.Type == ExchangeLoginEnumType.WebLogin)" 
+                                                                   autocomplete="off"
+                                                                   />
+                                                    </div>
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.ServiceUserPassword)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_SELECTED]</b></label>
+                                            <DxCheckBox @bind-Checked="@_editContext.IsEnabled" />
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                        <Template>
+                                            <div class="validation-message">@_messages</div>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <div>
+                                                <DxButton RenderStyle="ButtonRenderStyle.Success" Text="@_localizer[LangKey.TEST_CONNECTION]" @onclick="(async () => { await HandelOnClickTestConnection(); })" />
+                                            </div>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                        <Template>
+                                            <div class="validation-message">@messageTestConnectionError</div>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="12" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.EXCHANGE_SETTING_DESCRIPTION]</b></label>
+                                            <DxMemo @bind-Text="@_editContext.Description" SizeMode="SizeMode.Small" Rows="8" maxlength="5000" />
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanSm="12" Context="FormLayoutContext">
+                                        <Template>
+                                            @if (_editContext.Id > 0)
+                                                {
+                                                <div class="text-right">
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Primary" SubmitFormOnClick="true" Text="@_localizer[LangKey.EXCHANGE_SETTING_BUTTON_UPDATE]" />
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Danger" Text="@_localizer[LangKey.EXCHANGE_SETTING_BUTTON_DELETE]" @onclick="(() => _PopupVisibleDeleteExchangeSetting = true)" />
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Warning" Text="@_localizer[LangKey.EXCHANGE_SETTING_BUTTON_CANCEL]" @onclick="OnCancelButtonClick" />
+                                                </div>
+                                                }
+                                                else
+                                                {
+                                                <div class="text-right">
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Primary" SubmitFormOnClick="true" Text="@_localizer[LangKey.EXCHANGE_SETTING_BUTTON_CREATE]" />
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Warning" Text="@_localizer[LangKey.EXCHANGE_SETTING_BUTTON_CANCEL]" @onclick="OnCancelButtonClick" />
+                                                </div>
+                                                }
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                </DxFormLayout>
+                            </EditForm>
+                            }
+                    </EditFormTemplate>
+                </DxDataGrid>
+            }
+        </div>
+    </div>
+    <DxPopup HeaderText="@_titleDelete"
+             @bind-Visible="@_PopupVisibleDeleteExchangeSetting">
+        <Content>
+            <div class="text-center">
+                @_localizer[LangKey.MSG_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_EXCHANGE_SETTING]
+            </div>
+        </Content>
+        <FooterTemplate>
+            <DxButton RenderStyle="ButtonRenderStyle.Danger" Text="@_localizer[LangKey.EXCHANGE_SETTING_BUTTON_DELETE]" @onclick="DeleteExchangeSetting" />
+            <DxButton RenderStyle="ButtonRenderStyle.Warning" @onclick="(()=> _PopupVisibleDeleteExchangeSetting = false)" Text="@_localizer[LangKey.EXCHANGE_SETTING_BUTTON_POPUP_CANCEL]" />
+        </FooterTemplate>
+    </DxPopup>
+</div>

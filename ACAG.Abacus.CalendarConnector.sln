@@ -1,0 +1,292 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Logic", "ACAG.Abacus.CalendarConnector.Logic\ACAG.Abacus.CalendarConnector.Logic.csproj", "{1201AF40-E7FC-4DCD-BD54-6966D0E0D334}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.IntegrationTests", "ACAG.Abacus.CalendarConnector.IntegrationTests\ACAG.Abacus.CalendarConnector.IntegrationTests.csproj", "{9140E76D-5293-4B66-8679-A16B5F8B04FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Logic.UnitTests", "ACAG.Abacus.CalendarConnector.Logic.UnitTests\ACAG.Abacus.CalendarConnector.Logic.UnitTests.csproj", "{8C4F8BDF-9AAF-413A-A06A-FCCB3FFE868B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.CommonFiles", "ACAG.Abacus.CalendarConnector.CommonFiles\ACAG.Abacus.CalendarConnector.CommonFiles.csproj", "{DB45C0DD-B6C3-4A3E-9FA2-55C92244D96B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Scheduler", "ACAG.Abacus.CalendarConnector.Scheduler\ACAG.Abacus.CalendarConnector.Scheduler.csproj", "{11C948BE-014C-4B4A-94E8-17E334EEDDA8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Exchange", "ACAG.Abacus.CalendarConnector.Exchange\ACAG.Abacus.CalendarConnector.Exchange.csproj", "{81AC587C-538E-4F5F-BEF0-C79B90417CEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Exchange.UnitTests", "ACAG.Abacus.CalendarConnector.Exchange.UnitTests\ACAG.Abacus.CalendarConnector.Exchange.UnitTests.csproj", "{2D7B9F09-2F46-4120-8505-FE2C3FA33DD4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Scheduler.UnitTests", "ACAG.Abacus.CalendarConnector.Scheduler.UnitTests\ACAG.Abacus.CalendarConnector.Scheduler.UnitTests.csproj", "{8AC836E5-A2DF-409E-8329-887B36437C82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server Libraries", "Server Libraries", "{E1805510-F250-476C-BB60-8E03D73D32E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{20E6D07B-387C-465D-8D63-1BA1ADA11E8F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.DataAccess", "ACAG.Abacus.CalendarConnector.DataAccess\ACAG.Abacus.CalendarConnector.DataAccess.csproj", "{E72AAF31-20CF-49A2-99DC-4484E6E74033}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.DataAccess.UnitTests", "ACAG.Abacus.CalendarConnector.DataAccess.UnitTests\ACAG.Abacus.CalendarConnector.DataAccess.UnitTests.csproj", "{0D2602EA-0945-47BE-B59A-3A776C4326F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Abacus.UnitTests", "ACAG.Abacus.CalendarConnector.Abacus.UnitTests\ACAG.Abacus.CalendarConnector.Abacus.UnitTests.csproj", "{F8DFB8A9-5AAB-4CC6-B8B1-BAA20AFE4879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACAG.Abacus.CalendarConnector.Abacus", "ACAG.Abacus.CalendarConnector.Abacus\ACAG.Abacus.CalendarConnector.Abacus.csproj", "{8107C28C-5B6D-4237-B4A2-271025E49FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACAG.Abacus.CalendarConnector.Models", "ACAG.Abacus.CalendarConnector.Models\ACAG.Abacus.CalendarConnector.Models.csproj", "{92C6504A-D070-4334-A937-271AD20E911C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Language", "ACAG.Abacus.CalendarConnector.Language\ACAG.Abacus.CalendarConnector.Language.csproj", "{4C874856-8D78-4257-A51F-2D2ED261C5C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.InstallationApp", "ACAG.Abacus.CalendarConnector.InstallationApp\ACAG.Abacus.CalendarConnector.InstallationApp.csproj", "{C73D46AD-0E5D-4D3F-9F58-5A510BC905E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Installation", "Installation", "{FC6FD5DB-319A-429C-8B36-9691D4F12E84}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CalendarConnectorSetup", "CalendarConnectorSetup\CalendarConnectorSetup.vdproj", "{2B264C7A-31CA-42AD-A5FE-16A31C6E991C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servers", "Servers", "{1BE6D95D-912A-493B-99A7-F2DC599E37B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library Tests", "Library Tests", "{4480B78D-9A2E-4A3C-A2D1-7F9127936A5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API Tests", "API Tests", "{E45D9356-345F-41BB-BDC6-58B458E2BFB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Server", "ACAG.Abacus.CalendarConnector.Server\ACAG.Abacus.CalendarConnector.Server.csproj", "{3B372FE8-392F-492F-AC47-76C395B19D63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shares", "Shares", "{BD2671D0-4E07-4830-8A02-420213819ECD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{B51D4383-E896-4237-B6BA-C4DFE922B944}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Client", "ACAG.Abacus.CalendarConnector.Client\ACAG.Abacus.CalendarConnector.Client.csproj", "{99F193E8-F090-4130-B824-102B9A0BAF81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACAG.Abacus.CalendarConnector.Wrappers", "ACAG.Abacus.CalendarConnector.Wrappers\ACAG.Abacus.CalendarConnector.Wrappers.csproj", "{75110FCE-1680-42BB-952B-0C5D68AA5ED2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EasyTest|Any CPU = EasyTest|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1201AF40-E7FC-4DCD-BD54-6966D0E0D334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1201AF40-E7FC-4DCD-BD54-6966D0E0D334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1201AF40-E7FC-4DCD-BD54-6966D0E0D334}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{1201AF40-E7FC-4DCD-BD54-6966D0E0D334}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{1201AF40-E7FC-4DCD-BD54-6966D0E0D334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1201AF40-E7FC-4DCD-BD54-6966D0E0D334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9140E76D-5293-4B66-8679-A16B5F8B04FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9140E76D-5293-4B66-8679-A16B5F8B04FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9140E76D-5293-4B66-8679-A16B5F8B04FC}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{9140E76D-5293-4B66-8679-A16B5F8B04FC}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{9140E76D-5293-4B66-8679-A16B5F8B04FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9140E76D-5293-4B66-8679-A16B5F8B04FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4F8BDF-9AAF-413A-A06A-FCCB3FFE868B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4F8BDF-9AAF-413A-A06A-FCCB3FFE868B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4F8BDF-9AAF-413A-A06A-FCCB3FFE868B}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4F8BDF-9AAF-413A-A06A-FCCB3FFE868B}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{8C4F8BDF-9AAF-413A-A06A-FCCB3FFE868B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4F8BDF-9AAF-413A-A06A-FCCB3FFE868B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB45C0DD-B6C3-4A3E-9FA2-55C92244D96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB45C0DD-B6C3-4A3E-9FA2-55C92244D96B}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{DB45C0DD-B6C3-4A3E-9FA2-55C92244D96B}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{DB45C0DD-B6C3-4A3E-9FA2-55C92244D96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C948BE-014C-4B4A-94E8-17E334EEDDA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C948BE-014C-4B4A-94E8-17E334EEDDA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C948BE-014C-4B4A-94E8-17E334EEDDA8}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C948BE-014C-4B4A-94E8-17E334EEDDA8}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{11C948BE-014C-4B4A-94E8-17E334EEDDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C948BE-014C-4B4A-94E8-17E334EEDDA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81AC587C-538E-4F5F-BEF0-C79B90417CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AC587C-538E-4F5F-BEF0-C79B90417CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AC587C-538E-4F5F-BEF0-C79B90417CEB}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AC587C-538E-4F5F-BEF0-C79B90417CEB}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{81AC587C-538E-4F5F-BEF0-C79B90417CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AC587C-538E-4F5F-BEF0-C79B90417CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7B9F09-2F46-4120-8505-FE2C3FA33DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7B9F09-2F46-4120-8505-FE2C3FA33DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7B9F09-2F46-4120-8505-FE2C3FA33DD4}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7B9F09-2F46-4120-8505-FE2C3FA33DD4}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{2D7B9F09-2F46-4120-8505-FE2C3FA33DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7B9F09-2F46-4120-8505-FE2C3FA33DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC836E5-A2DF-409E-8329-887B36437C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC836E5-A2DF-409E-8329-887B36437C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC836E5-A2DF-409E-8329-887B36437C82}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC836E5-A2DF-409E-8329-887B36437C82}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{8AC836E5-A2DF-409E-8329-887B36437C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC836E5-A2DF-409E-8329-887B36437C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E72AAF31-20CF-49A2-99DC-4484E6E74033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72AAF31-20CF-49A2-99DC-4484E6E74033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E72AAF31-20CF-49A2-99DC-4484E6E74033}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72AAF31-20CF-49A2-99DC-4484E6E74033}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{E72AAF31-20CF-49A2-99DC-4484E6E74033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E72AAF31-20CF-49A2-99DC-4484E6E74033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D2602EA-0945-47BE-B59A-3A776C4326F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D2602EA-0945-47BE-B59A-3A776C4326F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D2602EA-0945-47BE-B59A-3A776C4326F5}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D2602EA-0945-47BE-B59A-3A776C4326F5}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{0D2602EA-0945-47BE-B59A-3A776C4326F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D2602EA-0945-47BE-B59A-3A776C4326F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8DFB8A9-5AAB-4CC6-B8B1-BAA20AFE4879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8DFB8A9-5AAB-4CC6-B8B1-BAA20AFE4879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8DFB8A9-5AAB-4CC6-B8B1-BAA20AFE4879}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8DFB8A9-5AAB-4CC6-B8B1-BAA20AFE4879}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{F8DFB8A9-5AAB-4CC6-B8B1-BAA20AFE4879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8DFB8A9-5AAB-4CC6-B8B1-BAA20AFE4879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8107C28C-5B6D-4237-B4A2-271025E49FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8107C28C-5B6D-4237-B4A2-271025E49FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8107C28C-5B6D-4237-B4A2-271025E49FFA}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{8107C28C-5B6D-4237-B4A2-271025E49FFA}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{8107C28C-5B6D-4237-B4A2-271025E49FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8107C28C-5B6D-4237-B4A2-271025E49FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C6504A-D070-4334-A937-271AD20E911C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C6504A-D070-4334-A937-271AD20E911C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C6504A-D070-4334-A937-271AD20E911C}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C6504A-D070-4334-A937-271AD20E911C}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{92C6504A-D070-4334-A937-271AD20E911C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C6504A-D070-4334-A937-271AD20E911C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C874856-8D78-4257-A51F-2D2ED261C5C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C874856-8D78-4257-A51F-2D2ED261C5C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C874856-8D78-4257-A51F-2D2ED261C5C2}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C874856-8D78-4257-A51F-2D2ED261C5C2}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{4C874856-8D78-4257-A51F-2D2ED261C5C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C874856-8D78-4257-A51F-2D2ED261C5C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C73D46AD-0E5D-4D3F-9F58-5A510BC905E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73D46AD-0E5D-4D3F-9F58-5A510BC905E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73D46AD-0E5D-4D3F-9F58-5A510BC905E1}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73D46AD-0E5D-4D3F-9F58-5A510BC905E1}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{C73D46AD-0E5D-4D3F-9F58-5A510BC905E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73D46AD-0E5D-4D3F-9F58-5A510BC905E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B264C7A-31CA-42AD-A5FE-16A31C6E991C}.Debug|Any CPU.ActiveCfg = Debug
+		{2B264C7A-31CA-42AD-A5FE-16A31C6E991C}.EasyTest|Any CPU.ActiveCfg = Debug
+		{2B264C7A-31CA-42AD-A5FE-16A31C6E991C}.Release|Any CPU.ActiveCfg = Release
+		{3B372FE8-392F-492F-AC47-76C395B19D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B372FE8-392F-492F-AC47-76C395B19D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B372FE8-392F-492F-AC47-76C395B19D63}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B372FE8-392F-492F-AC47-76C395B19D63}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{3B372FE8-392F-492F-AC47-76C395B19D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B372FE8-392F-492F-AC47-76C395B19D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99F193E8-F090-4130-B824-102B9A0BAF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F193E8-F090-4130-B824-102B9A0BAF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F193E8-F090-4130-B824-102B9A0BAF81}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F193E8-F090-4130-B824-102B9A0BAF81}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{99F193E8-F090-4130-B824-102B9A0BAF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F193E8-F090-4130-B824-102B9A0BAF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75110FCE-1680-42BB-952B-0C5D68AA5ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75110FCE-1680-42BB-952B-0C5D68AA5ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75110FCE-1680-42BB-952B-0C5D68AA5ED2}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{75110FCE-1680-42BB-952B-0C5D68AA5ED2}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{75110FCE-1680-42BB-952B-0C5D68AA5ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75110FCE-1680-42BB-952B-0C5D68AA5ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1201AF40-E7FC-4DCD-BD54-6966D0E0D334} = {E1805510-F250-476C-BB60-8E03D73D32E0}
+		{9140E76D-5293-4B66-8679-A16B5F8B04FC} = {4480B78D-9A2E-4A3C-A2D1-7F9127936A5F}
+		{8C4F8BDF-9AAF-413A-A06A-FCCB3FFE868B} = {4480B78D-9A2E-4A3C-A2D1-7F9127936A5F}
+		{DB45C0DD-B6C3-4A3E-9FA2-55C92244D96B} = {E1805510-F250-476C-BB60-8E03D73D32E0}
+		{11C948BE-014C-4B4A-94E8-17E334EEDDA8} = {E1805510-F250-476C-BB60-8E03D73D32E0}
+		{81AC587C-538E-4F5F-BEF0-C79B90417CEB} = {E1805510-F250-476C-BB60-8E03D73D32E0}
+		{2D7B9F09-2F46-4120-8505-FE2C3FA33DD4} = {4480B78D-9A2E-4A3C-A2D1-7F9127936A5F}
+		{8AC836E5-A2DF-409E-8329-887B36437C82} = {4480B78D-9A2E-4A3C-A2D1-7F9127936A5F}
+		{E1805510-F250-476C-BB60-8E03D73D32E0} = {1BE6D95D-912A-493B-99A7-F2DC599E37B9}
+		{E72AAF31-20CF-49A2-99DC-4484E6E74033} = {E1805510-F250-476C-BB60-8E03D73D32E0}
+		{0D2602EA-0945-47BE-B59A-3A776C4326F5} = {4480B78D-9A2E-4A3C-A2D1-7F9127936A5F}
+		{F8DFB8A9-5AAB-4CC6-B8B1-BAA20AFE4879} = {E45D9356-345F-41BB-BDC6-58B458E2BFB6}
+		{8107C28C-5B6D-4237-B4A2-271025E49FFA} = {1BE6D95D-912A-493B-99A7-F2DC599E37B9}
+		{92C6504A-D070-4334-A937-271AD20E911C} = {BD2671D0-4E07-4830-8A02-420213819ECD}
+		{4C874856-8D78-4257-A51F-2D2ED261C5C2} = {BD2671D0-4E07-4830-8A02-420213819ECD}
+		{C73D46AD-0E5D-4D3F-9F58-5A510BC905E1} = {FC6FD5DB-319A-429C-8B36-9691D4F12E84}
+		{2B264C7A-31CA-42AD-A5FE-16A31C6E991C} = {FC6FD5DB-319A-429C-8B36-9691D4F12E84}
+		{4480B78D-9A2E-4A3C-A2D1-7F9127936A5F} = {20E6D07B-387C-465D-8D63-1BA1ADA11E8F}
+		{E45D9356-345F-41BB-BDC6-58B458E2BFB6} = {20E6D07B-387C-465D-8D63-1BA1ADA11E8F}
+		{3B372FE8-392F-492F-AC47-76C395B19D63} = {1BE6D95D-912A-493B-99A7-F2DC599E37B9}
+		{99F193E8-F090-4130-B824-102B9A0BAF81} = {B51D4383-E896-4237-B6BA-C4DFE922B944}
+		{75110FCE-1680-42BB-952B-0C5D68AA5ED2} = {BD2671D0-4E07-4830-8A02-420213819ECD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4932022-F1DD-4755-A8A1-48995B964249}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 20
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/all-consulting-dev
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ACAG.Abacus.CalendarConnector.Abacus\\ACAG.Abacus.CalendarConnector.Abacus.csproj
+		SccProjectTopLevelParentUniqueName1 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName1 = ACAG.Abacus.CalendarConnector.Abacus
+		SccLocalPath1 = ACAG.Abacus.CalendarConnector.Abacus
+		SccProjectUniqueName2 = ACAG.Abacus.CalendarConnector.Logic.UnitTests\\ACAG.Abacus.CalendarConnector.Logic.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName2 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName2 = ACAG.Abacus.CalendarConnector.Logic.UnitTests
+		SccLocalPath2 = ACAG.Abacus.CalendarConnector.Logic.UnitTests
+		SccProjectUniqueName3 = ACAG.Abacus.CalendarConnector.CommonFiles\\ACAG.Abacus.CalendarConnector.CommonFiles.csproj
+		SccProjectTopLevelParentUniqueName3 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName3 = ACAG.Abacus.CalendarConnector.CommonFiles
+		SccLocalPath3 = ACAG.Abacus.CalendarConnector.CommonFiles
+		SccProjectUniqueName4 = ACAG.Abacus.CalendarConnector.Scheduler\\ACAG.Abacus.CalendarConnector.Scheduler.csproj
+		SccProjectTopLevelParentUniqueName4 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName4 = ACAG.Abacus.CalendarConnector.Scheduler
+		SccLocalPath4 = ACAG.Abacus.CalendarConnector.Scheduler
+		SccProjectUniqueName5 = ACAG.Abacus.CalendarConnector.Exchange\\ACAG.Abacus.CalendarConnector.Exchange.csproj
+		SccProjectTopLevelParentUniqueName5 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName5 = ACAG.Abacus.CalendarConnector.Exchange
+		SccLocalPath5 = ACAG.Abacus.CalendarConnector.Exchange
+		SccProjectUniqueName6 = ACAG.Abacus.CalendarConnector.Exchange.UnitTests\\ACAG.Abacus.CalendarConnector.Exchange.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName6 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName6 = ACAG.Abacus.CalendarConnector.Exchange.UnitTests
+		SccLocalPath6 = ACAG.Abacus.CalendarConnector.Exchange.UnitTests
+		SccProjectUniqueName7 = ACAG.Abacus.CalendarConnector.Scheduler.UnitTests\\ACAG.Abacus.CalendarConnector.Scheduler.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName7 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName7 = ACAG.Abacus.CalendarConnector.Scheduler.UnitTests
+		SccLocalPath7 = ACAG.Abacus.CalendarConnector.Scheduler.UnitTests
+		SccProjectUniqueName8 = ACAG.Abacus.CalendarConnector.Logic\\ACAG.Abacus.CalendarConnector.Logic.csproj
+		SccProjectTopLevelParentUniqueName8 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName8 = ACAG.Abacus.CalendarConnector.Logic
+		SccLocalPath8 = ACAG.Abacus.CalendarConnector.Logic
+		SccProjectUniqueName9 = ACAG.Abacus.CalendarConnector.IntegrationTests\\ACAG.Abacus.CalendarConnector.IntegrationTests.csproj
+		SccProjectTopLevelParentUniqueName9 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName9 = ACAG.Abacus.CalendarConnector.IntegrationTests
+		SccLocalPath9 = ACAG.Abacus.CalendarConnector.IntegrationTests
+		SccProjectUniqueName10 = ACAG.Abacus.CalendarConnector.DataAccess\\ACAG.Abacus.CalendarConnector.DataAccess.csproj
+		SccProjectTopLevelParentUniqueName10 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName10 = ACAG.Abacus.CalendarConnector.DataAccess
+		SccLocalPath10 = ACAG.Abacus.CalendarConnector.DataAccess
+		SccProjectUniqueName11 = ACAG.Abacus.CalendarConnector.DataAccess.UnitTests\\ACAG.Abacus.CalendarConnector.DataAccess.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName11 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName11 = ACAG.Abacus.CalendarConnector.DataAccess.UnitTests
+		SccLocalPath11 = ACAG.Abacus.CalendarConnector.DataAccess.UnitTests
+		SccProjectUniqueName12 = ACAG.Abacus.CalendarConnector.Abacus.UnitTests\\ACAG.Abacus.CalendarConnector.Abacus.UnitTests.csproj
+		SccProjectTopLevelParentUniqueName12 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName12 = ACAG.Abacus.CalendarConnector.Abacus.UnitTests
+		SccLocalPath12 = ACAG.Abacus.CalendarConnector.Abacus.UnitTests
+		SccProjectUniqueName13 = ACAG.Abacus.CalendarConnector.Models\\ACAG.Abacus.CalendarConnector.Models.csproj
+		SccProjectTopLevelParentUniqueName13 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName13 = ACAG.Abacus.CalendarConnector.Models
+		SccLocalPath13 = ACAG.Abacus.CalendarConnector.Models
+		SccProjectUniqueName14 = ACAG.Abacus.CalendarConnector.Language\\ACAG.Abacus.CalendarConnector.Language.csproj
+		SccProjectTopLevelParentUniqueName14 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName14 = ACAG.Abacus.CalendarConnector.Language
+		SccLocalPath14 = ACAG.Abacus.CalendarConnector.Language
+		SccProjectUniqueName15 = ACAG.Abacus.CalendarConnector.InstallationApp\\ACAG.Abacus.CalendarConnector.InstallationApp.csproj
+		SccProjectTopLevelParentUniqueName15 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName15 = ACAG.Abacus.CalendarConnector.InstallationApp
+		SccLocalPath15 = ACAG.Abacus.CalendarConnector.InstallationApp
+		SccProjectUniqueName16 = CalendarConnectorSetup\\CalendarConnectorSetup.vdproj
+		SccProjectTopLevelParentUniqueName16 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName16 = CalendarConnectorSetup
+		SccLocalPath16 = CalendarConnectorSetup
+		SccProjectUniqueName17 = ACAG.Abacus.CalendarConnector.Server\\ACAG.Abacus.CalendarConnector.Server.csproj
+		SccProjectTopLevelParentUniqueName17 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName17 = ACAG.Abacus.CalendarConnector.Server
+		SccLocalPath17 = ACAG.Abacus.CalendarConnector.Server
+		SccProjectUniqueName18 = ACAG.Abacus.CalendarConnector.Client\\ACAG.Abacus.CalendarConnector.Client.csproj
+		SccProjectTopLevelParentUniqueName18 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName18 = ACAG.Abacus.CalendarConnector.Client
+		SccLocalPath18 = ACAG.Abacus.CalendarConnector.Client
+		SccProjectUniqueName19 = ACAG.Abacus.CalendarConnector.Wrappers\\ACAG.Abacus.CalendarConnector.Wrappers.csproj
+		SccProjectTopLevelParentUniqueName19 = ACAG.Abacus.CalendarConnector.sln
+		SccProjectName19 = ACAG.Abacus.CalendarConnector.Wrappers
+		SccLocalPath19 = ACAG.Abacus.CalendarConnector.Wrappers
+	EndGlobalSection
+EndGlobal

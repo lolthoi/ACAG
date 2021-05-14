@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Company>ALL CONSULTING AG</Company>
+    <Authors>Development @  ALL CONSULTING AG</Authors>
+    <Copyright>Copyright © 2020 by ALL CONSULTING AG</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.10.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="SendGrid" Version="9.22.0" /> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ACAG.Abacus.CalendarConnector.DataAccess\ACAG.Abacus.CalendarConnector.DataAccess.csproj" />
+    <ProjectReference Include="..\ACAG.Abacus.CalendarConnector.Exchange\ACAG.Abacus.CalendarConnector.Exchange.csproj" />
+    <ProjectReference Include="..\ACAG.Abacus.CalendarConnector.Models\ACAG.Abacus.CalendarConnector.Models.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "eeNYs5oDGjA5SPnhzzQERG/xlpfr2mAC1CMkDGjjdRbOuzPMA9h7Lkt7ccJSQTVevNTDZhSQ2NWPPq9C/XlYUg==",
+  "success": true,
+  "projectFilePath": "G:\\ACAG\\ACAG.Abacus.CalendarConnector.Language\\ACAG.Abacus.CalendarConnector.Language.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hoang.thai.duong\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\hoang.thai.duong\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

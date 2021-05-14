@@ -1,0 +1,987 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ABACUS_SETTING_NAME" xml:space="preserve">
+    <value>Abaque</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_CONNECTION_STATE" xml:space="preserve">
+    <value>État de santé</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_NAME" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_PASSWORD" xml:space="preserve">
+    <value>Mot de passe de service</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_PORT" xml:space="preserve">
+    <value>Port de service</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_URL" xml:space="preserve">
+    <value>URL du service</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_USE_SSL" xml:space="preserve">
+    <value>Utilisateur de service SSL</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_USER" xml:space="preserve">
+    <value>Utilisateur du service</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_TITLE" xml:space="preserve">
+    <value>Paramètres Abacus</value>
+  </data>
+  <data name="ABOUT_US" xml:space="preserve">
+    <value>About us fr</value>
+  </data>
+  <data name="APP_FOOTER_TITLE" xml:space="preserve">
+    <value>2020 © Copyright par ALL CONSULTING AG</value>
+  </data>
+  <data name="APP_TITLE" xml:space="preserve">
+    <value>Abacus Calendar Connector</value>
+  </data>
+  <data name="ARE_YOU_SURE_WANT_TO_DELETE_THIS_PAYTYPE_SETTING" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie diese Leistungsart löschen wollen?</value>
+  </data>
+  <data name="AWAY" xml:space="preserve">
+    <value>Un moyen</value>
+  </data>
+  <data name="AZURE_CLIENT" xml:space="preserve">
+    <value>Client Azure</value>
+  </data>
+  <data name="AZURE_CLIENT_SECRET" xml:space="preserve">
+    <value>Secret du client Azure</value>
+  </data>
+  <data name="AZURE_TENANT" xml:space="preserve">
+    <value>Locataire Azure</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="CHANGE_PASSWORD" xml:space="preserve">
+    <value>Change password fr</value>
+  </data>
+  <data name="CODE" xml:space="preserve">
+    <value>Leistungsart</value>
+  </data>
+  <data name="COMMENT" xml:space="preserve">
+    <value>Commentaire</value>
+  </data>
+  <data name="CONFIRM_NEW_PASSWORD" xml:space="preserve">
+    <value>Confirmer le nouveau mot de passe</value>
+  </data>
+  <data name="CONFIRM_PASSWORD" xml:space="preserve">
+    <value>Confirmez le mot de passe</value>
+  </data>
+  <data name="CREATE" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+  <data name="CURRENT_PASSWORD" xml:space="preserve">
+    <value>Mot de passe actuel</value>
+  </data>
+  <data name="DATA_DOES_NOT_EXIST" xml:space="preserve">
+    <value>Les données n'existent pas!</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="DELETE_CONFIRMATION" xml:space="preserve">
+    <value>Confirmation de suppression</value>
+  </data>
+  <data name="DISPLAY_NAME" xml:space="preserve">
+    <value>Afficher un nom</value>
+  </data>
+  <data name="EMAIL" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EMAIL_ADDERESS" xml:space="preserve">
+    <value>Email Adderess</value>
+  </data>
+  <data name="ENTER_YOUR_EMAIL" xml:space="preserve">
+    <value>Please enter your email address.</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>Erreur!</value>
+  </data>
+  <data name="EXCHANGE_SETTING" xml:space="preserve">
+    <value>Échange</value>
+  </data>
+  <data name="EXCHANGE_SETTING_AZURE_CLIENT" xml:space="preserve">
+    <value>Nom du client Azure</value>
+  </data>
+  <data name="EXCHANGE_SETTING_AZURE_CLIENT_SECRET" xml:space="preserve">
+    <value>Secret client Azure</value>
+  </data>
+  <data name="EXCHANGE_SETTING_AZURE_TENANT" xml:space="preserve">
+    <value>Nom du locataire Azure</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_CREATE" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_DELETE" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_POPUP_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_SAVE" xml:space="preserve">
+    <value>Sauver</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_UPDATE" xml:space="preserve">
+    <value>sauver</value>
+  </data>
+  <data name="EXCHANGE_SETTING_DESCRIPTION" xml:space="preserve">
+    <value>La description</value>
+  </data>
+  <data name="EXCHANGE_SETTING_EMAIL_ADDERESS" xml:space="preserve">
+    <value>Email Adderess</value>
+  </data>
+  <data name="EXCHANGE_SETTING_EXCHANGE_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="EXCHANGE_SETTING_EXCHANGE_VERSION" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="EXCHANGE_SETTING_HEALTH_STATUS" xml:space="preserve">
+    <value>État de la connexion</value>
+  </data>
+  <data name="EXCHANGE_SETTING_LOGIN_TYPE" xml:space="preserve">
+    <value>Type de connexion</value>
+  </data>
+  <data name="EXCHANGE_SETTING_NAME" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SELECT_EXCHANGE_LOGIN_TYPE" xml:space="preserve">
+    <value>Sélectionnez le type de connexion Exchange</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SELECT_EXCHANGE_VERSION" xml:space="preserve">
+    <value>Sélectionnez la version d'Exchange</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SELECTED" xml:space="preserve">
+    <value>Choisi</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SERVICE_USER" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SERVICE_USER_PASSWORD" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="EXCHANGE_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="EXCHANGE_VERSION" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="FAIL_TO_ADD_PAYTYPE" xml:space="preserve">
+    <value>Échec de l'ajout de Paytype!</value>
+  </data>
+  <data name="FAIL_TO_DELETE_PAYTYPE" xml:space="preserve">
+    <value>Échec de la suppression de Paytype!</value>
+  </data>
+  <data name="FAIL_TO_UPDATE_PAYTYPE" xml:space="preserve">
+    <value>Échec de la mise à jour de Paytype!</value>
+  </data>
+  <data name="FORGOT_PASSWORD" xml:space="preserve">
+    <value>Forgot password</value>
+  </data>
+  <data name="FORGOT_PASSWORD_TITLE" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="GRID_PAYTYPECODE" xml:space="preserve">
+    <value>Leistungsart</value>
+  </data>
+  <data name="HEALTH_STATUS" xml:space="preserve">
+    <value>État de la connexion</value>
+  </data>
+  <data name="ID_DOES_NOT_MATCH" xml:space="preserve">
+    <value>L'identifiant ne correspond pas</value>
+  </data>
+  <data name="IF_THE_USER_IS_AN_ADMINISTRATOR_THE_TENANT_MUST_BE_EMPTY" xml:space="preserve">
+    <value>Si l'utilisateur est un administrateur, le locataire doit être vide</value>
+  </data>
+  <data name="INFO" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="INFOMATION" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="IS_APPOINTMENT_AWAY_STATE" xml:space="preserve">
+    <value>Est-ce que l'état de rendez-vous est absent</value>
+  </data>
+  <data name="IS_APPOINTMENT_PRIVATE" xml:space="preserve">
+    <value>Le rendez-vous est-il privé</value>
+  </data>
+  <data name="LANGUAGE" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="LAST_TEST_STATE" xml:space="preserve">
+    <value>Dernier état de test</value>
+  </data>
+  <data name="LOG_IN" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LOGIN_TYPE" xml:space="preserve">
+    <value>Type de connexion</value>
+  </data>
+  <data name="LOGO_TITLE" xml:space="preserve">
+    <value>Abaque</value>
+  </data>
+  <data name="LOGOUT" xml:space="preserve">
+    <value>Se déconnecter</value>
+  </data>
+  <data name="MANAGE" xml:space="preserve">
+    <value>Gérer</value>
+  </data>
+  <data name="MANAGE_YOUR_ACCOUNT" xml:space="preserve">
+    <value>Manage your account fr</value>
+  </data>
+  <data name="MAX_LENGTH_OF_DISPLAY_NAME_IS_250" xml:space="preserve">
+    <value>Max length of display name is 252</value>
+  </data>
+  <data name="MENU_LOG" xml:space="preserve">
+    <value>Log fr</value>
+  </data>
+  <data name="MENU_LOG_FIELD_ERROR" xml:space="preserve">
+    <value>Error fr</value>
+  </data>
+  <data name="MENU_LOG_FIELD_LOG_DATA" xml:space="preserve">
+    <value>Log data fr</value>
+  </data>
+  <data name="MENU_LOG_FIELD_STATUS" xml:space="preserve">
+    <value>Status fr</value>
+  </data>
+  <data name="MENU_LOG_FIELD_TIMESTAMP" xml:space="preserve">
+    <value>Timestamp fr</value>
+  </data>
+  <data name="MENU_OVERVIEW" xml:space="preserve">
+    <value>Aperçu</value>
+  </data>
+  <data name="MENU_PAYTYPE" xml:space="preserve">
+    <value>Type de paie</value>
+  </data>
+  <data name="MENU_TENANT" xml:space="preserve">
+    <value>Locataires</value>
+  </data>
+  <data name="MENU_TENANT_DESCRIPTION" xml:space="preserve">
+    <value>La description</value>
+  </data>
+  <data name="MENU_USER" xml:space="preserve">
+    <value>Utilisateurs</value>
+  </data>
+  <data name="MIN_LENGTH_OF_DISPLAY_NAME_IS_1" xml:space="preserve">
+    <value>Min length of display name is 3</value>
+  </data>
+  <data name="MSG_AN_ERROR_HAS_OCCURRED_DURRING_DATA_SAVING" xml:space="preserve">
+    <value>Une erreur s'est produite lors de l'enregistrement des données.</value>
+  </data>
+  <data name="MSG_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_EXCHANGE_SETTING" xml:space="preserve">
+    <value>Voulez-vous vraiment supprimer ce paramètre d'échange?</value>
+  </data>
+  <data name="MSG_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_USER" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie diesen Benutzer löschen wollen?</value>
+  </data>
+  <data name="MSG_AZURE_CLIENT_IS_REQUIRED" xml:space="preserve">
+    <value>Le client Azure est requis</value>
+  </data>
+  <data name="MSG_AZURE_CLIENT_SECRET_IS_REQUIRED" xml:space="preserve">
+    <value>Azure Client Secret est requis</value>
+  </data>
+  <data name="MSG_AZURE_TENANT_IS_REQUIRED" xml:space="preserve">
+    <value>Azure Tenant est requis</value>
+  </data>
+  <data name="MSG_CAN_NOT_IDENTITY_USER" xml:space="preserve">
+    <value>Der eingegebene Benutzername oder Pass ist falsch!</value>
+  </data>
+  <data name="MSG_CHANGE_PASSWORD_FAILED" xml:space="preserve">
+    <value>La modification du mot de passe a échoué.</value>
+  </data>
+  <data name="MSG_CLICKING_HERE" xml:space="preserve">
+    <value>clicking here fr</value>
+  </data>
+  <data name="MSG_CODE_NUMBER_RANGE_IS_FROM_1_TO_99999" xml:space="preserve">
+    <value>La plage de numéros de code va de 1 à 99999</value>
+  </data>
+  <data name="MSG_CODE_USED_FOR_ANOTHER_PAYTYPE" xml:space="preserve">
+    <value>Ce code est déjà utilisé pour un autre Paytype!</value>
+  </data>
+  <data name="MSG_CONCURRENCY_FAILURE" xml:space="preserve">
+    <value>Concurrency failure fr</value>
+  </data>
+  <data name="MSG_CONFIRM_DELETE_RECORD" xml:space="preserve">
+    <value>Voulez-vous supprimer ce enregistrement?</value>
+  </data>
+  <data name="MSG_DEFAULT_ERROR" xml:space="preserve">
+    <value>Default error fr</value>
+  </data>
+  <data name="MSG_DUPLICATE_EMAIL" xml:space="preserve">
+    <value>Duplicate email fr</value>
+  </data>
+  <data name="MSG_DUPLICATE_ROLE_NAME" xml:space="preserve">
+    <value>Duplicate role name fr</value>
+  </data>
+  <data name="MSG_DUPLICATE_USER_NAME" xml:space="preserve">
+    <value>Duplicate user name fr</value>
+  </data>
+  <data name="MSG_EMAIL_DOES_NOT_EXIST_ON_THE_SYSTEM" xml:space="preserve">
+    <value>L'e-mail n'existe pas sur le système!</value>
+  </data>
+  <data name="MSG_EMAIL_IS_REQUIRED" xml:space="preserve">
+    <value>Le courriel est requis!</value>
+  </data>
+  <data name="MSG_EXCHANGE_URL_IS_REQUIRED" xml:space="preserve">
+    <value>L'URL Exchange est requise</value>
+  </data>
+  <data name="MSG_EXCHANGE_VERSION_IS_REQUIRED" xml:space="preserve">
+    <value>La version Exchange est requise</value>
+  </data>
+  <data name="MSG_FORGOT_PASSWORD_CONFIRMATION" xml:space="preserve">
+    <value>Forgot password confirmation fr</value>
+  </data>
+  <data name="MSG_HELLO" xml:space="preserve">
+    <value>Hello fr</value>
+  </data>
+  <data name="MSG_IF_USER_IS_ADMIN_THEN_TENANT_MUST_NULL" xml:space="preserve">
+    <value>Si l'utilisateur est administrateur, le locataire doit null</value>
+  </data>
+  <data name="MSG_INVALID_EMAIL" xml:space="preserve">
+    <value>Invalid email fr</value>
+  </data>
+  <data name="MSG_INVALID_ID" xml:space="preserve">
+    <value>ID invalide</value>
+  </data>
+  <data name="MSG_INVALID_LOGIN" xml:space="preserve">
+    <value>Connexion invalide.</value>
+  </data>
+  <data name="MSG_INVALID_ROLE_NAME" xml:space="preserve">
+    <value>Invalid role name fr</value>
+  </data>
+  <data name="MSG_INVALID_TOKEN" xml:space="preserve">
+    <value>Invalid token fr</value>
+  </data>
+  <data name="MSG_INVALID_USER_NAME" xml:space="preserve">
+    <value>Invalid user name fr</value>
+  </data>
+  <data name="MSG_LOADING" xml:space="preserve">
+    <value>Loading... fr</value>
+  </data>
+  <data name="MSG_LOGIN_ALREADY_ASSOCIATED" xml:space="preserve">
+    <value>Login already associated fr</value>
+  </data>
+  <data name="MSG_LOGIN_TYPE_IS_REQUIRED" xml:space="preserve">
+    <value>Le type de connexion est requis</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_AZURE_CLIENT_IS_255" xml:space="preserve">
+    <value>La longueur maximale du client Azure est de 255</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_AZURE_CLIENT_SECRET_IS_255" xml:space="preserve">
+    <value>La longueur maximale du secret client Azure est de 255</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_AZURE_TENANT_IS_255" xml:space="preserve">
+    <value>La longueur maximale d'Azure Tenant est de 255</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_EMAIL_IS_75" xml:space="preserve">
+    <value>La longueur maximale des e-mails est de 75</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_EXCHANGE_URL_IS_255" xml:space="preserve">
+    <value>La longueur maximale de l'URL d'échange est de 255</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_NAME_IS" xml:space="preserve">
+    <value>La longueur maximale du nom est 50</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_NAME_IS_255" xml:space="preserve">
+    <value>Le nom ne doit pas contenir plus de 255 caractères!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_PASSWORD_IS_50" xml:space="preserve">
+    <value>Le mot de passe ne doit pas contenir plus de 50 caractères!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_URL_IS_255" xml:space="preserve">
+    <value>L'URL du service ne doit pas contenir plus de 255 caractères!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_USER_IS_255" xml:space="preserve">
+    <value>Le nom d'utilisateur ne doit pas contenir plus de 255 caractères!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_USER_IS_50" xml:space="preserve">
+    <value>La durée maximale de l'utilisateur du service est de 50</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_USER_PASSWORD_IS_50" xml:space="preserve">
+    <value>La longueur maximale du mot de passe de l'utilisateur de service est de 50</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_USERNAME_IS_50" xml:space="preserve">
+    <value>La longueur maximale du nom d'utilisateur est de 50</value>
+  </data>
+  <data name="MSG_MINLENGTH_OF_USERNAME_IS_6" xml:space="preserve">
+    <value>La longueur minimale du nom d'utilisateur est 6</value>
+  </data>
+  <data name="MSG_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>Le nom est requis!</value>
+  </data>
+  <data name="MSG_NO_RECORD_FOUND_WITH_ID" xml:space="preserve">
+    <value>Aucune donnée disponible!</value>
+  </data>
+  <data name="MSG_NO_RECORD_FOUND_WITH_ID_" xml:space="preserve">
+    <value>Aucun enregistrement trouvé avec Id</value>
+  </data>
+  <data name="MSG_NUMBER_MUST_BETWEEN_1_AND_99999" xml:space="preserve">
+    <value>Le nombre doit être compris entre 1 et 99999</value>
+  </data>
+  <data name="MSG_OLD_PASSWORD_NOT_MATCHED" xml:space="preserve">
+    <value>L'ancien mot de passe ne correspond pas!</value>
+  </data>
+  <data name="MSG_ONLY_LETTERS_AND_NUMBERS_ARE_ALLOWED" xml:space="preserve">
+    <value>Seuls les lettres et les chiffres sont autorisés</value>
+  </data>
+  <data name="MSG_PASSWORD_IS_REQUIRED" xml:space="preserve">
+    <value>Mot de passe requis</value>
+  </data>
+  <data name="MSG_PASSWORD_IS_REQUIRED_MIN_LENGHT_IS_6_MAX_LENGHT_IS_100" xml:space="preserve">
+    <value>Le mot de passe est requis.La longueur minimale est de 6, la longueur maximale est de 100</value>
+  </data>
+  <data name="MSG_PASSWORD_MISMATCH" xml:space="preserve">
+    <value>Password mismatch fr</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_DIGIT" xml:space="preserve">
+    <value>Password requires digit fr</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_LOWER" xml:space="preserve">
+    <value>Password requires lower fr</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_NON_ALPHANUMERIC" xml:space="preserve">
+    <value>Password requires non alphanumeric fr</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_UNIQUE_CHARS" xml:space="preserve">
+    <value>Password requires unique chars fr</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_UPPER" xml:space="preserve">
+    <value>Password requires upper fr</value>
+  </data>
+  <data name="MSG_PASSWORD_TOO_SHORT" xml:space="preserve">
+    <value>Password too short fr</value>
+  </data>
+  <data name="MSG_PAYTYPE_DISPLAY_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>Text ist erforderlich</value>
+  </data>
+  <data name="MSG_PAYTYPE_DOESNT_EXIST" xml:space="preserve">
+    <value>Paytype n'existe pas!</value>
+  </data>
+  <data name="MSG_PLEASE_CHECK_YOUR_EMAIL_TO_RESET_YOUR_PASSWORD" xml:space="preserve">
+    <value>Please check your email to reset your password fr</value>
+  </data>
+  <data name="MSG_PLEASE_FILL_IN_THE_REQUIRED_FIELDS" xml:space="preserve">
+    <value>S'il vous plaît remplir les champs obligatoires</value>
+  </data>
+  <data name="MSG_PLEASE_RESET_YOUR_PASSWORD_BY" xml:space="preserve">
+    <value>Please reset your password by fr</value>
+  </data>
+  <data name="MSG_RECOVERY_CODE_REDEMPTION_FAILED" xml:space="preserve">
+    <value>Recovery code redemption failed fr</value>
+  </data>
+  <data name="MSG_SCHEDULER_SHOULD_BE_BETWEEN_1_AND_180" xml:space="preserve">
+    <value>Le planificateur doit être compris entre 1 et 180!</value>
+  </data>
+  <data name="MSG_SERVICE_PASSWORD_IS_REQUIRED" xml:space="preserve">
+    <value>Le mot de passe de service est requis!</value>
+  </data>
+  <data name="MSG_SERVICE_PORT_IS_REQUIRED" xml:space="preserve">
+    <value>Le port de service est requis!</value>
+  </data>
+  <data name="MSG_SERVICE_PORT_RANGE_IS_FROM_1_TO_99999" xml:space="preserve">
+    <value>The Port range is from 1 to 99999</value>
+  </data>
+  <data name="MSG_SERVICE_URL_IS_REQUIRED" xml:space="preserve">
+    <value>L'URL du service est requise!</value>
+  </data>
+  <data name="MSG_SERVICE_USE_SSL_IS_REQUIRED" xml:space="preserve">
+    <value>L'utilisation du service SSL est requise!</value>
+  </data>
+  <data name="MSG_SERVICE_USER_IS_REQUIRED" xml:space="preserve">
+    <value>L'utilisateur du service est requis!</value>
+  </data>
+  <data name="MSG_SERVICE_USER_PASSWORD_IS_REQUIRED" xml:space="preserve">
+    <value>Le mot de passe de l'utilisateur du service est requis.</value>
+  </data>
+  <data name="MSG_TENANT_DOESNT_EXIST" xml:space="preserve">
+    <value>Le locataire n'existe pas!</value>
+  </data>
+  <data name="MSG_TENANT_NOT_EXIST_OR_DISABLED" xml:space="preserve">
+    <value>Le locataire n'existe pas ou est handicapé</value>
+  </data>
+  <data name="MSG_THE_EMAIL_FIELD_IS_NOT_A_VALID_EMAIL_ADDRESS" xml:space="preserve">
+    <value>Le champ E-mail n'est pas une adresse e-mail valide!</value>
+  </data>
+  <data name="MSG_THE_ENTERED_EMAIL_ALREADY_EXISTS" xml:space="preserve">
+    <value>L'e-mail saisi existe déjà!</value>
+  </data>
+  <data name="MSG_THE_ENTERED_NAME_ALREADY_EXISTS" xml:space="preserve">
+    <value>Le nom saisi existe déjà!</value>
+  </data>
+  <data name="MSG_THE_ENTERED_NUMBER_ALREADY_EXISTS" xml:space="preserve">
+    <value>Le numéro saisi existe déjà!</value>
+  </data>
+  <data name="MSG_THE_NEW_PASSWORD_AND_CONFIRMATION_PASSWORD_DO_NOT_MATCH" xml:space="preserve">
+    <value>Le nouveau mot de passe et le mot de passe de confirmation ne correspondent pas.</value>
+  </data>
+  <data name="MSG_THE_PASSWORD_AND_CONFIRMATION_PASSWORD_DO_NOT_MATCH" xml:space="preserve">
+    <value>Le mot de passe et le mot de passe de confirmation ne correspondent pas.</value>
+  </data>
+  <data name="MSG_THE_PASSWORD_MUST_HAVE_UPPER_AND_LOWER_CASE_LETTERS" xml:space="preserve">
+    <value>Le mot de passe doit contenir des lettres majuscules et minuscules</value>
+  </data>
+  <data name="MSG_THIS_PAYTYPE_CODE_IS_USED_FOR_ANOTHER_PAYTYPE" xml:space="preserve">
+    <value>Ce code de paytype est utilisé pour un autre paytype</value>
+  </data>
+  <data name="MSG_UNABLE_TO_LOAD_USER" xml:space="preserve">
+    <value>impossible de charger l'utilisateur.</value>
+  </data>
+  <data name="MSG_USER_ALREADY_HAS_PASSWORD" xml:space="preserve">
+    <value>User already has password fr</value>
+  </data>
+  <data name="MSG_USER_ALREADY_IN_ROLE" xml:space="preserve">
+    <value>User already in role fr</value>
+  </data>
+  <data name="MSG_USER_IS_REQUIRED" xml:space="preserve">
+    <value>L'utilisateur est requis</value>
+  </data>
+  <data name="MSG_USER_LOCKOUT_NOT_ENABLED" xml:space="preserve">
+    <value>User lockout not enabled fr</value>
+  </data>
+  <data name="MSG_USER_NOT_IN_ROLE" xml:space="preserve">
+    <value>User not in role fr</value>
+  </data>
+  <data name="MSG_YOU_WANT_TO_DELETE_THIS_RECORD_WITH" xml:space="preserve">
+    <value>Voulez-vous supprimer cet enregistrement?</value>
+  </data>
+  <data name="MSG_YOUR_ACCOUNT_DOESNT_HAVE_PERMISSION_TO_ACCESS_PLEASE_CONTACT_ADMINISTRATOR_FOR_MORE_INFORMATION" xml:space="preserve">
+    <value>Votre compte n'a pas l'autorisation d'accéder. veuillez contacter l'administrateur pour plus d'informations</value>
+  </data>
+  <data name="MSG_YOUR_PASSWORD_HAS_BEEN_CHANGED" xml:space="preserve">
+    <value>Your password has been changed fr</value>
+  </data>
+  <data name="MSG_YOUR_PROFILE_HAS_BEEN_UPDATED" xml:space="preserve">
+    <value>votre profil a été mis a jour</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="NEW_PASSWORD" xml:space="preserve">
+    <value>Nouveau mot de passe</value>
+  </data>
+  <data name="NO_DATA_TO_DISPLAY" xml:space="preserve">
+    <value>No data to display fr</value>
+  </data>
+  <data name="OLD_PASSWORD" xml:space="preserve">
+    <value>Old password fr</value>
+  </data>
+  <data name="PASSWORD" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PAY_TYPE_SETTING" xml:space="preserve">
+    <value>Type de paie</value>
+  </data>
+  <data name="PAY_TYPE_SETTING_TITTLE" xml:space="preserve">
+    <value>Lohnarten Einstellungen</value>
+  </data>
+  <data name="PAYTYPE_HAS_BEEN_ADDED_SUCCESSFULLY" xml:space="preserve">
+    <value>Paytype a été ajouté avec succès!</value>
+  </data>
+  <data name="PAYTYPE_HAS_BEEN_DELETED_SUCCESSFULLY" xml:space="preserve">
+    <value>Paytype a été supprimé avec succès!</value>
+  </data>
+  <data name="PAYTYPE_HAS_BEEN_UPDATED_SUCCESSFULLY" xml:space="preserve">
+    <value>Paytype a été mis à jour avec succès!</value>
+  </data>
+  <data name="POPUP_BUTTON_CLOSE" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="POPUP_BUTTON_SAVE" xml:space="preserve">
+    <value>sauver</value>
+  </data>
+  <data name="POPUP_BUTTON_TEST" xml:space="preserve">
+    <value>Tester la connexion</value>
+  </data>
+  <data name="POPUP_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="POPUP_TEXT_TYPE_PASSWORD" xml:space="preserve">
+    <value>Entrer le mot de passe</value>
+  </data>
+  <data name="POPUP_TITLE_MESSAGE" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="PRIVATE" xml:space="preserve">
+    <value>Privée</value>
+  </data>
+  <data name="PRODUCT_VERSION" xml:space="preserve">
+    <value>Version de produit</value>
+  </data>
+  <data name="PROFILE" xml:space="preserve">
+    <value>Profile fr</value>
+  </data>
+  <data name="RESET_PASSWORD_BUTTON_RESET" xml:space="preserve">
+    <value>Reset fr</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_MSG_CLICK_HERE_TO_LOG_IN" xml:space="preserve">
+    <value>click here to log in fr</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_MSG_YOU_CAN" xml:space="preserve">
+    <value>You can fr</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_MSG_YOUR_PASSWORD_HAS_BEEN_RESET" xml:space="preserve">
+    <value>Your password has been reset fr</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_TITLE_RESET_PASSWORD_CONFIRMATION" xml:space="preserve">
+    <value>Reset password confirmation fr</value>
+  </data>
+  <data name="RESET_PASSWORD_MSG_RESET_YOUR_PASSWORD" xml:space="preserve">
+    <value>Reset your password fr</value>
+  </data>
+  <data name="RESET_PASSWORD_TITLE_RESET_PASSWORD" xml:space="preserve">
+    <value>Reset password fr</value>
+  </data>
+  <data name="ROLE" xml:space="preserve">
+    <value>Rôle</value>
+  </data>
+  <data name="SAVE" xml:space="preserve">
+    <value>Sauver</value>
+  </data>
+  <data name="SEARCH" xml:space="preserve">
+    <value>Chercher</value>
+  </data>
+  <data name="SELECTED" xml:space="preserve">
+    <value>Choisi</value>
+  </data>
+  <data name="SERVICE_USER" xml:space="preserve">
+    <value>Utilisateur du service</value>
+  </data>
+  <data name="SERVICE_USER_PASSWORD" xml:space="preserve">
+    <value>Mot de passe de l'utilisateur du service</value>
+  </data>
+  <data name="SETTING" xml:space="preserve">
+    <value>Réglages</value>
+  </data>
+  <data name="SETTINGS" xml:space="preserve">
+    <value>Réglages</value>
+  </data>
+  <data name="STATE" xml:space="preserve">
+    <value>Etat</value>
+  </data>
+  <data name="STATUS" xml:space="preserve">
+    <value>Statut</value>
+  </data>
+  <data name="SUBMIT" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="SUCCESS" xml:space="preserve">
+    <value>Succès!</value>
+  </data>
+  <data name="TENANT" xml:space="preserve">
+    <value>Tenants</value>
+  </data>
+  <data name="TENANT_BUTTON_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="TENANT_BUTTON_DELETE" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="TENANT_BUTTON_SAVE" xml:space="preserve">
+    <value>Sauver</value>
+  </data>
+  <data name="TENANT_DESCRIPTION" xml:space="preserve">
+    <value>La description</value>
+  </data>
+  <data name="TENANT_INFOMATION" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="TENANT_NAME" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="TENANT_NO" xml:space="preserve">
+    <value>Non.</value>
+  </data>
+  <data name="TENANT_NUMBER" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="TENANT_SETTING_ABACUS_SETTING_NAME" xml:space="preserve">
+    <value>Abaque</value>
+  </data>
+  <data name="TENANT_SETTING_EXCHANGE_SETTING" xml:space="preserve">
+    <value>Échange</value>
+  </data>
+  <data name="TENANT_SETTING_MANAGE" xml:space="preserve">
+    <value>Gérer</value>
+  </data>
+  <data name="TENANT_SETTING_PAY_TYPE_SETTING" xml:space="preserve">
+    <value>Type de paie</value>
+  </data>
+  <data name="TENANT_SETTING_SHEDULE_TIMER" xml:space="preserve">
+    <value>Planificatrice</value>
+  </data>
+  <data name="TENANT_SETTINGS" xml:space="preserve">
+    <value>Réglages</value>
+  </data>
+  <data name="TENANT_STATUS" xml:space="preserve">
+    <value>actif</value>
+  </data>
+  <data name="TENANT_USER" xml:space="preserve">
+    <value>Utilisateurs</value>
+  </data>
+  <data name="TEST_CONNECTION" xml:space="preserve">
+    <value>Tester</value>
+  </data>
+  <data name="TEST_FAIL" xml:space="preserve">
+    <value>Échec du test!</value>
+  </data>
+  <data name="TEST_PASS" xml:space="preserve">
+    <value>Passer un test!</value>
+  </data>
+  <data name="TITLE_LOG_IN" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="UPDATE" xml:space="preserve">
+    <value>Mise à jour</value>
+  </data>
+  <data name="UPDATE_PASSWORD" xml:space="preserve">
+    <value>Update password fr</value>
+  </data>
+  <data name="USER_BUTTON_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="USER_BUTTON_CREATE" xml:space="preserve">
+    <value>Créer</value>
+  </data>
+  <data name="USER_BUTTON_DELETE" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="USER_BUTTON_UPDATE" xml:space="preserve">
+    <value>Mise à jour</value>
+  </data>
+  <data name="USER_COMMENT" xml:space="preserve">
+    <value>Commentaire</value>
+  </data>
+  <data name="USER_EMAIL" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="USER_LANGUAGE" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="USER_ROLE" xml:space="preserve">
+    <value>Rôle</value>
+  </data>
+  <data name="USER_SELECT_LANGUAGE" xml:space="preserve">
+    <value>Choisir la langue</value>
+  </data>
+  <data name="USER_SELECT_ROLE" xml:space="preserve">
+    <value>Sélectionnez un rôle</value>
+  </data>
+  <data name="USER_SELECT_TENANT" xml:space="preserve">
+    <value>Sélectionnez un locataire</value>
+  </data>
+  <data name="USER_STATUS" xml:space="preserve">
+    <value>actif</value>
+  </data>
+  <data name="USER_TENANT" xml:space="preserve">
+    <value>Tenants</value>
+  </data>
+  <data name="USER_USERNAME" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="USERNAME" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="WARNING" xml:space="preserve">
+    <value>Attention!</value>
+  </data>
+  <data name="MSG_SEND_RESET_PASSWORD_MAIL_TO" xml:space="preserve">
+    <value>L'e-mail de réinitialisation du mot de passe envoyé avec succès à {0}.</value>
+  </data>
+  <data name="MSG_SENDING_EMAILS_IS_NOT_SUCCESSFUL_PLEASE_CONTACT_TO_THE_ADMINISTRATOR" xml:space="preserve">
+    <value>L'envoi d'e-mails échoue. Veuillez contacter l'administrateur!</value>
+  </data>
+  <data name="MSG_SENDING_EMAIL_FOR_FORGOT_PASSWORD_CAN_TAKE_MORE_THAN_10_MINUTES" xml:space="preserve">
+    <value>Un e-mail de mot de passe oublié a été envoyé.</value>
+  </data>
+  <data name="RESET_PASSWORD_THE_RESET_CODE_IS_NOT_VALID" xml:space="preserve">
+    <value>Le code de réinitialisation n'est pas valide.</value>
+  </data>
+  <data name="RESET_PASSWORD_BACK_TO_HOME" xml:space="preserve">
+    <value>De retour à la maison</value>
+  </data>
+  <data name="RESET_PASSWORD_TO_BACK_TO_THE_LOGIN_FORM" xml:space="preserve">
+    <value>pour revenir au formulaire de connexion</value>
+  </data>
+  <data name="RESET_PASSWORD_YOU_CAN_CLICK_A_LINK" xml:space="preserve">
+    <value>Vous pouvez cliquer sur un lien</value>
+  </data>
+  <data name="MSG_THIS_USER_DOES_NOT_EXIST_OR_IS_DEACTIVATED" xml:space="preserve">
+    <value>Cet utilisateur n'existe pas ou est désactivé.</value>
+  </data>
+  <data name="USER_FIRST_NAME" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="MSG_FIRST_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>Le prénom est requis!</value>
+  </data>
+  <data name="MSG_MIN_LENGTH_OF_FIRST_NAME_IS_3" xml:space="preserve">
+    <value>La longueur minimale du prénom est de 3!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_FIRST_NAME_IS_50" xml:space="preserve">
+    <value>La longueur maximale du prénom est de 50!</value>
+  </data>
+  <data name="USER_LAST_NAME" xml:space="preserve">
+    <value>Nom de famille</value>
+  </data>
+  <data name="MSG_LAST_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>Le nom de famille est obligatoire!</value>
+  </data>
+  <data name="MSG_MIN_LENGTH_OF_LAST_NAME_IS_3" xml:space="preserve">
+    <value>La longueur minimale du nom de famille est de 3!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_LAST_NAME_IS_50" xml:space="preserve">
+    <value>La longueur maximale du nom de famille est de 50!</value>
+  </data>
+  <data name="USER_FULL_NAME" xml:space="preserve">
+    <value>Nom complet</value>
+  </data>
+  <data name="MSG_THE_ENTERED_EMAIL_DOES_NOT_EXIST" xml:space="preserve">
+    <value>L'e-mail saisi n'existe pas!</value>
+  </data>
+  <data name="GESENDET" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="MSG_THIS_TENANT_HAS_BEEN_USED" xml:space="preserve">
+    <value>Ce locataire a été utilisé!</value>
+  </data>
+  <data name="MSG_SENDING_EMAILS_IS_NOT_SUCCESSFUL._PLEASE_CONTACT_TO_THE_ADMINISTRATOR" xml:space="preserve">
+    <value>L'envoi d'e-mails échoue. Veuillez contacter l'administrateur!</value>
+  </data>
+  <data name="MSG_FAILED_TO_LOAD_LANGUAGES" xml:space="preserve">
+    <value>Impossible de charger les langues pour le moment. Veuillez essayer d'actualiser la page actuelle</value>
+  </data>
+  <data name="MSG_CANT_DELETE_YOURSELF" xml:space="preserve">
+    <value>Kann dich nicht löschen</value>
+  </data>
+  <data name="MSG_CANT_DELETE_SYSADMIN" xml:space="preserve">
+    <value>Benutzer mit Rolle SysAdmin kann nicht gelöscht werden</value>
+  </data>
+  <data name="MSG_CANT_DELETE_ROLE_WITH_EQUAL_OR_LOWER_ROLE" xml:space="preserve">
+    <value>Sie haben keine Berechtigung zur Löschung der Daten!</value>
+  </data>
+  <data name="MSG_USER_PERMISSION_MAY_HAS_CHANGED_ON_OTHER_DEVICE" xml:space="preserve">
+    <value>L'autorisation de l'utilisateur peut avoir changé sur un autre appareil. Cette session se terminera automatiquement dans {0} secondes ou cliquez sur Déconnexion pour la terminer maintenant.</value>
+  </data>
+</root>

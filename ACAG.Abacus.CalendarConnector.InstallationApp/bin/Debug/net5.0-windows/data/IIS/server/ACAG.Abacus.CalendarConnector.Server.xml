@@ -1,0 +1,744 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ACAG.Abacus.CalendarConnector.Server</name>
+    </assembly>
+    <members>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AbacusSettingsController.GetById(System.Int32,System.Int32)">
+            <summary>
+            Find an abacus setting of a tenant by abacus setting id
+            </summary>
+            <remarks>
+            Return a single abacus setting
+            </remarks>
+            <param name="tenantId">Tenant id of the abacus setting</param>
+            <param name="id">Id of the abacus setting</param>
+            <returns>Return a single abacus setting</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Abacus setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AbacusSettingsController.GetByTenant(System.Int32)">
+            <summary>
+            Find an abacus setting by its tenant
+            </summary>
+            <remarks>
+            Return a single abacus setting
+            </remarks>
+            <param name="tenantId">Tenant id of the abacus setting</param>
+            <returns>Return a single abacus setting</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Abacus setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AbacusSettingsController.Create(System.Int32,ACAG.Abacus.CalendarConnector.Models.AbacusSettingEditModel)">
+            <summary>
+            Create a new abacus setting for a tenant
+            </summary>
+            <remarks>
+            Return the newly created abacus setting
+            </remarks>
+            <param name="tenantId">Tenant id of the abacus setting</param>
+            <param name="model">Abacus setting object that needs to be created for the tenant</param>
+            <returns>Return the newly created abacus setting</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Abacus setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AbacusSettingsController.CheckConnection(System.Int32,ACAG.Abacus.CalendarConnector.Models.AbacusSettingConnectionModel)">
+            <summary>
+            Check connection of the provided tenant and abacus setting information
+            </summary>
+            <remarks>
+            Return whether the checking is successed or failed
+            </remarks>
+            <param name="tenantId">Tenant id of the abacus setting</param>
+            <param name="model">Tenant and abacus setting information that needs to be checked</param>
+            <returns>Return whether the checking is successed or failed</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Abacus setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AbacusSettingsController.Update(System.Int32,System.Int32,ACAG.Abacus.CalendarConnector.Models.AbacusSettingEditModel)">
+            <summary>
+            Update an existing abacus setting for a tenant
+            </summary>
+            <remarks>
+            Return the updated abacus setting
+            </remarks>
+            <param name="tenantId">Tenant id of the abacus setting</param>
+            <param name="id">Id of the abacus setting</param>
+            <param name="model">Abacus setting object that needs to be created for the tenant</param>
+            <returns>Return the updated abacus setting</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Abacus setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AbacusSettingsController.Delete(System.Int32,System.Int32)">
+            <summary>
+            Delete an existing abacus setting on a tenant
+            </summary>
+            <remarks>
+            Return whether the deleting is successed or failed
+            </remarks>
+            <param name="tenantId">Tenant id of the abacus setting</param>
+            <param name="id">Id of the abacus setting</param>
+            <returns>Return whether the deleting is successed or failed</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Abacus setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AccountController.Login(ACAG.Abacus.CalendarConnector.Models.Authentication.LoginModel)">
+            <summary>
+            Login with an account
+            </summary>
+            <remarks>
+            Return the status whether login is successed of failed
+            </remarks>
+            <param name="login">Information of the account</param>
+            <returns>Return the status whether login is successed of failed</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Account not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AppSettingsController.GetAll">
+            <summary>
+            Find all existing app settings
+            </summary>
+            <remarks>
+            Return all existing app settings
+            </remarks>
+            <returns>Return all existing app settings</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">App setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AuthenticationsController.GetByEmail(System.String)">
+            <summary>
+            Find a user by its email
+            </summary>
+            <remarks>
+            Return a single user
+            </remarks>
+            <param name="email">Email of the user</param>
+            <returns>Return a single user</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AuthenticationsController.ResetNewPassword(System.Int32,System.String)">
+            <summary>
+            Reset password for a user
+            </summary>
+            <remarks>
+            Return whether the reseting is successed of failed
+            </remarks>
+            <param name="userId">Id of the user</param>
+            <param name="password">New password</param>
+            <returns>Return whether the reseting is successed of failed</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.AuthenticationsController.Login(System.String,System.String)">
+            <summary>
+            Login with a user
+            </summary>
+            <remarks>
+            Return information of the logged-in user
+            </remarks>
+            <param name="email">Email of the user</param>
+            <param name="password">New password</param>
+            <returns>Return information of the logged-in user</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.CulturesController.GetAll">
+            <summary>
+            Find all cultures that satisfy logged-in role
+            </summary>
+            <remarks>
+            Return all cultures that satisfy logged-in role
+            </remarks>
+            <returns>Return all cultures that satisfy logged-in role</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Culture not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.ExchangeSettingsController.GetAll(System.Int32,System.String)">
+            <summary>
+            Find all existing exchange settings
+            </summary>
+            <remarks>
+            Return all existing exchange settings
+            </remarks>
+            <returns>Return all existing exchange settings</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Exchange setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.ExchangeSettingsController.GetById(System.Int32,System.Int32)">
+            <summary>
+            Find an exchange setting of a tenant by exchange setting id
+            </summary>
+            <remarks>
+            Return a single exchange setting
+            </remarks>
+            <param name="tenantId">Tenant id of the exchange setting</param>
+            <param name="id">Id of the exchange setting</param>
+            <returns>Return a single exchange setting</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Exchange setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.ExchangeSettingsController.ExchangeVersions">
+            <summary>
+            Find all existing exchange version
+            </summary>
+            <remarks>
+            Return all existing exchange version
+            </remarks>
+            <returns>Return all existing exchange version</returns>
+            <response code="200">Successful operation</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.ExchangeSettingsController.LoginTypes">
+            <summary>
+            Find all existing login types
+            </summary>
+            <remarks>
+            Return all existing login types
+            </remarks>
+            <returns>Return all existing login types</returns>
+            <response code="200">Successful operation</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.ExchangeSettingsController.Create(System.Int32,ACAG.Abacus.CalendarConnector.Models.ExchangeSettingEditModel)">
+            <summary>
+            Create a new exchange setting for a tenant
+            </summary>
+            <remarks>
+            Return the newly created exchange setting
+            </remarks>
+            <param name="tenantId">Tenant id of the exchange setting</param>
+            <param name="model">Exchange setting object that needs to be created for the tenant</param>
+            <returns>Return the newly created exchange setting</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Exchange setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.ExchangeSettingsController.CheckConnection(System.Int32,ACAG.Abacus.CalendarConnector.Models.ExchangeSettingEditModel)">
+            <summary>
+            Check connection of the provided tenant and exchange setting information
+            </summary>
+            <remarks>
+            Return whether the checking is successed or failed
+            </remarks>
+            <param name="tenantId">Tenant id of the exchange setting</param>
+            <param name="model">Tenant and exchange setting information that needs to be checked</param>
+            <returns>Return whether the checking is successed or failed</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Exchange setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.ExchangeSettingsController.Update(System.Int32,System.Int32,ACAG.Abacus.CalendarConnector.Models.ExchangeSettingEditModel)">
+            <summary>
+            Update an existing exchange setting for a tenant
+            </summary>
+            <remarks>
+            Return the updated exchange setting
+            </remarks>
+            <param name="tenantId">Tenant id of the exchange setting</param>
+            <param name="id">Id of the exchange setting</param>
+            <param name="model">Exchange setting object that needs to be created for the tenant</param>
+            <returns>Return the updated exchange setting</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Exchange setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.ExchangeSettingsController.Delete(System.Int32,System.Int32)">
+            <summary>
+            Delete an existing exchange setting on a tenant
+            </summary>
+            <remarks>
+            Return whether the deleting is successed or failed
+            </remarks>
+            <param name="tenantId">Tenant id of the exchange setting</param>
+            <param name="id">Id of the exchange setting</param>
+            <returns>Return whether the deleting is successed or failed</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Exchange setting not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.LogDiariesController.GetByTenant(System.Int32)">
+            <summary>
+            Find all log diaries by its tenant
+            </summary>
+            <remarks>
+            Return all log diaries of the provided tenant
+            </remarks>
+            <param name="tenantId">Tenant id of the log diaries</param>
+            <returns>Return all log diaries of the provided tenant</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Log diary not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.LogDiariesController.Create(System.Int32,ACAG.Abacus.CalendarConnector.Models.LogDiaryEditModel)">
+            <summary>
+            Create a new log diary for a tenant
+            </summary>
+            <remarks>
+            Return the newly created log diary
+            </remarks>
+            <param name="tenantId">Tenant id of the log diaries</param>
+            <param name="model">Log diary object that needs to be created for the tenant</param>
+            <returns>Return the newly created log diary</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Log diary not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.LogDiariesController.DisableRange(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Delete a list of existing log diaries on a tenant
+            </summary>
+            <remarks>
+            Return whether the deleting is successed or failed
+            </remarks>
+            <param name="tenantId">Tenant id of the log diary</param>
+            <param name="ids">List id of log diaries to be deleted</param>
+            <returns>Return whether the deleting is successed or failed</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Log diary not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.LogDiariesController.DeleteAll(System.Int32)">
+            <summary>
+            Delete all existing log diaries on a tenant
+            </summary>
+            <remarks>
+            Return whether the deleting is successed or failed
+            </remarks>
+            <param name="tenantId">Tenant id of the log diaries</param>
+            <returns>Return whether the deleting is successed or failed</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Log diary not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.PayTypesController.GetAll(System.Int32,System.String)">
+            <summary>
+            Find all pay types of a tenant by search text
+            </summary>
+            <remarks>
+            Return all pay types that meet the criteria
+            </remarks>
+            <param name="tenantId">Tenant id of the pay type</param>
+            <param name="searchText">The criteria to filter pay types</param>
+            <returns>Return all pay types that meet the criteria</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Pay type not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.PayTypesController.GetById(System.Int32,System.Int32)">
+            <summary>
+            Find a pay type of a tenant by pay type id
+            </summary>
+            <remarks>
+            Return a single pay type
+            </remarks>
+            <param name="tenantId">Tenant id of the pay type</param>
+            <param name="id">Id of the pay type to be returned</param>
+            <returns>Return a single pay type</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Pay type not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.PayTypesController.Create(System.Int32,ACAG.Abacus.CalendarConnector.Models.PayTypeEditModel)">
+            <summary>
+            Create a new pay type for a tenant
+            </summary>
+            <remarks>
+            Return the newly created pay type
+            </remarks>
+            <param name="tenantId">Tenant id of the pay type</param>
+            <param name="model">Pay type object that needs to be created for the tenant</param>
+            <returns>Return the newly created pay type</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Pay type not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.PayTypesController.Update(System.Int32,System.Int32,ACAG.Abacus.CalendarConnector.Models.PayTypeEditModel)">
+            <summary>
+            Update an existing pay type for a tenant
+            </summary>
+            <remarks>
+            Return the updated pay type
+            </remarks>
+            <param name="tenantId">Tenant id of the pay type</param>
+            <param name="id">Id of the pay type to be updated</param>
+            <param name="model">Pay type object that needs to be created for the tenant</param>
+            <returns>Return the updated pay type</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Pay type not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.PayTypesController.Delete(System.Int32,System.Int32)">
+            <summary>
+            Delete an existing pay type on a tenant
+            </summary>
+            <remarks>
+            Return whether the deleting is successed or failed
+            </remarks>
+            <param name="tenantId">Tenant id of the pay type</param>
+            <param name="id">Id of the pay type to be deleted</param>
+            <returns>Return whether the deleting is successed or failed</returns>
+            /// <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Pay type not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.RolesController.GetAll">
+            <summary>
+            Find all existing roles
+            </summary>
+            <remarks>
+            Return all existing roles
+            </remarks>
+            <returns>Return all existing roles</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Role not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.TenantsController.GetAll(System.String)">
+            <summary>
+            Find all tenants by search text
+            </summary>
+            <remarks>
+            Return all tenants that meet the criteria
+            </remarks>
+            <param name="searchText">The criteria to filter tenant</param>
+            <returns>Return all tenants that meet the criteria</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Tenant not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.TenantsController.GetAllTenantIsActive">
+            <summary>
+            Find all tenants by search text
+            </summary>
+            <remarks>
+            Return all tenants that meet the criteria
+            </remarks>
+            <param name="searchText">The criteria to filter tenant</param>
+            <returns>Return all tenants that meet the criteria</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Tenant not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.TenantsController.GetById(System.Int32)">
+            <summary>
+            Find a tenant by its id
+            </summary>
+            <remarks>
+            Return a single tenant
+            </remarks>
+            <param name="tenantId">Tenant id of the pay type</param>
+            <returns>Return a single tenant</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Tenant not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.TenantsController.Users(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tenantId"></param>
+            <param name="searchText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.TenantsController.Create(ACAG.Abacus.CalendarConnector.Models.TenantEditModel)">
+            <summary>
+            Create a new tenant
+            </summary>
+            <remarks>
+            Return the newly created tenant
+            </remarks>
+            <param name="model">Tenant object that needs to be created</param>
+            <returns>Return the newly created tenant</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Tenant not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.TenantsController.Update(ACAG.Abacus.CalendarConnector.Models.TenantEditModel)">
+            <summary>
+            Update an existing tenant
+            </summary>
+            <remarks>
+            Return the updated tenant
+            </remarks>
+            <param name="model">Tenant object that needs to be created</param>
+            <returns>Return the updated tenant</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Tenant not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.TenantsController.Delete(System.Int32)">
+            <summary>
+            Delete an existing tenant
+            </summary>
+            <remarks>
+            Return whether the deleting is successed or failed
+            </remarks>
+            <param name="tenantId">Tenant id that need to be deleted</param>
+            <returns>Return whether the deleting is successed or failed</returns>
+            /// <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">Tenant not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="T:ACAG.Abacus.CalendarConnector.Server.Controllers.UsersController">
+            <summary>
+            Class controller
+            </summary>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.UsersController.#ctor(ACAG.Abacus.CalendarConnector.Logic.Services.IUserService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="userService"></param>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.UsersController.GetAll(System.String)">
+            <summary>
+            Find all users by search text
+            </summary>
+            <remarks>
+            Return all users that meet the criteria
+            </remarks>
+            <param name="searchText">The criteria to filter users</param>
+            <returns>Return all Users that meet the criteria</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.UsersController.GetById(System.Int32)">
+            <summary>
+            Find a User by its id
+            </summary>
+            <remarks>
+            Return a single User
+            </remarks>
+            <param name="userId">User id of the pay type</param>
+            <returns>Return a single user</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.UsersController.Create(ACAG.Abacus.CalendarConnector.Models.UserModel)">
+            <summary>
+            Create a new User
+            </summary>
+            <remarks>
+            Return the newly created User
+            </remarks>
+            <param name="model">User object that needs to be created</param>
+            <returns>Return the newly created User</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+            <returns></returns>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.UsersController.Update(ACAG.Abacus.CalendarConnector.Models.UserModel)">
+            <summary>
+            Update an existing User
+            </summary>
+            <remarks>
+            Return the updated User
+            </remarks>
+            <param name="model">User object that needs to be created</param>
+            <returns>Return the updated user</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.UsersController.ChangePassword(ACAG.Abacus.CalendarConnector.Models.UserChangePasswordModel)">
+            <summary>
+            Update Password for user current login
+            </summary>
+            <param name="model">UserChangePassword object that needs to be created</param>
+            <returns></returns>
+            /// <returns>Return the change password user</returns>
+            <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+        </member>
+        <member name="M:ACAG.Abacus.CalendarConnector.Server.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Delete an existing user
+            </summary>
+            <remarks>
+            Return whether the deleting is successed or failed
+            </remarks>
+            <param name="userId">User id that need to be deleted</param>
+            <returns>Return whether the deleting is successed or failed</returns>
+            /// <response code="200">Successful operation</response>
+            <response code="400">Invalid Id supplied</response>
+            <response code="401">User is unauthorized</response>
+            <response code="403">User is not authenticated</response>
+            <response code="404">Request is inaccessible</response>
+            <response code="409">User not found</response>
+            <response code="500">Server side error</response>
+        </member>
+    </members>
+</doc>

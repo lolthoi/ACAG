@@ -1,0 +1,29 @@
+﻿@inject ThemeAppService ThemeLinkService
+
+@if (!string.IsNullOrWhiteSpace(currentTheme))
+{
+    <link rel="stylesheet" href="@("css/switcher-resources/themes/" + currentTheme.ToLower() + "/bootstrap.min.css")" />
+}
+
+
+<div id="settingsbar" class="@(Shown ? "" : "hidden-settings-bar")">
+    <nav id="themesMenu">
+        <ul class="nav nav-pills">
+            @foreach (var themeSet in themeData)
+            {
+                <li class="nav-item theme-group">@themeSet.Title</li>
+                @foreach (var theme in themeSet.Themes)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link @(currentTheme == theme ? "active" : "") "
+                           href="javascript:;"
+                           @onclick="@(() => OnItemClick(theme))">
+                            <span class="image @theme.ToLower().Replace(" ", "-")" aria-hidden="true"></span>
+                            <span class="theme-name">@theme</span>
+                        </a>
+                    </li>
+                }
+            }
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,350 @@
+﻿@page  "/tenant"
+@inject IApiWrapper _apiWrapper
+@inject IStringLocalizer<Resource> _localizer
+@inject IToastAppService _toastAppService
+@inject IJSRuntime _jSRuntime
+@attribute [Authorize]
+
+<div class="container-fluid container-fluid-custom" style="padding-right: 0px; padding-left: 0px">
+    <h3>@_localizer[LangKey.MENU_TENANT]</h3>
+    <hr />
+
+    <div class="row">
+        <div class="offset-md-9 col-md-3 col-12">
+            <DxTextBox @bind-Text="@search"
+                       BindValueMode="BindValueMode.OnInput"
+                       NullText="@_localizer[LangKey.SEARCH]"
+                       SizeMode="SizeMode.Medium" style="width:100%"
+                       @onkeyup="@(async () => await SearchAsync())" />
+        </div>
+    </div>
+    <div class="row" style="margin-top:5px">
+        <div class="col-sm-12">
+            @if (dataSource == null)
+            {
+                @*<p><em>@_localizer[LangKey.MSG_LOADING]</em></p>*@
+                <LoadingIcon></LoadingIcon>
+            }
+            else
+            {
+                <DxDataGrid @ref="@grid"
+                            Data="@dataSource.Tenants"
+                            AllowColumnDragDrop="false"
+                            AutoCollapseDetailRow="true"
+                            RowEditStart="@(async (TenantModel item) => await OnEditRowAsync(item))"
+                            CssClass="customTenantGrid"
+                            PageIndex="0">
+                    <Columns>
+                        <DxDataGridCommandColumn Width="40px">
+                            <HeaderCellTemplate>
+                                <AuthorizeView Roles="@AppDefiner.Roles.ADMINISTRATOR_SYSADMIN">
+                                    @{
+                                        _isAdmin = true;
+                                        _isBtnDeleteTenantVisible = true;
+                                    }
+                                    <button class="btn btn-outline-primary btn-custom" @onclick="@OnAddNewAsync">
+                                        <span class="oi oi-plus"></span>
+                                    </button>
+                                </AuthorizeView>
+                            </HeaderCellTemplate>
+                            <CellTemplate>
+                                <a class="oi oi-pencil" @onclick="@(() => grid.StartRowEdit(context))" href="javascript:void(0);"></a>
+                            </CellTemplate>
+                        </DxDataGridCommandColumn>
+                        <DxDataGridSpinEditColumn Field="@nameof(TenantModel.Number)" Caption="@_localizer[LangKey.TENANT_NUMBER]" />
+                        <DxDataGridColumn Field="@nameof(TenantModel.Name)"
+                                          Caption="@_localizer[LangKey.TENANT_NAME]"
+                                          SortIndex="0"
+                                          SortOrder="DataGridColumnSortOrder.Ascending"
+                                          Width="200px" />
+                        <DxDataGridColumn Field="@nameof(TenantModel.Description)"
+                                          Caption="@_localizer[LangKey.TENANT_DESCRIPTION]" />
+                        <DxDataGridCheckBoxColumn Field="@nameof(TenantModel.IsEnabled)" Caption="@_localizer[LangKey.TENANT_STATUS]" />
+                    </Columns>
+
+                    <EditFormTemplate>
+                        @if (EditContext == null)
+                            {
+                                @*<p><em>@_localizer[LangKey.MSG_LOADING]</em></p>*@
+                                <LoadingIcon></LoadingIcon>
+                            }
+                            else
+                            {
+                                if (EditContext.Id == 0)
+                                {
+                                <EditForm Model="@EditContext"
+                                          Context="EditFormContext"
+                                          OnValidSubmit="HandleValidSubmitAsync">
+                                    <DxTabs ActiveTabIndex="@ActiveTabIndex"
+                                            ActiveTabIndexChanged="OnTabChangeAsync">
+                                        <DxTabPage Text="@_localizer[LangKey.TENANT_INFOMATION]"></DxTabPage>
+                                        @switch (ActiveTabIndex)
+                                            {
+                                                case 0:
+                                                <DataAnnotationsValidator />
+                                                <DxFormLayout CssClass="customTabPage">
+                                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_NAME]<span class="validation-message">*</span></b></label>
+                                                            <AbacusToolTip>
+                                                                <Control>
+                                                                    <DxTextBox @bind-Text="@EditContext.Name" maxlength="50" CssClass="first-focus" />
+                                                                </Control>
+                                                                <ErrorMessage>
+                                                                    <ValidationMessage For="(() => EditContext.Name)" />
+                                                                </ErrorMessage>
+                                                            </AbacusToolTip>
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_NUMBER]<span class="validation-message">*</span></b></label>
+                                                            <DxSpinEdit @bind-Value="@EditContext.Number" MinValue="1" MaxValue="99999" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+
+                                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_STATUS]</b></label>
+                                                            <DxCheckBox @bind-Checked="@EditContext.IsEnabled" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_DESCRIPTION]</b></label>
+                                                            <DxMemo @bind-Text="@EditContext.Description" SizeMode="SizeMode.Small" ResizeMode="MemoResizeMode.Disabled" Rows="8" maxlength="5000" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                </DxFormLayout>
+                                                    break;
+                                            }
+                                    </DxTabs>
+                                    <DxFormLayout>
+                                        <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                            <Template>
+                                                <div class="text-right">
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Primary" SubmitFormOnClick="true" Text="@_localizer[LangKey.TENANT_BUTTON_SAVE]" />
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Warning" Text="@_localizer[LangKey.TENANT_BUTTON_CANCEL]" @onclick="OnCancelButtonClick" />
+                                                </div>
+                                            </Template>
+                                        </DxFormLayoutItem>
+                                    </DxFormLayout>
+                                </EditForm>
+                                }
+                                else if (EditContext.Id > 0)
+                                {
+                                <EditForm Model="EditContext"
+                                          Context="EditFormContext"
+                                          OnSubmit="async () => { await HandleOnSubmitAsync(); }">
+                                    <DxTabs ActiveTabIndex="@ActiveTabIndex"
+                                            ActiveTabIndexChanged="OnTabChangeAsync">
+                                        <DxTabPage Text="@_localizer[LangKey.TENANT_INFOMATION]"></DxTabPage>
+                                        @if (EditContext.Id > 0)
+                                            {
+                                            <DxTabPage Text="@_localizer[LangKey.TENANT_SETTINGS]"></DxTabPage>
+                                            <DxTabPage Text="@_localizer[LangKey.MENU_USER]"></DxTabPage>
+                                            <DxTabPage Text="@_localizer[LangKey.MENU_LOG]"></DxTabPage>
+                                            }
+                                        @switch (ActiveTabIndex)
+                                            {
+                                                case 0:
+                                                <DataAnnotationsValidator />
+                                                <DxFormLayout CssClass="customTabPage">
+                                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_NAME]<span class="validation-message">*</span></b></label>
+                                                            <AbacusToolTip>
+                                                                <Control>
+                                                                    <DxTextBox @bind-Text="@EditContext.Name" maxlength="50" CssClass="first-focus" @onfocusin="OnFocusTenant" />
+                                                                </Control>
+                                                                <ErrorMessage>
+                                                                    <ValidationMessage For="(() => EditContext.Name)" />
+                                                                </ErrorMessage>
+                                                            </AbacusToolTip>
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_NUMBER]<span class="validation-message">*</span></b></label>
+                                                            <DxSpinEdit @bind-Value="@EditContext.Number" MinValue="1" MaxValue="99999" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+
+                                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_STATUS]</b></label>
+                                                            <DxCheckBox @bind-Checked="@EditContext.IsEnabled" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_DESCRIPTION]</b></label>
+                                                            <DxMemo @bind-Text="@EditContext.Description" SizeMode="SizeMode.Small" ResizeMode="MemoResizeMode.Disabled" Rows="8" maxlength="5000" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                </DxFormLayout>
+                                                    break;
+                                                case 1:
+                                                <DxFormLayout CssClass="customTabPage">
+                                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_SETTING_SHEDULE_TIMER]</b></label>
+                                                            <DxSpinEdit @bind-Value="@EditContext.ScheduleTimer" MinValue="1" MaxValue="180" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                    <DxFormLayoutItem ColSpanLg="11" ColSpanMd="10" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_SETTING_ABACUS_SETTING_NAME]</b></label>
+                                                            <label class="readonly-label form-control form-control-sm dxbs-form-control text-truncate">
+                                                                @(EditContext.AbacusSettingName == null ? "" : EditContext.AbacusSettingName)
+                                                            </label>
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                    <DxFormLayoutItem ColSpanLg="1" ColSpanMd="2" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label class="blankLabel">x</label>
+                                                            <DxButton CssClass="btnMannage" Text="@_localizer[LangKey.TENANT_SETTING_MANAGE]" @onclick="(() => AbacusSettingPopupVisible = true)" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+
+                                                    <DxFormLayoutItem ColSpanLg="11" ColSpanMd="10" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_SETTING_EXCHANGE_SETTING]</b></label>
+                                                            <label class="readonly-label form-control form-control-sm dxbs-form-control text-truncate">
+                                                                @(_exchangeSettingSelected != null ? _exchangeSettingSelected.Name : "")
+                                                            </label>
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                    <DxFormLayoutItem ColSpanLg="1" ColSpanMd="2" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label class="blankLabel">x</label>
+                                                            <DxButton CssClass="btnMannage" Text="@_localizer[LangKey.TENANT_SETTING_MANAGE]" @onclick="OnShowPopupDeleteExchangeSetting" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+
+                                                    <DxFormLayoutItem ColSpanLg="11" ColSpanMd="10" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label><b>@_localizer[LangKey.TENANT_SETTING_PAY_TYPE_SETTING]</b></label>
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+
+                                                    <DxFormLayoutItem ColSpanLg="1" ColSpanMd="2" Context="FormLayoutContext">
+                                                        <Template>
+                                                            <label class="blankLabel">x</label>
+                                                            <DxButton CssClass="btnMannage" Text="@_localizer[LangKey.TENANT_SETTING_MANAGE]" @onclick="OnShowPayTypeSettingPopup" />
+                                                        </Template>
+                                                    </DxFormLayoutItem>
+                                                </DxFormLayout>
+                                                    break;
+                                                case 2:
+                                                <ACAG.Abacus.CalendarConnector.Client.Pages.Components.MenuUserComponent EditContextUser="EditContext" DataSourceUser="dataSourceUser" />
+                                                    break;
+                                                case 3:
+                                                <ACAG.Abacus.CalendarConnector.Client.Pages.Components.MenuLogComponent @ref="menuLogComponent"
+                                                                                                                        EditContextLog="EditContext"
+                                                                                                                        LogDiaryModels="dataSourceLog"
+                                                                                                                        SelectedLogDiaryChanged="HandleSelectedLogDiaryChanged" />
+                                                    break;
+                                            }
+                                    </DxTabs>
+                                    <DxFormLayout>
+                                        <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                            <Template>
+                                                <div class="text-right">
+                                                    @if (EditContext.Id > 0)
+                                                        {
+                                                        <DxButton RenderStyle="ButtonRenderStyle.Primary"
+                                                                  SubmitFormOnClick="true"
+                                                                  Text="@_localizer[LangKey.TENANT_BUTTON_SAVE]"
+                                                                  Visible="VisibleBtnSaveTenant"
+                                                                  CssClass="BtnSaveTenant" />
+                                                        <DxButton RenderStyle="ButtonRenderStyle.Danger"
+                                                                  Text="@_localizer[LangKey.TENANT_BUTTON_DELETE]"
+                                                                  @onclick="(() => PopupVisible = true)"
+                                                                  Visible="_isBtnDeleteTenantVisible == true"
+                                                                  CssClass="BtnDeleteTenant" />
+                                                        <DxButton RenderStyle="ButtonRenderStyle.Danger"
+                                                                  Text="@_localizer[LangKey.TENANT_BUTTON_DELETE]"
+                                                                  @onclick="(async () => await OnDeleteLogAsync(EditContext.Id))"
+                                                                  CssClass="BtnDeleteLog"
+                                                                  Visible="VisibleBtnDeleteLog" />
+                                                        <DxButton RenderStyle="ButtonRenderStyle.Warning"
+                                                                  Text="@_localizer[LangKey.TENANT_BUTTON_CANCEL]"
+                                                                  @onclick="OnCancelButtonClick" />
+                                                        }
+                                                        else
+                                                        {
+                                                        <DxButton RenderStyle="ButtonRenderStyle.Primary" SubmitFormOnClick="true" Text="@_localizer[LangKey.TENANT_BUTTON_SAVE]" />
+                                                        <DxButton RenderStyle="ButtonRenderStyle.Warning" Text="@_localizer[LangKey.TENANT_BUTTON_CANCEL]" @onclick="OnCancelButtonClick" />
+                                                        }
+                                                </div>
+                                            </Template>
+                                        </DxFormLayoutItem>
+                                    </DxFormLayout>
+                                </EditForm>
+                                }
+                            }
+                    </EditFormTemplate>
+                </DxDataGrid>
+            }
+        </div>
+    </div>
+    <DxPopup @bind-Visible="@PopupVisible">
+        <HeaderTemplate>
+            <div class="modal-header drag">
+                <h6 class="modal-title">@(_tenant_Number + ", " + _tenant_Name)</h6>
+                <a class="close-btn oi oi-x" href="javascript:;" aria-hidden="true" role="button" aria-label="Close popup" @onclick="@(() => OnShowPopupDelete(false))"></a><!--!-->
+            </div>
+        </HeaderTemplate>
+        <Content>
+            <div class="text-center">
+                @_localizer[LangKey.MSG_YOU_WANT_TO_DELETE_THIS_RECORD_WITH]
+            </div>
+        </Content>
+        <FooterTemplate>
+            <DxButton RenderStyle="ButtonRenderStyle.Danger"
+                      Text="@_localizer[LangKey.TENANT_BUTTON_DELETE]"
+                      @onclick="(async () => await DeleteTenantAsync())" />
+            <DxButton RenderStyle="ButtonRenderStyle.Warning" @onclick="@(() => OnShowPopupDelete(false))" Text="@_localizer[LangKey.TENANT_BUTTON_CANCEL]" />
+        </FooterTemplate>
+    </DxPopup>
+
+    <DxPopup HeaderText="@(_localizer[LangKey.TENANT_SETTING_ABACUS_SETTING_NAME] +  " " + _localizer[LangKey.SETTING] )"
+             CssClass="popupAbacusSetting customPopup"
+             Visible="AbacusSettingPopupVisible"
+             CloseButtonClick="OnHidePopupAbacusSetting">
+        <Content>
+            <ACAG.Abacus.CalendarConnector.Client.Pages.Components.AbacusSettingComponent Tenant="EditContext"
+                                                                                          VisibleChanged="AbacusSettingPopupVisibleChanged"
+                                                                                          AbacusSettingChanged="AbacusSettingHandleChanged" />
+        </Content>
+    </DxPopup>
+
+    <DxPopup HeaderText="@("" + _localizer[LangKey.TENANT_SETTING_EXCHANGE_SETTING] + " " + _localizer[LangKey.SETTING])"
+             @bind-Visible="PopupVisibleExchangeSetting"
+             CssClass="tenantPopupsSetting customPopup">
+        <Content>
+            <ACAG.Abacus.CalendarConnector.Client.Pages.Components.ExchangeComponent TenantId="EditContext.Id"
+                                                                                     ExchangeSettingsChanged="ExchangeSettingsChangedAsync" />
+        </Content>
+        <FooterTemplate>
+            <DxButton RenderStyle="ButtonRenderStyle.Primary" @onclick="OnHidePopupDeleteExchangeSetting" Text="@_localizer[LangKey.POPUP_BUTTON_CLOSE]" />
+        </FooterTemplate>
+    </DxPopup>
+
+    <DxPopup HeaderText="@(_localizer[LangKey.PAY_TYPE_SETTING] +  " " + _localizer[LangKey.SETTING])"
+             @bind-Visible="@isVisiblePopupPayTypeSetting"
+             CssClass="tenantPopupsSetting customPopup">
+        <Content>
+            <ACAG.Abacus.CalendarConnector.Client.Pages.Components.PayType TenantId="EditContext.Id">
+            </ACAG.Abacus.CalendarConnector.Client.Pages.Components.PayType>
+        </Content>
+        <FooterTemplate>
+            <DxButton RenderStyle="ButtonRenderStyle.Primary" @onclick="@OnHidePayTypeSettingPopup" Text="@_localizer[LangKey.POPUP_BUTTON_CLOSE]" />
+        </FooterTemplate>
+    </DxPopup>
+
+    <div style="z-index: 11005; position: absolute; left: calc(50% - 40px); top: calc(50% - 40px); " class="hideElement" id="LoadingIcon">
+        <img style="zoom: 30%;" src="images/loading.gif" />
+    </div>
+</div>

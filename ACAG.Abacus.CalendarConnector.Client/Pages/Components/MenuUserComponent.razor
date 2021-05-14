@@ -1,0 +1,40 @@
+﻿@inject IStringLocalizer<Resource> _localizer;
+@inject IJSRuntime _jSRuntime
+@inject IApiWrapper _apiWrapper
+
+<div class="customTabPage">
+    <div class="pt-3">
+        <div class="offset-md-9 col-md-3 col-12">
+            <DxTextBox @bind-Text="@searchUser"
+                       BindValueMode="BindValueMode.OnInput"
+                       NullText="@_localizer[LangKey.SEARCH]"
+                       SizeMode="SizeMode.Medium"
+                       style="width:100%"
+                       @onkeyup="(async () => await SearchUserAsync())"
+                       CssClass="prevent-default-on-enter" />
+        </div>
+    </div>
+    <div class="p-3">
+        @if (DataSourceUser == null)
+        {
+            @*<p><em>@_localizer[LangKey.MSG_LOADING]</em></p>*@
+            <LoadingIcon></LoadingIcon>
+        }
+        else
+        {
+            <DxDataGrid @ref="@GridUserModel"
+                        Data="@DataSourceUser.Users"
+                        AllowColumnDragDrop="false"
+                        PageIndex="0"
+                        CssClass="customMenuUserGrid">
+                <Columns>
+                    <DxDataGridColumn Field="@nameof(UserModel.FullName)" Caption="@_localizer[LangKey.USER_FULL_NAME]"
+                                      SortIndex="0"
+                                      SortOrder="DataGridColumnSortOrder.Ascending" />
+                    <DxDataGridColumn Field="@nameof(UserModel.Email)" Caption="@_localizer[LangKey.EMAIL]" />
+                    <DxDataGridCheckBoxColumn Field="@nameof(UserModel.IsEnabled)" Caption="@_localizer[LangKey.USER_STATUS]" Width="100px" />
+                </Columns>
+            </DxDataGrid>
+        }
+    </div>
+</div>

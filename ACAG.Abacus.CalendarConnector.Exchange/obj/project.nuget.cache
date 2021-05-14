@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "bVwOBSKI7L7l71cRgo31vtb3rSQdXI1b0ghI6uRcpwgiMjgL273vyPX6r+UhovK0lpYUUrRpopVkj8d9fU5S+g==",
+  "success": true,
+  "projectFilePath": "G:\\ACAG\\ACAG.Abacus.CalendarConnector.Exchange\\ACAG.Abacus.CalendarConnector.Exchange.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hoang.thai.duong\\.nuget\\packages\\microsoft.exchange.webservices.netstandard\\1.1.3\\microsoft.exchange.webservices.netstandard.1.1.3.nupkg.sha512",
+    "C:\\Users\\hoang.thai.duong\\.nuget\\packages\\microsoft.identity.client\\4.24.0\\microsoft.identity.client.4.24.0.nupkg.sha512",
+    "C:\\Users\\hoang.thai.duong\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\hoang.thai.duong\\.nuget\\packages\\system.security.cryptography.xml\\4.4.0\\system.security.cryptography.xml.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

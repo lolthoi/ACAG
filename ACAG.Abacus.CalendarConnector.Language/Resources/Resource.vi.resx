@@ -1,0 +1,987 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ABACUS_SETTING_NAME" xml:space="preserve">
+    <value>Abacus</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_CONNECTION_STATE" xml:space="preserve">
+    <value>Tình trạng sức khỏe</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_NAME" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_PASSWORD" xml:space="preserve">
+    <value>Mật khẩu dịch vụ</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_PORT" xml:space="preserve">
+    <value>Cổng dịch vụ</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_URL" xml:space="preserve">
+    <value>URL dịch vụ</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_USE_SSL" xml:space="preserve">
+    <value>sử dụng SSL</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_LABEL_USER" xml:space="preserve">
+    <value>Người sử dụng dịch vụ</value>
+  </data>
+  <data name="ABACUS_SETTING_POPUP_TITLE" xml:space="preserve">
+    <value>Cài đặt bàn tính</value>
+  </data>
+  <data name="ABOUT_US" xml:space="preserve">
+    <value>Về chúng tôi</value>
+  </data>
+  <data name="APP_FOOTER_TITLE" xml:space="preserve">
+    <value>2020 © Bản quyền thuộc về ALL CONSULTING AG</value>
+  </data>
+  <data name="APP_TITLE" xml:space="preserve">
+    <value>Abacus Calendar Connector</value>
+  </data>
+  <data name="ARE_YOU_SURE_WANT_TO_DELETE_THIS_PAYTYPE_SETTING" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa cài đặt servicecode này không?</value>
+  </data>
+  <data name="AWAY" xml:space="preserve">
+    <value>Away</value>
+  </data>
+  <data name="AZURE_CLIENT" xml:space="preserve">
+    <value>Azure Client</value>
+  </data>
+  <data name="AZURE_CLIENT_SECRET" xml:space="preserve">
+    <value>Azure Client Secret</value>
+  </data>
+  <data name="AZURE_TENANT" xml:space="preserve">
+    <value>Azure Tenant</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Hủy bỏ</value>
+  </data>
+  <data name="CHANGE_PASSWORD" xml:space="preserve">
+    <value>Thay đổi mật khẩu</value>
+  </data>
+  <data name="CODE" xml:space="preserve">
+    <value>Ký hiệu</value>
+  </data>
+  <data name="COMMENT" xml:space="preserve">
+    <value>Bình luận</value>
+  </data>
+  <data name="CONFIRM_NEW_PASSWORD" xml:space="preserve">
+    <value>Xác nhận mật khẩu mới</value>
+  </data>
+  <data name="CONFIRM_PASSWORD" xml:space="preserve">
+    <value>Xác nhận mật khẩu</value>
+  </data>
+  <data name="CREATE" xml:space="preserve">
+    <value>Tạo mới</value>
+  </data>
+  <data name="CURRENT_PASSWORD" xml:space="preserve">
+    <value>Mật khẩu hiện tại</value>
+  </data>
+  <data name="DATA_DOES_NOT_EXIST" xml:space="preserve">
+    <value>Dữ liệu không tồn tại!</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="DELETE_CONFIRMATION" xml:space="preserve">
+    <value>Xác nhận xóa</value>
+  </data>
+  <data name="DISPLAY_NAME" xml:space="preserve">
+    <value>Tên hiển thị</value>
+  </data>
+  <data name="EMAIL" xml:space="preserve">
+    <value>Thư</value>
+  </data>
+  <data name="EMAIL_ADDERESS" xml:space="preserve">
+    <value>Địa chỉ Email</value>
+  </data>
+  <data name="ENTER_YOUR_EMAIL" xml:space="preserve">
+    <value>Nhập email của bạn</value>
+  </data>
+  <data name="ERROR" xml:space="preserve">
+    <value>Lỗi!</value>
+  </data>
+  <data name="EXCHANGE_SETTING" xml:space="preserve">
+    <value>Đổi</value>
+  </data>
+  <data name="EXCHANGE_SETTING_AZURE_CLIENT" xml:space="preserve">
+    <value>Tên khách hàng Azure</value>
+  </data>
+  <data name="EXCHANGE_SETTING_AZURE_CLIENT_SECRET" xml:space="preserve">
+    <value>Bí mật khách hàng Azure</value>
+  </data>
+  <data name="EXCHANGE_SETTING_AZURE_TENANT" xml:space="preserve">
+    <value>Tên người thuê Azure</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_CANCEL" xml:space="preserve">
+    <value>Hủy bỏ</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_CREATE" xml:space="preserve">
+    <value>Tạo mới</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_DELETE" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_POPUP_CANCEL" xml:space="preserve">
+    <value>Huỷ bỏ</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_SAVE" xml:space="preserve">
+    <value>Lưu Lại</value>
+  </data>
+  <data name="EXCHANGE_SETTING_BUTTON_UPDATE" xml:space="preserve">
+    <value>Lưu lại</value>
+  </data>
+  <data name="EXCHANGE_SETTING_DESCRIPTION" xml:space="preserve">
+    <value>Sự miêu tả</value>
+  </data>
+  <data name="EXCHANGE_SETTING_EMAIL_ADDERESS" xml:space="preserve">
+    <value>Địa chỉ Email</value>
+  </data>
+  <data name="EXCHANGE_SETTING_EXCHANGE_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="EXCHANGE_SETTING_EXCHANGE_VERSION" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="EXCHANGE_SETTING_HEALTH_STATUS" xml:space="preserve">
+    <value>Trạng thái kết nối</value>
+  </data>
+  <data name="EXCHANGE_SETTING_LOGIN_TYPE" xml:space="preserve">
+    <value>Loại đăng nhập</value>
+  </data>
+  <data name="EXCHANGE_SETTING_NAME" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SELECT_EXCHANGE_LOGIN_TYPE" xml:space="preserve">
+    <value>Chọn loại đăng nhập Exchange</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SELECT_EXCHANGE_VERSION" xml:space="preserve">
+    <value>Chọn phiên bản Exchange</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SELECTED" xml:space="preserve">
+    <value>Đã chọn</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SERVICE_USER" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="EXCHANGE_SETTING_SERVICE_USER_PASSWORD" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="EXCHANGE_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="EXCHANGE_VERSION" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="FAIL_TO_ADD_PAYTYPE" xml:space="preserve">
+    <value>Thêm mới Paytype thất bại!</value>
+  </data>
+  <data name="FAIL_TO_DELETE_PAYTYPE" xml:space="preserve">
+    <value>Xóa Paytype thất bại!</value>
+  </data>
+  <data name="FAIL_TO_UPDATE_PAYTYPE" xml:space="preserve">
+    <value>Cập nhật Paytype thất bại!</value>
+  </data>
+  <data name="FORGOT_PASSWORD" xml:space="preserve">
+    <value>Quên mật khẩu</value>
+  </data>
+  <data name="FORGOT_PASSWORD_TITLE" xml:space="preserve">
+    <value>Quên mật khẩu</value>
+  </data>
+  <data name="GRID_PAYTYPECODE" xml:space="preserve">
+    <value>Ký hiệu</value>
+  </data>
+  <data name="HEALTH_STATUS" xml:space="preserve">
+    <value>Trạng thái kết nối</value>
+  </data>
+  <data name="ID_DOES_NOT_MATCH" xml:space="preserve">
+    <value>Id không khớp</value>
+  </data>
+  <data name="IF_THE_USER_IS_AN_ADMINISTRATOR_THE_TENANT_MUST_BE_EMPTY" xml:space="preserve">
+    <value>Người dùng là quản trị viên thì người thuê phải rỗng</value>
+  </data>
+  <data name="INFO" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="INFOMATION" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="IS_APPOINTMENT_AWAY_STATE" xml:space="preserve">
+    <value>Cuộc hẹn có trạng thái away</value>
+  </data>
+  <data name="IS_APPOINTMENT_PRIVATE" xml:space="preserve">
+    <value>Cuộc hẹn là riêng tư</value>
+  </data>
+  <data name="LANGUAGE" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="LAST_TEST_STATE" xml:space="preserve">
+    <value>Trạng thái thử nghiệm cuối cùng</value>
+  </data>
+  <data name="LOG_IN" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="LOGIN_TYPE" xml:space="preserve">
+    <value>Loại đăng nhập</value>
+  </data>
+  <data name="LOGO_TITLE" xml:space="preserve">
+    <value>Abacus</value>
+  </data>
+  <data name="LOGOUT" xml:space="preserve">
+    <value>Đăng xuất</value>
+  </data>
+  <data name="MANAGE" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="MANAGE_YOUR_ACCOUNT" xml:space="preserve">
+    <value>Quản lý tài khoản của bạn</value>
+  </data>
+  <data name="MAX_LENGTH_OF_DISPLAY_NAME_IS_250" xml:space="preserve">
+    <value>Độ dài hiển thị lớn nhất là 250</value>
+  </data>
+  <data name="MENU_LOG" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="MENU_LOG_FIELD_ERROR" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="MENU_LOG_FIELD_LOG_DATA" xml:space="preserve">
+    <value>Dữ liệu log</value>
+  </data>
+  <data name="MENU_LOG_FIELD_STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="MENU_LOG_FIELD_TIMESTAMP" xml:space="preserve">
+    <value>Mốc thời gian</value>
+  </data>
+  <data name="MENU_OVERVIEW" xml:space="preserve">
+    <value>Tổng quan</value>
+  </data>
+  <data name="MENU_PAYTYPE" xml:space="preserve">
+    <value>Thuộc tính</value>
+  </data>
+  <data name="MENU_TENANT" xml:space="preserve">
+    <value>Đại lý</value>
+  </data>
+  <data name="MENU_TENANT_DESCRIPTION" xml:space="preserve">
+    <value>Sự miêu tả</value>
+  </data>
+  <data name="MENU_USER" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="MIN_LENGTH_OF_DISPLAY_NAME_IS_1" xml:space="preserve">
+    <value>Độ dài hiển thị nhỏ nhất là</value>
+  </data>
+  <data name="MSG_AN_ERROR_HAS_OCCURRED_DURRING_DATA_SAVING" xml:space="preserve">
+    <value>Đã xảy ra lỗi khi lưu dữ liệu.</value>
+  </data>
+  <data name="MSG_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_EXCHANGE_SETTING" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa cài đặt trao đổi này không?</value>
+  </data>
+  <data name="MSG_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_USER" xml:space="preserve">
+    <value>Bạn muốn xóa người dùng này?</value>
+  </data>
+  <data name="MSG_AZURE_CLIENT_IS_REQUIRED" xml:space="preserve">
+    <value>Azure Client là bắt buộc</value>
+  </data>
+  <data name="MSG_AZURE_CLIENT_SECRET_IS_REQUIRED" xml:space="preserve">
+    <value>Azure Client Secret là bắt buộc</value>
+  </data>
+  <data name="MSG_AZURE_TENANT_IS_REQUIRED" xml:space="preserve">
+    <value>Azure tenant là bắt buộc</value>
+  </data>
+  <data name="MSG_CAN_NOT_IDENTITY_USER" xml:space="preserve">
+    <value>Không thể nhận diện người dùng.</value>
+  </data>
+  <data name="MSG_CHANGE_PASSWORD_FAILED" xml:space="preserve">
+    <value>Thay đổi mật khẩu thất bại.</value>
+  </data>
+  <data name="MSG_CLICKING_HERE" xml:space="preserve">
+    <value>bấm vào đây.</value>
+  </data>
+  <data name="MSG_CODE_NUMBER_RANGE_IS_FROM_1_TO_99999" xml:space="preserve">
+    <value>Code number phải trong khoảng từ 1 tới 99999</value>
+  </data>
+  <data name="MSG_CODE_USED_FOR_ANOTHER_PAYTYPE" xml:space="preserve">
+    <value>Mã này đã được sử dụng cho một Paytype khác!</value>
+  </data>
+  <data name="MSG_CONCURRENCY_FAILURE" xml:space="preserve">
+    <value>Lỗi đông thời</value>
+  </data>
+  <data name="MSG_CONFIRM_DELETE_RECORD" xml:space="preserve">
+    <value>Bạn có muốn xóa bản ghi này không?</value>
+  </data>
+  <data name="MSG_DEFAULT_ERROR" xml:space="preserve">
+    <value>Lỗi mặc định</value>
+  </data>
+  <data name="MSG_DUPLICATE_EMAIL" xml:space="preserve">
+    <value>Email nhân đôi</value>
+  </data>
+  <data name="MSG_DUPLICATE_ROLE_NAME" xml:space="preserve">
+    <value>Quyền nhân đôi</value>
+  </data>
+  <data name="MSG_DUPLICATE_USER_NAME" xml:space="preserve">
+    <value>Tên nhân đôi</value>
+  </data>
+  <data name="MSG_EMAIL_DOES_NOT_EXIST_ON_THE_SYSTEM" xml:space="preserve">
+    <value>Email không tồn tại trong hệ thống!</value>
+  </data>
+  <data name="MSG_EMAIL_IS_REQUIRED" xml:space="preserve">
+    <value>Email là bắt buộc!</value>
+  </data>
+  <data name="MSG_EXCHANGE_URL_IS_REQUIRED" xml:space="preserve">
+    <value>Url trao đổi là bắt buộc</value>
+  </data>
+  <data name="MSG_EXCHANGE_VERSION_IS_REQUIRED" xml:space="preserve">
+    <value>Phiên bản Exchange là bắt buộc</value>
+  </data>
+  <data name="MSG_FORGOT_PASSWORD_CONFIRMATION" xml:space="preserve">
+    <value>Xác nhận quên mật khẩu</value>
+  </data>
+  <data name="MSG_HELLO" xml:space="preserve">
+    <value>Xin chào</value>
+  </data>
+  <data name="MSG_IF_USER_IS_ADMIN_THEN_TENANT_MUST_NULL" xml:space="preserve">
+    <value>Nếu người dùng là quản trị viên thì người thuê phải rỗng</value>
+  </data>
+  <data name="MSG_INVALID_EMAIL" xml:space="preserve">
+    <value>Email không hợp lệ</value>
+  </data>
+  <data name="MSG_INVALID_ID" xml:space="preserve">
+    <value>ID không hợp lệ</value>
+  </data>
+  <data name="MSG_INVALID_LOGIN" xml:space="preserve">
+    <value>Đăng nhập không hợp lệ.</value>
+  </data>
+  <data name="MSG_INVALID_ROLE_NAME" xml:space="preserve">
+    <value>Quyền không hợp lệ</value>
+  </data>
+  <data name="MSG_INVALID_TOKEN" xml:space="preserve">
+    <value>Token không hợp lệ</value>
+  </data>
+  <data name="MSG_INVALID_USER_NAME" xml:space="preserve">
+    <value>Tên người dùng không hợp lệ</value>
+  </data>
+  <data name="MSG_LOADING" xml:space="preserve">
+    <value>Đang tải...</value>
+  </data>
+  <data name="MSG_LOGIN_ALREADY_ASSOCIATED" xml:space="preserve">
+    <value>Đăng nhập đã được liên kết</value>
+  </data>
+  <data name="MSG_LOGIN_TYPE_IS_REQUIRED" xml:space="preserve">
+    <value>Loại đăng nhập là bắt buộc</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_AZURE_CLIENT_IS_255" xml:space="preserve">
+    <value>Độ dài tối đa của Azure Client là 255</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_AZURE_CLIENT_SECRET_IS_255" xml:space="preserve">
+    <value>Độ dài tối đa của Azure Client Secret là 255</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_AZURE_TENANT_IS_255" xml:space="preserve">
+    <value>Chiều dài tối đa của Người thuê Azure là 255</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_EMAIL_IS_75" xml:space="preserve">
+    <value>Độ dài tối đa của email là 75</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_EXCHANGE_URL_IS_255" xml:space="preserve">
+    <value>Độ dài tối đa của Url Exchange là 255</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_NAME_IS" xml:space="preserve">
+    <value>Độ dài Tên Tối đa là 50</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_NAME_IS_255" xml:space="preserve">
+    <value>Tên không được chứa nhiều hơn 255 ký tự!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_PASSWORD_IS_50" xml:space="preserve">
+    <value>Mật khẩu không được chứa nhiều hơn 50 ký tự!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_URL_IS_255" xml:space="preserve">
+    <value>URL dịch vụ không được chứa nhiều hơn 255 ký tự!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_USER_IS_255" xml:space="preserve">
+    <value>Tên người dùng không được chứa nhiều hơn 255 ký tự!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_USER_IS_50" xml:space="preserve">
+    <value>Thời lượng tối đa của Người dùng dịch vụ là 50</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_SERVICE_USER_PASSWORD_IS_50" xml:space="preserve">
+    <value>Độ dài tối đa của Mật khẩu người dùng dịch vụ là 50</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_USERNAME_IS_50" xml:space="preserve">
+    <value>Độ dài tối đa của Tên người dùng là 50</value>
+  </data>
+  <data name="MSG_MINLENGTH_OF_USERNAME_IS_6" xml:space="preserve">
+    <value>Độ dài tối thiểu của Tên người dùng là 6</value>
+  </data>
+  <data name="MSG_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>Tên là bắt buộc!</value>
+  </data>
+  <data name="MSG_NO_RECORD_FOUND_WITH_ID" xml:space="preserve">
+    <value>Không tìm thấy dữ liệu nào!</value>
+  </data>
+  <data name="MSG_NO_RECORD_FOUND_WITH_ID_" xml:space="preserve">
+    <value>Không tìm thấy bản ghi nào có Id</value>
+  </data>
+  <data name="MSG_NUMBER_MUST_BETWEEN_1_AND_99999" xml:space="preserve">
+    <value>Số phải từ 1 đến 99999</value>
+  </data>
+  <data name="MSG_OLD_PASSWORD_NOT_MATCHED" xml:space="preserve">
+    <value>Mật khẫu cũ không đúng!</value>
+  </data>
+  <data name="MSG_ONLY_LETTERS_AND_NUMBERS_ARE_ALLOWED" xml:space="preserve">
+    <value>Chỉ cho phép các chữ cái và số</value>
+  </data>
+  <data name="MSG_PASSWORD_IS_REQUIRED" xml:space="preserve">
+    <value>Yêu cầu mật khẩu</value>
+  </data>
+  <data name="MSG_PASSWORD_IS_REQUIRED_MIN_LENGHT_IS_6_MAX_LENGHT_IS_100" xml:space="preserve">
+    <value>Mật khẩu được yêu cầu độ dài tối thiểu là 6, độ dài tối đa là 100</value>
+  </data>
+  <data name="MSG_PASSWORD_MISMATCH" xml:space="preserve">
+    <value>Mật khẩu không giống</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_DIGIT" xml:space="preserve">
+    <value>Mật khẩu yêu cầu số</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_LOWER" xml:space="preserve">
+    <value>Mật khẩu yêu cầu chữ thường</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_NON_ALPHANUMERIC" xml:space="preserve">
+    <value>Mật khẩu yêu cầu ký tự đặc biệt</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_UNIQUE_CHARS" xml:space="preserve">
+    <value>Mật khẩu yêu cầu ký tự đặc biệt</value>
+  </data>
+  <data name="MSG_PASSWORD_REQUIRES_UPPER" xml:space="preserve">
+    <value>Mật khẩu yêu cầu chữ hoa</value>
+  </data>
+  <data name="MSG_PASSWORD_TOO_SHORT" xml:space="preserve">
+    <value>Mật khẩu quá ngắn</value>
+  </data>
+  <data name="MSG_PAYTYPE_DISPLAY_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>Tên hiển thị là bắt buộc</value>
+  </data>
+  <data name="MSG_PAYTYPE_DOESNT_EXIST" xml:space="preserve">
+    <value>Paytype không tồn tại!</value>
+  </data>
+  <data name="MSG_PLEASE_CHECK_YOUR_EMAIL_TO_RESET_YOUR_PASSWORD" xml:space="preserve">
+    <value>Xin vui lòng kiểm tra email để đặt lại mật khẩu</value>
+  </data>
+  <data name="MSG_PLEASE_FILL_IN_THE_REQUIRED_FIELDS" xml:space="preserve">
+    <value>Vui lòng điền vào phần được yêu cầu</value>
+  </data>
+  <data name="MSG_PLEASE_RESET_YOUR_PASSWORD_BY" xml:space="preserve">
+    <value>Vui lòng đặt lại mật khẩu bằng</value>
+  </data>
+  <data name="MSG_RECOVERY_CODE_REDEMPTION_FAILED" xml:space="preserve">
+    <value>Mã khôi phục xảy ra lỗi</value>
+  </data>
+  <data name="MSG_SCHEDULER_SHOULD_BE_BETWEEN_1_AND_180" xml:space="preserve">
+    <value>Bộ lập lịch phải từ 1 đến 180!</value>
+  </data>
+  <data name="MSG_SERVICE_PASSWORD_IS_REQUIRED" xml:space="preserve">
+    <value>Mật khẩu dịch vụ là bắt buộc!</value>
+  </data>
+  <data name="MSG_SERVICE_PORT_IS_REQUIRED" xml:space="preserve">
+    <value>Cổng Dịch vụ là bắt buộc!</value>
+  </data>
+  <data name="MSG_SERVICE_PORT_RANGE_IS_FROM_1_TO_99999" xml:space="preserve">
+    <value>Giới hạn của Service port là từ 1 tới 99999</value>
+  </data>
+  <data name="MSG_SERVICE_URL_IS_REQUIRED" xml:space="preserve">
+    <value>URL dịch vụ là bắt buộc!</value>
+  </data>
+  <data name="MSG_SERVICE_USE_SSL_IS_REQUIRED" xml:space="preserve">
+    <value>Sử dụng dịch vụ SSL là bắt buộc!</value>
+  </data>
+  <data name="MSG_SERVICE_USER_IS_REQUIRED" xml:space="preserve">
+    <value>Người dùng dịch vụ là bắt buộc!</value>
+  </data>
+  <data name="MSG_SERVICE_USER_PASSWORD_IS_REQUIRED" xml:space="preserve">
+    <value>Mật khẩu người dùng dịch vụ là bắt buộc.</value>
+  </data>
+  <data name="MSG_TENANT_DOESNT_EXIST" xml:space="preserve">
+    <value>Tenant không tồn tại!</value>
+  </data>
+  <data name="MSG_TENANT_NOT_EXIST_OR_DISABLED" xml:space="preserve">
+    <value>Người thuê không tồn tại hoặc bị vô hiệu hóa</value>
+  </data>
+  <data name="MSG_THE_EMAIL_FIELD_IS_NOT_A_VALID_EMAIL_ADDRESS" xml:space="preserve">
+    <value>Trường Email không phải là địa chỉ e-mail hợp lệ!</value>
+  </data>
+  <data name="MSG_THE_ENTERED_EMAIL_ALREADY_EXISTS" xml:space="preserve">
+    <value>Email đã nhập đã tồn tại!</value>
+  </data>
+  <data name="MSG_THE_ENTERED_NAME_ALREADY_EXISTS" xml:space="preserve">
+    <value>Tên đã nhập đã tồn tại!</value>
+  </data>
+  <data name="MSG_THE_ENTERED_NUMBER_ALREADY_EXISTS" xml:space="preserve">
+    <value>Số đã nhập đã tồn tại!</value>
+  </data>
+  <data name="MSG_THE_NEW_PASSWORD_AND_CONFIRMATION_PASSWORD_DO_NOT_MATCH" xml:space="preserve">
+    <value>Mật khẩu mới và mật khẩu xác nhận không khớp.</value>
+  </data>
+  <data name="MSG_THE_PASSWORD_AND_CONFIRMATION_PASSWORD_DO_NOT_MATCH" xml:space="preserve">
+    <value>Mật khẩu và mật khẩu xác nhận không khớp.</value>
+  </data>
+  <data name="MSG_THE_PASSWORD_MUST_HAVE_UPPER_AND_LOWER_CASE_LETTERS" xml:space="preserve">
+    <value>Mật khẩu phải có chữ hoa và chữ thường</value>
+  </data>
+  <data name="MSG_THIS_PAYTYPE_CODE_IS_USED_FOR_ANOTHER_PAYTYPE" xml:space="preserve">
+    <value>Paytype code này đã được sử dụng ở một Paytype khác</value>
+  </data>
+  <data name="MSG_UNABLE_TO_LOAD_USER" xml:space="preserve">
+    <value>Không thể tải người dùng.</value>
+  </data>
+  <data name="MSG_USER_ALREADY_HAS_PASSWORD" xml:space="preserve">
+    <value>Người dùng đã có mật khẩu</value>
+  </data>
+  <data name="MSG_USER_ALREADY_IN_ROLE" xml:space="preserve">
+    <value>Người dùng đã có quyền</value>
+  </data>
+  <data name="MSG_USER_IS_REQUIRED" xml:space="preserve">
+    <value>Người dùng là bắt buộc</value>
+  </data>
+  <data name="MSG_USER_LOCKOUT_NOT_ENABLED" xml:space="preserve">
+    <value>Khóa người dùng không được bật</value>
+  </data>
+  <data name="MSG_USER_NOT_IN_ROLE" xml:space="preserve">
+    <value>Người dùng không có quyền</value>
+  </data>
+  <data name="MSG_YOU_WANT_TO_DELETE_THIS_RECORD_WITH" xml:space="preserve">
+    <value>Bạn muốn xóa bản ghi này với ?</value>
+  </data>
+  <data name="MSG_YOUR_ACCOUNT_DOESNT_HAVE_PERMISSION_TO_ACCESS_PLEASE_CONTACT_ADMINISTRATOR_FOR_MORE_INFORMATION" xml:space="preserve">
+    <value>Tài khoản của bạn không có quyền truy cập. vui lòng liên hệ với quản trị viên để biết thêm thông tin</value>
+  </data>
+  <data name="MSG_YOUR_PASSWORD_HAS_BEEN_CHANGED" xml:space="preserve">
+    <value>Mật khẩu của bạn đã được thay đổi</value>
+  </data>
+  <data name="MSG_YOUR_PROFILE_HAS_BEEN_UPDATED" xml:space="preserve">
+    <value>Hồ sơ của bạn đã được cập nhật</value>
+  </data>
+  <data name="NAME" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="NEW_PASSWORD" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="NO_DATA_TO_DISPLAY" xml:space="preserve">
+    <value>Không có dữ liệu hiển thị</value>
+  </data>
+  <data name="OLD_PASSWORD" xml:space="preserve">
+    <value>Mật khẩu cũ</value>
+  </data>
+  <data name="PASSWORD" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="PAY_TYPE_SETTING" xml:space="preserve">
+    <value>Hình thức thanh toán</value>
+  </data>
+  <data name="PAY_TYPE_SETTING_TITTLE" xml:space="preserve">
+    <value>Paytype cài đặt</value>
+  </data>
+  <data name="PAYTYPE_HAS_BEEN_ADDED_SUCCESSFULLY" xml:space="preserve">
+    <value>Paytype đã được thêm mới thành công!</value>
+  </data>
+  <data name="PAYTYPE_HAS_BEEN_DELETED_SUCCESSFULLY" xml:space="preserve">
+    <value>Paytype đã được xóa thành công!</value>
+  </data>
+  <data name="PAYTYPE_HAS_BEEN_UPDATED_SUCCESSFULLY" xml:space="preserve">
+    <value>Paytype đã được cập nhật thành công!</value>
+  </data>
+  <data name="POPUP_BUTTON_CLOSE" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="POPUP_BUTTON_SAVE" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="POPUP_BUTTON_TEST" xml:space="preserve">
+    <value>Kiểm tra kết nối</value>
+  </data>
+  <data name="POPUP_CANCEL" xml:space="preserve">
+    <value>Hủy bỏ</value>
+  </data>
+  <data name="POPUP_TEXT_TYPE_PASSWORD" xml:space="preserve">
+    <value>Nhập mật khẩu</value>
+  </data>
+  <data name="POPUP_TITLE_MESSAGE" xml:space="preserve">
+    <value>Thông điệp</value>
+  </data>
+  <data name="PRIVATE" xml:space="preserve">
+    <value>Riêng tư</value>
+  </data>
+  <data name="PRODUCT_VERSION" xml:space="preserve">
+    <value>Phiên bản sản phẩm</value>
+  </data>
+  <data name="PROFILE" xml:space="preserve">
+    <value>Hồ sơ</value>
+  </data>
+  <data name="RESET_PASSWORD_BUTTON_RESET" xml:space="preserve">
+    <value>Đặt lại</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_MSG_CLICK_HERE_TO_LOG_IN" xml:space="preserve">
+    <value>bấm vào đây.</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_MSG_YOU_CAN" xml:space="preserve">
+    <value>Bạn có thể</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_MSG_YOUR_PASSWORD_HAS_BEEN_RESET" xml:space="preserve">
+    <value>Mật khẩu của bạn đã được đặt lại</value>
+  </data>
+  <data name="RESET_PASSWORD_CONFIRMATION_TITLE_RESET_PASSWORD_CONFIRMATION" xml:space="preserve">
+    <value>Xác nhận đặt lại mật khẩu</value>
+  </data>
+  <data name="RESET_PASSWORD_MSG_RESET_YOUR_PASSWORD" xml:space="preserve">
+    <value>Đặt lại mật khẩu</value>
+  </data>
+  <data name="RESET_PASSWORD_TITLE_RESET_PASSWORD" xml:space="preserve">
+    <value>Đặt lại mật khẩu</value>
+  </data>
+  <data name="ROLE" xml:space="preserve">
+    <value>Vai trò</value>
+  </data>
+  <data name="SAVE" xml:space="preserve">
+    <value>Lưu Lại</value>
+  </data>
+  <data name="SEARCH" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="SELECTED" xml:space="preserve">
+    <value>Đã chọn</value>
+  </data>
+  <data name="SERVICE_USER" xml:space="preserve">
+    <value>Người dùng dịch vụ</value>
+  </data>
+  <data name="SERVICE_USER_PASSWORD" xml:space="preserve">
+    <value>Mật khẩu người dùng dịch vụ</value>
+  </data>
+  <data name="SETTING" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="SETTINGS" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="STATE" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="STATUS" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="SUBMIT" xml:space="preserve">
+    <value>Gửi đi</value>
+  </data>
+  <data name="SUCCESS" xml:space="preserve">
+    <value>Thành công!</value>
+  </data>
+  <data name="TENANT" xml:space="preserve">
+    <value>Đại lý</value>
+  </data>
+  <data name="TENANT_BUTTON_CANCEL" xml:space="preserve">
+    <value>Hủy bỏ</value>
+  </data>
+  <data name="TENANT_BUTTON_DELETE" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="TENANT_BUTTON_SAVE" xml:space="preserve">
+    <value>Lưu Lại</value>
+  </data>
+  <data name="TENANT_DESCRIPTION" xml:space="preserve">
+    <value>Sự miêu tả</value>
+  </data>
+  <data name="TENANT_INFOMATION" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="TENANT_NAME" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="TENANT_NO" xml:space="preserve">
+    <value>Không.</value>
+  </data>
+  <data name="TENANT_NUMBER" xml:space="preserve">
+    <value>Con số</value>
+  </data>
+  <data name="TENANT_SETTING_ABACUS_SETTING_NAME" xml:space="preserve">
+    <value>Bàn tính</value>
+  </data>
+  <data name="TENANT_SETTING_EXCHANGE_SETTING" xml:space="preserve">
+    <value>Đổi</value>
+  </data>
+  <data name="TENANT_SETTING_MANAGE" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="TENANT_SETTING_PAY_TYPE_SETTING" xml:space="preserve">
+    <value>Hình thức thanh toán</value>
+  </data>
+  <data name="TENANT_SETTING_SHEDULE_TIMER" xml:space="preserve">
+    <value>Lập kế hoạch</value>
+  </data>
+  <data name="TENANT_SETTINGS" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="TENANT_STATUS" xml:space="preserve">
+    <value>Hoạt động</value>
+  </data>
+  <data name="TENANT_USER" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="TEST_CONNECTION" xml:space="preserve">
+    <value>Kiểm tra</value>
+  </data>
+  <data name="TEST_FAIL" xml:space="preserve">
+    <value>Kiểm tra thất bại!</value>
+  </data>
+  <data name="TEST_PASS" xml:space="preserve">
+    <value>Vượt qua kiểm tra!</value>
+  </data>
+  <data name="TITLE_LOG_IN" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="UPDATE" xml:space="preserve">
+    <value>Cập nhật</value>
+  </data>
+  <data name="UPDATE_PASSWORD" xml:space="preserve">
+    <value>Cập nhật mật khẩu</value>
+  </data>
+  <data name="USER_BUTTON_CANCEL" xml:space="preserve">
+    <value>Hủy bỏ</value>
+  </data>
+  <data name="USER_BUTTON_CREATE" xml:space="preserve">
+    <value>Tạo mới</value>
+  </data>
+  <data name="USER_BUTTON_DELETE" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="USER_BUTTON_UPDATE" xml:space="preserve">
+    <value>Cập nhật</value>
+  </data>
+  <data name="USER_COMMENT" xml:space="preserve">
+    <value>Bình luận</value>
+  </data>
+  <data name="USER_EMAIL" xml:space="preserve">
+    <value>Thư</value>
+  </data>
+  <data name="USER_LANGUAGE" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="USER_ROLE" xml:space="preserve">
+    <value>Vai trò</value>
+  </data>
+  <data name="USER_SELECT_LANGUAGE" xml:space="preserve">
+    <value>Chọn ngôn ngữ</value>
+  </data>
+  <data name="USER_SELECT_ROLE" xml:space="preserve">
+    <value>Chọn vai trò</value>
+  </data>
+  <data name="USER_SELECT_TENANT" xml:space="preserve">
+    <value>Chọn đại lý</value>
+  </data>
+  <data name="USER_STATUS" xml:space="preserve">
+    <value>Hoạt động</value>
+  </data>
+  <data name="USER_TENANT" xml:space="preserve">
+    <value>Đại lý</value>
+  </data>
+  <data name="USER_USERNAME" xml:space="preserve">
+    <value>Tài Khoản</value>
+  </data>
+  <data name="USERNAME" xml:space="preserve">
+    <value>Tài Khoản</value>
+  </data>
+  <data name="WARNING" xml:space="preserve">
+    <value>Cảnh báo!</value>
+  </data>
+  <data name="MSG_SEND_RESET_PASSWORD_MAIL_TO" xml:space="preserve">
+    <value>Email Đặt lại Mật khẩu đã được gửi thành công tới {0}.</value>
+  </data>
+  <data name="MSG_SENDING_EMAILS_IS_NOT_SUCCESSFUL_PLEASE_CONTACT_TO_THE_ADMINISTRATOR" xml:space="preserve">
+    <value>Gửi email không thành công. Vui lòng liên hệ với quản trị viên!</value>
+  </data>
+  <data name="MSG_SENDING_EMAIL_FOR_FORGOT_PASSWORD_CAN_TAKE_MORE_THAN_10_MINUTES" xml:space="preserve">
+    <value>Email Quên mật khẩu đã được gửi.</value>
+  </data>
+  <data name="RESET_PASSWORD_THE_RESET_CODE_IS_NOT_VALID" xml:space="preserve">
+    <value>Mã đặt lại không hợp lệ.</value>
+  </data>
+  <data name="RESET_PASSWORD_BACK_TO_HOME" xml:space="preserve">
+    <value>Trở về nhà</value>
+  </data>
+  <data name="RESET_PASSWORD_TO_BACK_TO_THE_LOGIN_FORM" xml:space="preserve">
+    <value>để quay lại biểu mẫu Đăng nhập</value>
+  </data>
+  <data name="RESET_PASSWORD_YOU_CAN_CLICK_A_LINK" xml:space="preserve">
+    <value>Bạn có thể nhấp vào một liên kết</value>
+  </data>
+  <data name="MSG_THIS_USER_DOES_NOT_EXIST_OR_IS_DEACTIVATED" xml:space="preserve">
+    <value>Người dùng này không tồn tại hoặc đã bị vô hiệu hóa.</value>
+  </data>
+  <data name="USER_FIRST_NAME" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="MSG_FIRST_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>Tên là bắt buộc!</value>
+  </data>
+  <data name="MSG_MIN_LENGTH_OF_FIRST_NAME_IS_3" xml:space="preserve">
+    <value>Độ dài tối thiểu của Tên là 3!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_FIRST_NAME_IS_50" xml:space="preserve">
+    <value>Độ dài tối đa của Tên là 50!</value>
+  </data>
+  <data name="USER_LAST_NAME" xml:space="preserve">
+    <value>Họ</value>
+  </data>
+  <data name="MSG_LAST_NAME_IS_REQUIRED" xml:space="preserve">
+    <value>Họ là bắt buộc!</value>
+  </data>
+  <data name="MSG_MIN_LENGTH_OF_LAST_NAME_IS_3" xml:space="preserve">
+    <value>Độ dài tối thiểu của Họ là 3!</value>
+  </data>
+  <data name="MSG_MAX_LENGTH_OF_LAST_NAME_IS_50" xml:space="preserve">
+    <value>Độ dài tối đa của Họ là 50!</value>
+  </data>
+  <data name="USER_FULL_NAME" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="MSG_THE_ENTERED_EMAIL_DOES_NOT_EXIST" xml:space="preserve">
+    <value>Email đã nhập không tồn tại!</value>
+  </data>
+  <data name="GESENDET" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="MSG_THIS_TENANT_HAS_BEEN_USED" xml:space="preserve">
+    <value>Người thuê này đã được sử dụng!</value>
+  </data>
+  <data name="MSG_SENDING_EMAILS_IS_NOT_SUCCESSFUL._PLEASE_CONTACT_TO_THE_ADMINISTRATOR" xml:space="preserve">
+    <value>Gửi email không thành công. Vui lòng liên hệ với quản trị viên!</value>
+  </data>
+  <data name="MSG_FAILED_TO_LOAD_LANGUAGES" xml:space="preserve">
+    <value>Không thể tải ngôn ngữ vào lúc này. Vui lòng thử làm mới trang hiện tại</value>
+  </data>
+  <data name="MSG_CANT_DELETE_YOURSELF" xml:space="preserve">
+    <value>Cant delete yourself</value>
+  </data>
+  <data name="MSG_CANT_DELETE_SYSADMIN" xml:space="preserve">
+    <value>Cant delete user with role SysAdmin</value>
+  </data>
+  <data name="MSG_CANT_DELETE_ROLE_WITH_EQUAL_OR_LOWER_ROLE" xml:space="preserve">
+    <value>Sie haben keine Berechtigung zur Löschung der Daten!</value>
+  </data>
+  <data name="MSG_USER_PERMISSION_MAY_HAS_CHANGED_ON_OTHER_DEVICE" xml:space="preserve">
+    <value>Quyền của người dùng đã bị thay đổi. Phiên làm việc này sẽ kết thúc sau {0} giây hoặc nhấn Đăng xuất để kết thúc ngay.</value>
+  </data>
+</root>

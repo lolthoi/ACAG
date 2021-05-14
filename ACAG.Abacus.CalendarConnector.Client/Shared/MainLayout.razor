@@ -1,0 +1,30 @@
+﻿@inherits LayoutComponentBase
+    <AuthorizeView>
+        <Authorized>
+            <ACAG.Abacus.CalendarConnector.Client.Shared.Toast.AbacusToasts Position="ACAG.Abacus.CalendarConnector.Models.Common.Toast.ToastPosition.BottomRight"
+                                                                            Timeout="5"
+                                                                            InfoIconClass="oi oi-info"
+                                                                            SuccessIconClass="oi oi-check"
+                                                                            ErrorIconClass="oi oi-circle-x"
+                                                                            WarningIconClass="oi oi-warning">
+            </ACAG.Abacus.CalendarConnector.Client.Shared.Toast.AbacusToasts>
+            <Header @bind-StateCssClass="@NavMenuCssClass" />
+        </Authorized>
+    </AuthorizeView>
+    <div class="main">
+        <AuthorizeView>
+            <Authorized>
+                <div class="sidebar @NavMenuCssClass">
+                    <NavMenu />
+                </div>
+            </Authorized>
+        </AuthorizeView>
+        <div class="content px-4" style="max-width:100%">
+            @Body
+        </div>
+        <AuthorizeView>
+            <Authorized>
+                <Footer />
+            </Authorized>
+        </AuthorizeView>
+    </div>

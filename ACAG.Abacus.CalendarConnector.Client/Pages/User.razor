@@ -1,0 +1,225 @@
+﻿@page  "/user"
+
+@using Microsoft.AspNetCore.Authorization;
+@using Microsoft.Extensions.Localization;
+
+@inject IApiWrapper _apiWrapper
+@inject IToastAppService _toastAppService
+@inject IJSRuntime _jSRuntime
+@inject IStringLocalizer<Resource> _localizer
+@inject NavigationManager _navigationManager
+@inject IAuthService _authService
+
+@attribute [Authorize(Roles = AppDefiner.Roles.ADMINISTRATOR_SYSADMIN)]
+
+<div class="container-fluid container-fluid-custom" style="padding-right: 0px; padding-left: 0px">
+    <h3>@_localizer[LangKey.MENU_USER]</h3>
+    <hr />
+    <div class="row">
+        <div class="offset-md-9 col-md-3 col-12">
+            <DxTextBox @bind-Text="@_search"
+                       BindValueMode="BindValueMode.OnInput"
+                       NullText="@_localizer[LangKey.SEARCH]"
+                       SizeMode="SizeMode.Medium"
+                       @onkeyup="(async () => await SearchAsync())" />
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:5px">
+        <div class="col-sm-12">
+            @if (_userViewModel == null)
+            {
+                <LoadingIcon></LoadingIcon>
+            }
+            else
+            {
+                <DxDataGrid @ref="@_grid"
+                            Data="@_userViewModel.Users"
+                            AllowColumnDragDrop="false"
+                            RowEditStart="@(async (UserModel item) => await OnEditRowAsync(item))"
+                            PageIndex="0"
+                            CssClass="tblUserCustom customUserGrid">
+                    <Columns>
+                        <DxDataGridCommandColumn Width="40px">
+                            <HeaderCellTemplate>
+                                <button class="btn btn-outline-primary btn-custom" @onclick="@(async () => await OnAddRowAsync())">
+                                    <span class="oi oi-plus"></span>
+                                </button>
+                            </HeaderCellTemplate>
+                            <CellTemplate>
+                                <a class="oi oi-pencil" @onclick="@(async () => await _grid.StartRowEdit(context))" href="javascript:void(0);"></a>
+                            </CellTemplate>
+                        </DxDataGridCommandColumn>
+                        <DxDataGridColumn Field="@nameof(UserModel.FullName)"
+                                          Caption="@_localizer[LangKey.USER_FULL_NAME]"
+                                          SortIndex="0"
+                                          SortOrder="DataGridColumnSortOrder.Ascending" />
+                        <DxDataGridColumn Field="@nameof(UserModel.Email)" Caption="@_localizer[LangKey.USER_EMAIL]" />
+                        <DxDataGridColumn Field="@nameof(UserModel.TenantName)" Caption="@_localizer[LangKey.USER_TENANT]" />
+                        <DxDataGridColumn Field="@nameof(UserModel.RoleName)" Caption="@_localizer[LangKey.USER_ROLE]" />
+                        <DxDataGridCheckBoxColumn Field="@nameof(UserModel.IsEnabled)" Caption="@_localizer[LangKey.USER_STATUS]" />
+                    </Columns>
+                    <EditFormTemplate>
+                        @if (_editContext == null)
+                            {
+                                <LoadingIcon></LoadingIcon>
+                            }
+                            else
+                            {
+                            <EditForm EditContext="_EditContext" Context="EditFormContext" OnValidSubmit="HandleValidSubmit">
+                                <DataAnnotationsValidator />
+                                <DxFormLayout>
+                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.USER_EMAIL]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.Email" ReadOnly="@(_editContext.Id > 0)" CssClass="first-focus" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.Email)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.USER_FIRST_NAME]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.FirstName" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.FirstName)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.USER_LAST_NAME]<span class="validation-message">*</span></b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxTextBox @bind-Text="@_editContext.LastName" />
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.LastName)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.USER_ROLE]</b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxComboBox Data="@(_lstRoles.Roles == null ? null : _lstRoles.Roles)"
+                                                                TextFieldName="@nameof(AppRoleModel.Code)"
+                                                                NullText="@(_localizer[LangKey.USER_SELECT_ROLE] + "...")"
+                                                                Enabled="_enableCbxUserRoles"
+                                                                @bind-Value="_editContext.AppRole">
+                                                    </DxComboBox>
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.AppRole)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.USER_TENANT]</b></label>
+                                            <DxComboBox CssClass="CbxUserTenant"
+                                                        Data="@_tenants"
+                                                        TextFieldName="@nameof(TenantModel.Name)"
+                                                        NullText="@(_localizer[LangKey.USER_SELECT_TENANT] + "...")"
+                                                        @bind-Value="_editContext.Tenant"
+                                                        FilteringMode="DataGridFilteringMode.Contains"
+                                                        ClearButtonDisplayMode="DataEditorClearButtonDisplayMode.Auto"
+                                                        Enabled="!_editContext.AppRole.IsAdministrator"
+                                                        DropDownVisibleChanged="@(async (value) => await OnDropDownUserTenantVisibleChangesAsync(value))"
+                                                        @onkeyup="(async () => await SearchUserTenantAsync())">
+                                            </DxComboBox>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.USER_LANGUAGE]</b></label>
+                                            <AbacusToolTip>
+                                                <Control>
+                                                    <DxComboBox Data="_lstCultures"
+                                                                TextFieldName="@nameof(LanguageModel.DisplayName)"
+                                                                NullText="@(_localizer[LangKey.USER_SELECT_LANGUAGE] + "...")"
+                                                                @bind-Value="_editContext.Language">
+                                                    </DxComboBox>
+                                                </Control>
+                                                <ErrorMessage>
+                                                    <ValidationMessage For="(() => _editContext.Language)" />
+                                                </ErrorMessage>
+                                            </AbacusToolTip>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.USER_STATUS]</b></label>
+                                            <DxCheckBox @bind-Checked="@_editContext.IsEnabled"
+                                                        Enabled="_enableCbxUserStatus"/>
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                        <Template>
+                                            <label><b>@_localizer[LangKey.USER_COMMENT]</b></label>
+                                            <DxMemo @bind-Text="@_editContext.Comment" Rows="8" maxlength="5000" />
+                                        </Template>
+                                    </DxFormLayoutItem>
+
+                                    <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                        <Template>
+                                            @if (_editContext.Id > 0)
+                                                {
+                                                <div class="text-right">
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Primary" @onclick="@(async()=> { await ResetPassword(); })" Text="@_localizer[LangKey.RESET_PASSWORD_TITLE_RESET_PASSWORD]" 
+                                                              Enabled="(
+                                                                       _editContext.IsShowSendPasswordButton && 
+                                                                       _editContext.IsEnabled &&
+                                                                       _EditContext.Validate()
+                                                                       )" />
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Primary" 
+                                                              SubmitFormOnClick="true" 
+                                                              Text="@_localizer[LangKey.USER_BUTTON_UPDATE]" 
+                                                              Enabled="_enableBtnUpdateUser"/>
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Danger" Text="@_localizer[LangKey.USER_BUTTON_DELETE]" @onclick="(() => { _popupVisible = true; })" Enabled="_editContext.CanDelete" />
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Warning" Text="@_localizer[LangKey.USER_BUTTON_CANCEL]" @onclick="OnCancelButtonClick" />
+                                                </div>
+                                                }
+                                                else
+                                                {
+                                                <div class="text-right">
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Primary" SubmitFormOnClick="true" Text="@_localizer[LangKey.USER_BUTTON_CREATE]" />
+                                                    <DxButton RenderStyle="ButtonRenderStyle.Warning" Text="@_localizer[LangKey.USER_BUTTON_CANCEL]" @onclick="OnCancelButtonClick" />
+                                                </div>
+                                                }
+                                        </Template>
+                                    </DxFormLayoutItem>
+                                </DxFormLayout>
+
+                            </EditForm>
+                            }
+                    </EditFormTemplate>
+                </DxDataGrid>
+            }
+        </div>
+    </div>
+    <DxPopup HeaderText="@_localizer[LangKey.DELETE_CONFIRMATION]"
+             @bind-Visible="@_popupVisible">
+        <Content>
+            <div class="text-center">
+                @_localizer[LangKey.MSG_ARE_YOU_SURE_YOU_WANT_TO_DELETE_THIS_USER]
+            </div>
+        </Content>
+        <FooterTemplate>
+            <DxButton RenderStyle="ButtonRenderStyle.Danger" Text="@_localizer[LangKey.USER_BUTTON_DELETE]" @onclick="DeleteUser" />
+            <DxButton RenderStyle="ButtonRenderStyle.Warning" @onclick="(()=> { _popupVisible = false; })" Text="@_localizer[LangKey.USER_BUTTON_CANCEL]" />
+        </FooterTemplate>
+    </DxPopup>
+</div>

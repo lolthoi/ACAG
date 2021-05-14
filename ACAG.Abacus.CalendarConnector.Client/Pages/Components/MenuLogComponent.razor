@@ -1,0 +1,52 @@
+﻿@inject IStringLocalizer<Resource> _localizer;
+@inject IJSRuntime _jSRuntime
+
+<div class="customTabPage">
+    @*<div class="pt-3">
+            <div class="offset-md-9 col-md-3 col-12">
+
+            </div>
+        </div>*@
+    <div class="p-3">
+        @if (LogDiaryModels == null)
+        {
+            @*<p><em>@_localizer[LangKey.MSG_LOADING]</em></p>*@
+            <LoadingIcon></LoadingIcon>
+        }
+        else
+        {
+            <DxDataGrid @ref="@grid"
+                        Data="@LogDiaryModels"
+                        AllowColumnDragDrop="false"
+                        ShowFilterRow="true"
+                        CssClass="customMenuLogGrid"
+                        KeyFieldName="Id"
+                        SelectionMode="DataGridSelectionMode.OptimizedMultipleSelection"
+                        SelectAllMode="DataGridSelectAllMode.AllPages"
+                        OptimizedMultipleSelectionChanged="OnSelectionChanged">
+                <DxDataGridSelectionColumn></DxDataGridSelectionColumn>
+
+                <DxDataGridDateEditColumn Field="@nameof(LogDiaryModel.DateTime)"
+                                          DisplayFormat="dd/MM/yyyy HH:mm:ss"
+                                          Caption="@_localizer[LangKey.MENU_LOG_FIELD_TIMESTAMP]"
+                                          SortIndex="0"
+                                          SortOrder="DataGridColumnSortOrder.Descending">
+                </DxDataGridDateEditColumn>
+
+                <DxDataGridColumn Field="@nameof(LogDiaryModel.Data)"
+                                  Caption="@_localizer[LangKey.MENU_LOG_FIELD_LOG_DATA]">
+                </DxDataGridColumn>
+
+                <DxDataGridColumn Field="@nameof(LogDiaryModel.Error)"
+                                  Caption="@_localizer[LangKey.MENU_LOG_FIELD_ERROR]">
+                </DxDataGridColumn>
+
+                <DxDataGridCommandColumn NewButtonVisible="false"
+                                         EditButtonVisible="false"
+                                         DeleteButtonVisible="false"
+                                         Width="70px">
+                </DxDataGridCommandColumn>
+            </DxDataGrid>
+        }
+    </div>
+</div>

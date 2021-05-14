@@ -1,0 +1,7 @@
+﻿<SatelliteAssembly>
+  <Assembly Name="E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Release\netstandard2.0\de\ACAG.Abacus.CalendarConnector.Language.resources.dll" Culture="de" DestinationSubDirectory="de\" />
+  <Assembly Name="E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Release\netstandard2.0\fr\ACAG.Abacus.CalendarConnector.Language.resources.dll" Culture="fr" DestinationSubDirectory="fr\" />
+  <Assembly Name="E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Release\netstandard2.0\it\ACAG.Abacus.CalendarConnector.Language.resources.dll" Culture="it" DestinationSubDirectory="it\" />
+  <Assembly Name="E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Release\netstandard2.0\tr\ACAG.Abacus.CalendarConnector.Language.resources.dll" Culture="tr" DestinationSubDirectory="tr\" />
+  <Assembly Name="E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Release\netstandard2.0\vi\ACAG.Abacus.CalendarConnector.Language.resources.dll" Culture="vi" DestinationSubDirectory="vi\" />
+</SatelliteAssembly>

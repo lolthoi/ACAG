@@ -1,0 +1,12 @@
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\CalendarConnectorPackages\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.deps.json
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\CalendarConnectorPackages\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\CalendarConnectorPackages\net5.0\ref\ACAG.Abacus.CalendarConnector.DataAccess.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\CalendarConnectorPackages\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.DataAccess\obj\Release\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.DataAccess\obj\Release\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.AssemblyInfoInputs.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.DataAccess\obj\Release\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.AssemblyInfo.cs
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.DataAccess\obj\Release\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.csproj.CoreCompileInputs.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.DataAccess\obj\Release\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.DataAccess\obj\Release\net5.0\ref\ACAG.Abacus.CalendarConnector.DataAccess.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.DataAccess\obj\Release\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.DataAccess\obj\Release\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.csprojAssemblyReference.cache

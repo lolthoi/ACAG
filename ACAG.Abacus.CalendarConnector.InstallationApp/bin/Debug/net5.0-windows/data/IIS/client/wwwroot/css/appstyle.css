@@ -1,0 +1,99 @@
+﻿.app-icon-64 {
+    width: 32px;
+    height: 32px;
+}
+
+.app-icon-64 {
+    width: 64px;
+    height: 64px;
+}
+
+.app-header-right {
+    margin-left: auto;
+    display: inline-flex;
+}
+
+.app-header-right-lang {
+    float: left;
+    width: 115px;
+}
+
+.app-header-right-user {
+    float: left;
+    margin-left: 5px;    
+    width: 200px;
+}
+
+.app-header-right-setting-theme {
+    max-height: 31px;
+    float: left;
+}
+
+    .app-header-right-user a {
+        float: left;
+        max-width: 120px;
+        overflow: hidden;
+        padding: 5px;
+        display: inline-block;
+        max-height: 33px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .app-header-right-user button {
+        padding: 3px;        
+    }
+
+    .app-header-userconfig {
+        position: absolute !important;
+        right: 20px;
+        padding: 9px;
+        margin-top: 10px;
+        color: forestgreen;
+    }
+
+.app-footer, .themeswitcher-container, .demo-content, .sidebar {
+    transition: transform 0.1s ease-out;
+}
+
+.app-footer > div {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 10px;
+    background-color: inherit;
+}
+
+.app-footer:before {
+    content: "";
+    display: block;
+    border: 1px solid;
+    border-bottom-style: none;
+    opacity: 0.15;
+}
+
+.app-footer .version,
+.app-footer .copyright {
+    font-size: 11px;
+}
+
+@media (min-width: 1200px) {
+    .app-footer {
+        width: 300px;
+        box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.16);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1029;
+    }
+}
+
+.modal-header h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}

@@ -1,0 +1,50 @@
+﻿@page "/Login"
+@inject IAuthService authService
+@inject NavigationManager navigationManager
+@inject IStringLocalizer<Resource> _localizer
+@inject IJSRuntime _jSRuntime
+@layout LoginLayout
+@inject ILocalStorageService _localStorage
+
+<link href="css/logincss.css" rel="stylesheet" />
+<div class="container">
+    <main role="main" class="pb-3">
+        <div class="login-div">
+            <div class="login-container">
+                <div class="login-content">
+                    <h1 style="text-align:center"><img src="images/AbacusCalendarConnector.png" style="width: 100%" /></h1>
+                    @if (ShowErrors)
+                    {
+                        <div class="alert alert-danger" role="alert" style="word-wrap: break-word">
+                            <p>@_localizer[Error]</p>
+                        </div>
+                    }
+                    <EditForm Model="loginModel" OnValidSubmit="HandleLogin">
+                        <DataAnnotationsValidator />
+
+                        <div class="form-group">
+                            <label for="email">@_localizer[LangKey.EMAIL_ADDERESS]</label>
+                            <InputText Id="email" Class="form-control" @bind-Value="loginModel.Email" @onfocusout="OnFocusOutEmail" />
+                            <ValidationMessage For="@(() => loginModel.Email)" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">@_localizer[LangKey.PASSWORD]</label>
+                            <InputText Id="password" type="password" Class="form-control" @bind-Value="loginModel.Password" />
+                            <ValidationMessage For="@(() => loginModel.Password)" />
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">@_localizer[LangKey.LOG_IN]</button>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                <a id="forgot-password" href="ForgotPassword">@_localizer[LangKey.FORGOT_PASSWORD]</a>
+                            </p>
+                        </div>
+                    </EditForm>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+

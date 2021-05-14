@@ -1,0 +1,16 @@
+﻿@using ACAG.Abacus.CalendarConnector.Models.Common.Toast;
+@using System.Timers;
+@inject IToastAppService _toastService;
+@inject IStringLocalizer<Resource> _localizer; 
+
+@if (ToastList.Any())
+{
+    <div class="blazored-toast-container @PositionClass">
+        <CascadingValue Value=this>
+            @foreach (var toast in ToastList.OrderBy(x => x.TimeStamp))
+            {
+                <AbacusToast ToastSettings="toast.ToastSettings" ToastId="toast.Id" />
+            }
+        </CascadingValue>
+    </div>
+}

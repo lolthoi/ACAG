@@ -1,0 +1,4 @@
+﻿@implements IObserver<string>
+@implements IDisposable
+@inject ThemeAppService ThemeLinkService
+<link rel="stylesheet" href="@_currentThemeLink" />

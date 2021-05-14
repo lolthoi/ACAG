@@ -1,0 +1,52 @@
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.deps.json
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ref\ACAG.Abacus.CalendarConnector.Logic.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Exchange.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Language.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Models.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Exchange.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Models.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Language.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\de\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\fr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\it\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\vi\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.csprojAssemblyReference.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.GeneratedMSBuildEditorConfig.editorconfig
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.AssemblyInfoInputs.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.AssemblyInfo.cs
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.csproj.CoreCompileInputs.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.csproj.CopyComplete
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ref\ACAG.Abacus.CalendarConnector.Logic.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\tr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.deps.json
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ref\ACAG.Abacus.CalendarConnector.Logic.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.pdb
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Exchange.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Language.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Models.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.pdb
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Exchange.pdb
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Models.pdb
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\ACAG.Abacus.CalendarConnector.Language.pdb
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\de\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\fr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\it\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\tr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\bin\Debug\net5.0\vi\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.csprojAssemblyReference.cache
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.AssemblyInfoInputs.cache
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.AssemblyInfo.cs
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.csproj.CoreCompileInputs.cache
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.csproj.CopyComplete
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ref\ACAG.Abacus.CalendarConnector.Logic.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Logic\obj\Debug\net5.0\ACAG.Abacus.CalendarConnector.Logic.pdb

@@ -1,0 +1,13 @@
+﻿@inject IJSRuntime _jSRuntime
+
+<div class="showElement customLoadingIcon" id="LoadingIcon">
+    <img style="zoom: 30%;" src="images/loading.gif" />
+</div>
+<div class="modal dxbs-modal customModal"></div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await _jSRuntime.InvokeVoidAsync("timeoutLoadingIcon");
+    }
+}

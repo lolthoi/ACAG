@@ -1,0 +1,134 @@
+﻿@inject IStringLocalizer<Resource> _localizer;
+@inject IApiWrapper _apiWrapper
+@inject IToastAppService _toastAppService
+@inject IJSRuntime _jSRuntime
+
+@if (EditContext == null)
+{
+    @*<p><em>@_localizer[LangKey.MSG_LOADING]</em></p>*@
+    <LoadingIcon></LoadingIcon>
+}
+else
+{
+    <EditForm OnValidSubmit="@HandleValidSubmit"
+              OnInvalidSubmit="@HandleInvalidSubmit"
+              Context="EditContext"
+              EditContext="@EditContext">
+        <DataAnnotationsValidator />
+        <DxFormLayout>
+            <DxFormLayoutItem ColSpanMd="6">
+                <Template>
+                    <label for="@nameof(AbacusSetting.Name)"><b>@_localizer[LangKey.ABACUS_SETTING_POPUP_LABEL_NAME]<span class="validation-message">*</span></b></label>
+
+                    <AbacusToolTip>
+                        <Control>
+                            <DxTextBox Id="@nameof(AbacusSetting.Name)" @bind-Text="@AbacusSetting.Name" CssClass="first-focus" />
+                        </Control>
+                        <ErrorMessage>
+                            <ValidationMessage For="@(() => AbacusSetting.Name)" />
+                        </ErrorMessage>
+                    </AbacusToolTip>
+                </Template>
+            </DxFormLayoutItem>
+
+            <DxFormLayoutItem ColSpanMd="6" BeginRow="true">
+                <Template>
+                    <label for="@nameof(AbacusSetting.ServiceUrl)"><b>@_localizer[LangKey.ABACUS_SETTING_POPUP_LABEL_URL]<span class="validation-message">*</span></b></label>
+
+                    <AbacusToolTip>
+                        <Control>
+                            <DxTextBox Id="@nameof(AbacusSetting.ServiceUrl)" @bind-Text="@AbacusSetting.ServiceUrl" />
+                        </Control>
+                        <ErrorMessage>
+                            <ValidationMessage For="@(() => AbacusSetting.ServiceUrl)" />
+                        </ErrorMessage>
+                    </AbacusToolTip>
+                </Template>
+            </DxFormLayoutItem>
+            <DxFormLayoutItem ColSpanMd="6">
+                <Template>
+                    <label for="@nameof(AbacusSetting.ServicePort)"><b>@_localizer[LangKey.ABACUS_SETTING_POPUP_LABEL_PORT]</b></label>
+                    <AbacusToolTip>
+                        <Control>
+                            <DxSpinEdit Id="@nameof(AbacusSetting.ServicePort)"
+                                        Increment="1"
+                                        ShowSpinButtons="true"
+                                        @bind-Value="@AbacusSetting.ServicePort" />
+                        </Control>
+                        <ErrorMessage>
+                            <ValidationMessage For="@(() => AbacusSetting.ServicePort)" />
+                        </ErrorMessage>
+                    </AbacusToolTip>
+                </Template>
+            </DxFormLayoutItem>
+
+            <DxFormLayoutItem ColSpanMd="6">
+                <Template>
+                    <label for="@nameof(AbacusSetting.ServiceUseSsl)"><b>@_localizer[LangKey.ABACUS_SETTING_POPUP_LABEL_USE_SSL]</b></label>
+                    <AbacusToolTip>
+                        <Control>
+                            <DxCheckBox Id="@nameof(AbacusSetting.ServiceUseSsl)" @bind-Checked="@AbacusSetting.ServiceUseSsl" />
+                        </Control>
+                        <ErrorMessage>
+                            <ValidationMessage For="@(() => AbacusSetting.ServiceUseSsl)" />
+                        </ErrorMessage>
+                    </AbacusToolTip>
+                </Template>
+            </DxFormLayoutItem>
+
+            <DxFormLayoutItem ColSpanMd="6" BeginRow="true">
+                <Template>
+                    <label for="@nameof(AbacusSetting.ServiceUser)"><b>@_localizer[LangKey.ABACUS_SETTING_POPUP_LABEL_USER]<span class="validation-message">*</span></b></label>
+
+                    <AbacusToolTip>
+                        <Control>
+                            <DxTextBox Id="@nameof(AbacusSetting.ServiceUser)" @bind-Text="@AbacusSetting.ServiceUser" />
+                        </Control>
+                        <ErrorMessage>
+                            <ValidationMessage For="@(() => @AbacusSetting.ServiceUser)" />
+                        </ErrorMessage>
+                    </AbacusToolTip>
+                </Template>
+            </DxFormLayoutItem>
+            <DxFormLayoutItem ColSpanMd="6">
+                <Template>
+                    <label for="@nameof(AbacusSetting.ServiceUserPassword)"><b>@_localizer[LangKey.ABACUS_SETTING_POPUP_LABEL_PASSWORD]<span class="validation-message">*</span></b></label>
+                    <div style="position: relative;">
+                        <span class="oi oi-eye eyeIcon" @onclick="(e) => showPassword = !showPassword"></span>
+                    </div>
+
+                    <AbacusToolTip>
+                        <Control>
+                            <DxTextBox Id="@nameof(AbacusSetting.ServiceUserPassword)"
+                                       @bind-Text="@AbacusSetting.ServiceUserPassword"
+                                       CssClass="PasswordTextBox"
+                                       Password="false"
+                                       NullText="@_localizer[LangKey.POPUP_TEXT_TYPE_PASSWORD]" />
+                        </Control>
+                        <ErrorMessage>
+                            <ValidationMessage For="@(() => @AbacusSetting.ServiceUserPassword)" />
+                        </ErrorMessage>
+                    </AbacusToolTip>
+                </Template>
+            </DxFormLayoutItem>
+        </DxFormLayout>
+
+        <div class="modal-footer-custom">
+            <div class="modal-footer">
+                <div>
+                    <DxButton RenderStyle="ButtonRenderStyle.Success"
+                              Text="@_localizer[LangKey.POPUP_BUTTON_TEST]"
+                              @onclick="HandelOnClickTestConnection" />
+                </div>
+                <div>
+                    <DxButton RenderStyle="ButtonRenderStyle.Primary"
+                              SubmitFormOnClick="true"
+                              Text="@_localizer[LangKey.POPUP_BUTTON_SAVE]" />
+                    <DxButton RenderStyle="ButtonRenderStyle.Primary"
+                              Text="@_localizer[LangKey.POPUP_BUTTON_CLOSE]"
+                              @onclick="@(() => VisibleChanged.InvokeAsync(false))" />
+                </div>
+            </div>
+        </div>
+    </EditForm>
+}

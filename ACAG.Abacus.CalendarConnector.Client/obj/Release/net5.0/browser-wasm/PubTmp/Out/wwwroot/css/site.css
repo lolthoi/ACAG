@@ -1,0 +1,420 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('switcher-resources/themes.css');
+@import url('switcher-resources/theme-switcher.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+app, #app {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+}
+
+.navbar.header-navbar {
+    border: none;
+    background-color: inherit;
+    border-radius: 0;
+    padding:0px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
+    justify-content: flex-start;
+}
+
+.header-navbar #navbarToggler {
+    outline: none;
+    border-radius: 0;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    align-self: stretch;
+}
+
+    .header-navbar #navbarToggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        background-color: transparent !important;
+        height: 2rem;
+        width: 2rem;
+    }
+
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    overflow-y: hidden;
+}
+
+.sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+    transition: transform 0.1s ease-out;
+    overflow: auto;
+    height: 100vh;
+}
+
+.content {
+    max-width: 1100px;
+    padding: 1.1rem 2rem 0 2rem;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+.sidebar.collapse {
+    display: none;
+}
+
+.sidebar.expand {
+    display: block;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+.title {
+    font-size: 1.1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+.app-sidebar > .nav-pills > .nav-item:first-of-type {
+    padding-top: 1rem;
+}
+
+.app-sidebar > .nav-pills > .nav-item:last-of-type {
+    padding-bottom: 1rem;
+}
+
+.app-sidebar .nav-pills > .nav-item a {
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.app-sidebar > .nav-pills > .nav-item > a {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    padding: .25rem 1rem .25rem .125rem;
+}
+
+.fit-width {
+    max-width: 100%;
+}
+
+.dxbs-fl-ctrl .readonly-label{
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.customPopup {
+    height: 80%;
+    width: 95%!important;
+}
+.customPopup .modal-content {
+   height: 100%;
+}
+.customPopup .modal-content .modal-header { 
+    height: 7%;
+}
+.customPopup .modal-content .modal-body {
+   height: 86%;
+   overflow: auto;
+}
+.customPopup .modal-content .modal-footer { 
+   height: 7%;
+}
+
+.tenantPopupsSetting,
+.popupAbacusSetting { 
+   max-width: 1200px!important; 
+}
+
+.popupAbacusSetting .modal-content .modal-body{
+   height: 93%;  
+   overflow: unset;
+}
+.popupAbacusSetting .modal-content .modal-body form{
+   height: 92%;
+   overflow: auto;
+}
+.popupAbacusSetting .modal-footer { 
+    justify-content: space-between;
+    height: 100%!important;
+}
+.popupAbacusSetting .modal-footer-custom {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 8%;
+}
+.popupAbacusSetting .modal-body {
+    padding: 0;
+}
+
+.tenantPopupsSetting .modal-body {
+    padding: 15px 0;
+}
+
+.popupAbacusSetting .PasswordTextBox input {
+    padding-right: 2em;
+}
+
+.popupAbacusSetting .eyeIcon {
+    position: absolute;
+    right: 0.5em;
+    z-index: 3;
+    top: 0.55em;
+}
+
+.btn-custom {
+   border: none!important;
+}
+
+.btnMannage { 
+  margin-top: 0px; 
+  float: right;
+}
+
+.customTabPage {
+    max-height: 400px;
+    height: 350px;
+    overflow: auto;
+}
+
+.blankLabel {
+    visibility: hidden;
+    display: block;
+}
+
+.customTenantGrid > .card tr td.text-left:nth-last-child(2)  { 
+    display: block;
+    overflow: auto;
+    max-height: 200px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    word-break: break-all;
+}
+
+@media (max-width: 1390px) {
+    .customTenantGrid > .card {
+        overflow: auto; 
+    }
+}
+
+@media (max-width: 1200px) { 
+    .main {
+        min-width: 100vw;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.expand {
+        position: fixed;
+        top: 3.5rem;
+        left: 0;
+        min-width: 100vw; 
+        background-color: #fff;
+        z-index: 1050;
+    }
+
+    .app-sidebar > .nav-pills > .nav-item:last-of-type {
+        padding-bottom: 0;
+    }
+
+    .app-footer {
+        margin-top: 20px
+    }
+
+    .customTenantGrid > .card {
+       overflow: auto;
+    }
+
+    .tblUserCustom > .card{
+        width: calc(100vw - 47px);
+        overflow: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-fluid-custom {
+        padding-right: 0px!important;
+        padding-left: 0px!important;
+    }
+
+    .blankLabel {
+        font-size: 0px;
+    }
+
+    .tblUserCustom > .card{
+        width: calc(100vw - 47px);
+        overflow: auto;
+    }
+
+    .customTenantGrid > .card { 
+        width: calc(100vw - 47px); 
+        overflow: auto; 
+    }
+
+    .navbar .app-header-flex-container{
+        justify-content: space-between;
+        width: 100%!important;
+    }
+
+    .navbar ul.navbar-nav .nav-item {
+       padding-right: 10px;
+    }
+
+    .navbar ul.navbar-nav .nav-item form.form-check-inline{
+        margin-right: 0px;
+    }
+
+    .theme-settings-collapsed > a, .theme-settings > a {
+        padding-right: 0px!important;
+    }
+
+    ::-webkit-scrollbar { 
+        display: none; 
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: inherit;
+    }
+
+    .customPopup .modal-content .modal-header {
+        height: 10%;
+    }
+    .customPopup .modal-content .modal-body {
+        height: 80%;
+        overflow: auto;
+    }
+    .customPopup .modal-content .modal-footer {
+        height: 10%;
+    }
+
+    .popupAbacusSetting .modal-content .modal-body{
+       height: 90%;  
+       overflow: unset;
+    }
+    .popupAbacusSetting .modal-content .modal-body form {
+       height: 88%;
+       overflow: auto;
+    }
+    .popupAbacusSetting .modal-footer-custom {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        height: 12%;
+    }
+}
+
+@media screen and (max-height: 600px) {
+     .customPopup .modal-content .modal-header {
+        height: 15%;
+    }
+    .customPopup .modal-content .modal-body {
+        height: 70%;
+    }
+    .customPopup .modal-content .modal-footer {
+        height: 15%;
+    }
+
+    .popupAbacusSetting .modal-content .modal-body{
+       height: 85%;  
+       overflow: unset;
+    }
+    .popupAbacusSetting .modal-content .modal-body form {
+       height: 75%;
+       overflow: auto;
+    }
+    .popupAbacusSetting .modal-footer-custom {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        height: 20%;
+    }
+}
+
+#btnLogout:hover {
+    text-decoration: underline;
+}
+
+.btnLogout {
+    float: right;
+}
+
+.app-header-navitem {
+    display: block;
+    padding: 0.5rem 0rem;
+}
+
+.app-header-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+
+.enableScreen {
+    z-index: 11002!important; 
+}
+
+.disableScreen {
+    z-index: 11001!important; 
+}
+
+.showElement {
+    visibility: visible!important;
+}
+
+.hideElement {
+    visibility: hidden!important;
+}
+
+.customLoadingIcon { 
+    z-index: 11005; 
+    position: fixed; 
+    left: calc(50% - 40px); 
+    top: calc(50% - 40px); 
+}
+
+#app .customModal { 
+    display: block; 
+    visibility: visible; 
+    z-index: 11002; 
+    padding-right: 0px; 
+    background-color: #000; 
+    opacity: 0.4; 
+}

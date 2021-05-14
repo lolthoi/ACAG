@@ -1,0 +1,462 @@
+# editorconfig.org
+root = true
+
+# Rules in this file were initially inferred by Visual Studio IntelliCode from the D:\ACG-Dev\DevDotNet\Prototypes\CodeAnalysis\CodeAnalysisWinForms codebase based on best match to current usage at 06.10.2020
+# You can modify the rules from these initially generated values to suit your own policies
+# You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
+[*.cs]
+
+
+#Core editorconfig formatting - indentation
+
+#use soft tabs (spaces) for indentation
+indent_style = space
+indent_size = 2
+
+#Formatting - new line options
+
+#require braces to be on a new line for methods and types (also known as "Allman" style)
+csharp_new_line_before_catch = true
+csharp_new_line_before_else = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_open_brace = all
+csharp_new_line_between_query_expression_clauses = true
+
+#Formatting - organize using options
+
+#sort System.* using directives alphabetically, and place them before other usings
+dotnet_sort_system_directives_first = true
+
+#Formatting - spacing options
+
+#require a space after a keyword in a control flow statement such as a for loop
+csharp_space_after_keywords_in_control_flow_statements = true
+#remove space between method call name and opening parenthesis
+csharp_space_between_method_call_name_and_opening_parenthesis = false
+#do not place space characters after the opening parenthesis and before the closing parenthesis of a method call
+csharp_space_between_method_call_parameter_list_parentheses = false
+#remove space within empty parameter list parentheses for a method declaration
+csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
+#place a space character after the opening parenthesis and before the closing parenthesis of a method declaration parameter list.
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+
+#Style - Code block preferences
+
+#prefer curly braces even for one line of code
+csharp_prefer_braces = true:none
+
+#Style - expression bodied member options
+
+#prefer block bodies for constructors
+csharp_style_expression_bodied_constructors = false:suggestion
+
+#Style - expression level options
+
+#prefer the language keyword for member access expressions, instead of the type name, for types that have a keyword to represent them
+dotnet_style_predefined_type_for_member_access = true:none
+
+#Style - implicit and explicit types
+
+#prefer var over explicit type in all cases, unless overridden by another code style rule
+csharp_style_var_elsewhere = true:none
+#prefer var is used to declare variables with built-in system types such as int
+csharp_style_var_for_built_in_types = true:none
+
+#Style - language keyword and framework type options
+
+#prefer the language keyword for local variables, method parameters, and class members, instead of the type name, for types that have a keyword to represent them
+dotnet_style_predefined_type_for_locals_parameters_members = true:none
+
+#Style - modifier options
+
+#prefer accessibility modifiers to be declared except for public interface members. This will currently not differ from always and will act as future proofing for if C# adds default interface methods.
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:none
+
+#Style - Modifier preferences
+
+#when this rule is set to a list of modifiers, prefer the specified ordering.
+csharp_preferred_modifier_order = public,private,protected,static,override,async:none
+
+#Style - qualification options
+
+#prefer fields not to be prefaced with this. or Me. in Visual Basic
+dotnet_style_qualification_for_field = false:none
+
+#### Naming styles ####
+
+# Naming rules
+
+dotnet_naming_rule.interface_should_be_begins_with_i.severity = suggestion
+dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
+dotnet_naming_rule.interface_should_be_begins_with_i.style = begins_with_i
+
+dotnet_naming_rule.types_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
+dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
+
+# Symbol specifications
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.interface.required_modifiers =
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.types.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.types.required_modifiers =
+
+dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
+dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.non_field_members.required_modifiers =
+
+# Naming styles
+
+dotnet_naming_style.pascal_case.required_prefix =
+dotnet_naming_style.pascal_case.required_suffix =
+dotnet_naming_style.pascal_case.word_separator =
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.begins_with_i.required_prefix = I
+dotnet_naming_style.begins_with_i.required_suffix =
+dotnet_naming_style.begins_with_i.word_separator =
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+
+###
+### CA
+###
+
+# CA1000: Do not declare static members on generic types
+dotnet_diagnostic.CA1000.severity = none
+
+# CA1002: Do not expose generic lists
+dotnet_diagnostic.CA1002.severity = none
+
+# CA1003: Use generic event handler instances
+dotnet_diagnostic.CA1003.severity = none
+
+# CA1008: Enums should have zero value
+dotnet_diagnostic.CA1008.severity = none
+
+# CA1010: Generic interface should also be implemented
+dotnet_diagnostic.CA1010.severity = none
+
+# CA1012: Abstract types should not have constructors
+dotnet_diagnostic.CA1012.severity = none
+
+# CA1014: Mark assemblies with CLSCompliantAttribute
+dotnet_diagnostic.CA1014.severity = none
+
+# CA1019: Define accessors for attribute arguments
+dotnet_diagnostic.CA1019.severity = none
+
+# CA1021: Avoid out parameters
+dotnet_diagnostic.CA1021.severity = none
+
+# CA1024: Use properties where appropriate
+dotnet_diagnostic.CA1024.severity = none
+
+# CA1030: Use events where appropriate
+dotnet_diagnostic.CA1030.severity = none
+
+# CA1031: Do not catch general exception types
+dotnet_diagnostic.CA1031.severity = none
+
+# CA1032: Implement standard exception constructors
+dotnet_diagnostic.CA1032.severity = none
+
+# CA1034: Nested types should not be visible
+dotnet_diagnostic.CA1034.severity = none
+
+# CA1036: Override methods on comparable types
+dotnet_diagnostic.CA1036.severity = none
+
+# CA1040: Avoid empty interfaces
+dotnet_diagnostic.CA1040.severity = none
+
+# CA1045: Do not pass types by reference
+dotnet_diagnostic.CA1045.severity = none
+
+# CA1051: Do not declare visible instance fields
+dotnet_diagnostic.CA1051.severity = none
+
+# CA1052: Static holder types should be Static or NotInheritable
+dotnet_diagnostic.CA1052.severity = none
+
+# CA1054: URI-like parameters should not be strings
+dotnet_diagnostic.CA1054.severity = none
+
+# CA1055: URI-like return values should not be strings
+dotnet_diagnostic.CA1055.severity = none
+
+# CA1056: URI-like properties should not be strings
+dotnet_diagnostic.CA1056.severity = none
+
+# CA1058: Types should not extend certain base types
+dotnet_diagnostic.CA1058.severity = none
+
+# CA1060: Move pinvokes to native methods class
+dotnet_diagnostic.CA1060.severity = none
+
+# CA1062: Validate arguments of public methods
+dotnet_diagnostic.CA1062.severity = none
+
+# CA1069: Enums values should not be duplicated
+dotnet_diagnostic.CA1069.severity = none
+
+# CA1200: Avoid using cref tags with a prefix
+dotnet_diagnostic.CA1200.severity = none
+
+# CA1303: Do not pass literals as localized parameters
+dotnet_diagnostic.CA1303.severity = none
+
+# CA1304: Specify CultureInfo
+dotnet_diagnostic.CA1304.severity = none
+
+# CA1305: Specify IFormatProvider
+dotnet_diagnostic.CA1305.severity = none
+
+# CA1307: Specify StringComparison
+dotnet_diagnostic.CA1307.severity = none
+
+# CA1309: Use ordinal string comparison
+dotnet_diagnostic.CA1309.severity = none
+
+# CA1310: Specify StringComparison for correctness
+dotnet_diagnostic.CA1310.severity = none
+
+# CA1501: Avoid excessive inheritance
+dotnet_diagnostic.CA1501.severity = none
+
+# CA1502: Avoid excessive complexity
+dotnet_diagnostic.CA1502.severity = none
+
+# CA1505: Avoid unmaintainable code
+dotnet_diagnostic.CA1505.severity = none
+
+# CA1506: Avoid excessive class coupling
+dotnet_diagnostic.CA1506.severity = none
+
+# CA1508: Avoid dead conditional code
+dotnet_diagnostic.CA1508.severity = none
+
+# CA1707: Remove the underscores from member name Dnx.DnxCommon.Configuration.DATABASE_DBENGINE_INSTANCENAME_DEFAULT
+dotnet_diagnostic.CA1707.severity = none
+
+# CA1710: Identifiers should have correct suffix
+dotnet_diagnostic.CA1710.severity = none
+
+# CA1711: Identifiers should not have incorrect suffix
+dotnet_diagnostic.CA1711.severity = none
+
+# CA1712: Do not prefix enum values with type name
+dotnet_diagnostic.CA1712.severity = none
+
+# CA1716: Identifiers should not match keywords
+dotnet_diagnostic.CA1716.severity = none
+
+# CA1720: Identifier contains type name
+dotnet_diagnostic.CA1720.severity = none
+
+# CA1721: Property names should not match get methods
+dotnet_diagnostic.CA1721.severity = none
+
+# CA1724: The type name Configuration conflicts in whole or in part with the namespace name 'System.Configuration' defined in the .NET Framework. Rename the type to eliminate the conflict.
+dotnet_diagnostic.CA1724.severity = none
+
+# CA1801: Review unused parameters
+dotnet_diagnostic.CA1801.severity = none
+
+# CA1805: Do not initialize unnecessarily
+dotnet_diagnostic.CA1805.severity = none
+
+# CA1806: Do not ignore method results
+dotnet_diagnostic.CA1806.severity = none
+
+# CA1810: Initialize reference type static fields inline
+dotnet_diagnostic.CA1810.severity = none
+
+# CA1812: OutlookDataObject.NativeMethods.POINTL is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static members, make it static (Shared in Visual Basic).
+dotnet_diagnostic.CA1812.severity = none
+
+# CA1813: Avoid unsealed attributes
+dotnet_diagnostic.CA1813.severity = none
+
+# CA1815: Override equals and operator equals on value types
+dotnet_diagnostic.CA1815.severity = none
+
+# CA1816: Dispose methods should call SuppressFinalize
+dotnet_diagnostic.CA1816.severity = none
+
+# CA1819: Properties should not return arrays
+dotnet_diagnostic.CA1819.severity = none
+
+# CA1820: Test for empty strings using string length
+dotnet_diagnostic.CA1820.severity = none
+
+# CA1822: Mark members as static
+dotnet_diagnostic.CA1822.severity = none
+
+# CA1823: Avoid unused private fields
+dotnet_diagnostic.CA1823.severity = none
+
+# CA1824: Mark assemblies with NeutralResourcesLanguageAttribute
+dotnet_diagnostic.CA1824.severity = none
+
+# CA1825: Avoid zero-length array allocations
+dotnet_diagnostic.CA1825.severity = none
+
+# CA1830: Prefer strongly-typed Append and Insert method overloads on StringBuilder
+dotnet_diagnostic.CA1830.severity = none
+
+# CA1834: Consider using 'StringBuilder.Append(char)' when applicable
+dotnet_diagnostic.CA1834.severity = none
+
+# CA2000: Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = none
+
+# CA2100: Review SQL queries for security vulnerabilities
+dotnet_diagnostic.CA2100.severity = none
+
+# CA2201: Do not raise reserved exception types
+dotnet_diagnostic.CA2201.severity = suggestion
+
+# CA2008: Do not create tasks without passing a TaskScheduler
+dotnet_diagnostic.CA2008.severity = none
+
+# CA2211: Non-constant fields should not be visible
+dotnet_diagnostic.CA2211.severity = none
+
+# CA2213: Disposable fields should be disposed
+dotnet_diagnostic.CA2213.severity = warning
+
+# CA2227: Collection properties should be read only
+dotnet_diagnostic.CA2227.severity = none
+
+# CA2234: Pass system uri objects instead of strings
+dotnet_diagnostic.CA2234.severity = warning
+
+# CA2300: Do not use insecure deserializer BinaryFormatter
+dotnet_diagnostic.CA2300.severity = none
+
+# CA2301: Do not call BinaryFormatter.Deserialize without first setting BinaryFormatter.Binder
+dotnet_diagnostic.CA2301.severity = none
+
+# CA2302: Ensure BinaryFormatter.Binder is set before calling BinaryFormatter.Deserialize
+dotnet_diagnostic.CA2302.severity = none
+
+# CA2351: Ensure DataSet.ReadXml()'s input is trusted
+dotnet_diagnostic.CA2351.severity = none
+
+# CA3075: Insecure DTD processing in XML
+dotnet_diagnostic.CA3075.severity = none
+
+# CA5350: Do Not Use Weak Cryptographic Algorithms
+dotnet_diagnostic.CA5350.severity = none
+
+# CA5351: Do Not Use Broken Cryptographic Algorithms
+dotnet_diagnostic.CA5351.severity = none
+
+# CA5358: Do Not Use Unsafe Cipher Modes
+dotnet_diagnostic.CA5358.severity = suggestion
+
+# CA5366: Use XmlReader For DataSet Read Xml
+dotnet_diagnostic.CA5366.severity = none
+
+# CA5390: Do not hard-code encryption key
+dotnet_diagnostic.CA5390.severity = suggestion
+
+# CA5392: Use DefaultDllImportSearchPaths attribute for P/Invokes
+dotnet_diagnostic.CA5392.severity = none
+
+###
+### CS
+###
+# CS0618: Type or member is obsolete
+dotnet_diagnostic.CS0618.severity = warning
+
+# CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = warning
+
+###
+### IDE
+###
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_event = false:none
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_method = false:none
+
+# IDE0003: Remove qualification
+dotnet_style_qualification_for_property = false:none
+
+# IDE1006: Naming Styles
+dotnet_diagnostic.IDE1006.severity = none
+
+# IDE0007: Use implicit type
+csharp_style_var_when_type_is_apparent = false:none
+
+# IDE0016: Use 'throw' expression
+csharp_style_throw_expression = true:none
+
+# IDE0017: Simplify object initialization
+dotnet_style_object_initializer = true:none
+
+# IDE0018: Inline variable declaration
+csharp_style_inlined_variable_declaration = true:none
+
+# IDE0019: Use pattern matching
+csharp_style_pattern_matching_over_as_with_null_check = true:none
+
+# IDE0020: Use pattern matching
+csharp_style_pattern_matching_over_is_with_cast_check = true:none
+
+# IDE0028: Simplify collection initialization
+dotnet_style_collection_initializer = true:none
+
+# IDE0029: Use coalesce expression
+dotnet_style_coalesce_expression = true:none
+
+# IDE0031: Use null propagation
+dotnet_style_null_propagation = true:none
+
+# IDE0034: Simplify 'default' expression
+csharp_prefer_simple_default_expression = true:none
+
+# IDE0038: Use pattern matching
+dotnet_diagnostic.IDE0038.severity = none
+
+# IDE0041: Use 'is null' check
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:none
+
+# IDE0044: Add readonly modifier
+dotnet_style_readonly_field = true:none
+
+# IDE0051: Remove unused private members
+dotnet_diagnostic.IDE0051.severity = suggestion
+
+# IDE0052: Remove unread private members
+dotnet_diagnostic.IDE0052.severity = none
+
+# IDE0054: Use compound assignment
+dotnet_style_prefer_compound_assignment = true:none
+
+# IDE0059: Unnecessary assignment of a value
+csharp_style_unused_value_assignment_preference = discard_variable:none
+
+# IDE0060: Remove unused parameter
+dotnet_code_quality_unused_parameters = all:none
+
+# IDE0075: Simplify conditional expression
+dotnet_style_prefer_simplified_boolean_expressions = true:none
+
+# IDE1005: Delegate invocation can be simplified.
+csharp_style_conditional_delegate_call = true:none
+
+

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Company>ALL CONSULTING AG</Company>
+    <Authors>Development @  ALL CONSULTING AG</Authors>
+    <Copyright>Copyright © 2020 by ALL CONSULTING AG</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Assemblies\**" />
+    <EmbeddedResource Remove="Assemblies\**" />
+    <None Remove="Assemblies\**" />
+  </ItemGroup>
+
+</Project>

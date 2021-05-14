@@ -1,0 +1,52 @@
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.deps.json
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\de\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\fr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\it\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\vi\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.resources
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.de.resources
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.fr.resources
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.it.resources
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.vi.resources
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.csproj.GenerateResource.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.AssemblyInfoInputs.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.AssemblyInfo.cs
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.csproj.CoreCompileInputs.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\de\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\fr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\it\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\vi\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.csprojAssemblyReference.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\tr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.tr.resources
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\tr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.deps.json
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.pdb
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\de\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\fr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\it\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\tr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\bin\Debug\netstandard2.0\vi\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.csprojAssemblyReference.cache
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.resources
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.de.resources
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.fr.resources
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.it.resources
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.tr.resources
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.Resources.Resource.vi.resources
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.csproj.GenerateResource.cache
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.AssemblyInfoInputs.cache
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.AssemblyInfo.cs
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.csproj.CoreCompileInputs.cache
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\de\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\fr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\it\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\tr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\vi\ACAG.Abacus.CalendarConnector.Language.resources.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.dll
+C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Language\obj\Debug\netstandard2.0\ACAG.Abacus.CalendarConnector.Language.pdb

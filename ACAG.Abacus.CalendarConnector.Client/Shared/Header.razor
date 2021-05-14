@@ -1,0 +1,95 @@
+﻿@using Microsoft.AspNetCore.Localization
+@using ACAG.Abacus.CalendarConnector.Models
+@using ACAG.Abacus.CalendarConnector.Client.Services
+@using ACAG.Abacus.CalendarConnector.Client.Shared.Theme
+@inherits LayoutComponentBase
+@inject IJSRuntime _jsRuntime
+@inject NavigationManager _navigationManager
+@inject IStringLocalizer<Resource> _localizer
+@inject IToastAppService _toastAppService
+@inject IApiWrapper _apiWrapper
+@inject IAuthService _authService
+@inject ILocalStorageService _localStorage
+
+<nav class="navbar navbar-expand-md justify-content-start header-navbar navbar-light">
+    <div class="ml-1 app-header-flex-container">
+        <AuthorizeView>
+            <Authorized>
+                <button id="navbarToggler" class="navbar-brand navbar-toggler bg-primary d-block ml-0" @onclick="OnToggleClick">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="app-header-navitem mr-0 font-weight-bold title pr-4" @onclick="@OnLogoTittleClick" style="cursor: pointer;">
+                    <img src="images/AbacusCalendarConnector.png" style="width: 200px" />
+                </div>
+                <button id="navbarSettingToggler" class="navbar-toggler app-header-navitem" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+
+    <div class="navbar-collapse collapse flex-grow-0 mr-1 ml-auto" id="navbarSupportedContent">
+        <AuthorizeView>
+            <Authorized>
+                <ul class="navbar-nav text-right">
+                    <li class="nav-item">
+                        <div class="app-header-navitem ml-auto mr-md-1">
+                            <div align="right" class="@($"theme-settings { ThemeSwitcherShown }")" style="padding-top: 2px;">
+                                <a @onclick="@ToggleThemeSwitcherPanel" href="javascript:void(0);">
+                                    <span class="oi oi-cog"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="app-header-navitem mr-0 ">
+                            <div class="form-check-inline mr-lg-3 mr-0">
+                                @if (Cultures != null && CurrentCulture != null)
+                                {
+
+                                    <DxComboBox Data="Cultures"
+                                                TextFieldName="DisplayName"
+                                                Value="CurrentCulture"
+                                                ValueChanged="@((LanguageModel lang) => RequestCultureChange(lang))">
+                                    </DxComboBox>
+                                }
+                                else
+                                {
+                                    <p><em>@_localizer[LangKey.MSG_LOADING]</em></p>
+                                }
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" style="cursor: pointer">@_localizer[LangKey.MSG_HELLO], @FullName!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" style="cursor: pointer" @onclick="@HandleLogout">@_localizer[LangKey.LOGOUT]</a>
+                    </li>
+                </ul>
+            </Authorized>
+        </AuthorizeView>
+    </div>
+</nav>
+<ThemeSwitcher @bind-Shown="@ThemeSwitcherShown"></ThemeSwitcher>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">@_localizer[LangKey.ERROR]</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          @((MarkupString)_unauthorizedError)
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-danger" onclick="location.reload();">@_localizer[LangKey.LOGOUT]</button>
+      </div>
+    </div>
+  </div>
+</div>

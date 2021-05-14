@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ACAG.Abacus.CalendarConnector.DataAccess</id>
+    <version>1.0.0</version>
+    <authors>Development @  ALL CONSULTING AG</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <copyright>Copyright © 2020 by ALL CONSULTING AG</copyright>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.EntityFrameworkCore.InMemory" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Relational" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\CalendarConnectorPackages\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.dll" target="lib\net5.0\ACAG.Abacus.CalendarConnector.DataAccess.dll" />
+  </files>
+</package>

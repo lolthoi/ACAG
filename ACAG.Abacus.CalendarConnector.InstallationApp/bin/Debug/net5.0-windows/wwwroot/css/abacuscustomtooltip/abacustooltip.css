@@ -1,0 +1,70 @@
+﻿
+.mytext {
+    visibility: hidden;
+    max-width: 100%;
+    width: max-content;
+    background-color: mistyrose;
+    color: #fff;
+    z-index: 1;
+    top: 90%;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+}
+/*.mytext:not(:empty) {
+    visibility: visible;
+}*/
+
+.control-wrapper div:focus-within ~ span.mytext:not(:empty) {
+    visibility: visible;
+}
+
+.control-wrapper > div:after{
+    visibility: hidden;
+    pointer-events: none;
+    font-weight: 700;
+    position: absolute;
+    top: 65%;
+    right: 20px;
+    margin-top: -9px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 13px;
+    background-color: #d9534f;
+    color: #fff;
+    content: "!";
+    border-radius: 50%;
+}
+/*Visible region*/
+.control-wrapper > div.invalid:after {
+    visibility: visible;
+}
+
+div.invalid.dx-blazor-disabled-editor:after {
+    visibility: hidden;
+}
+
+/*Visible region*/
+.control-wrapper > div.dxbs-spin-edit:after {
+    right: 30px;
+    top: 50%;
+}
+
+.control-wrapper > div.dxbs-combobox:after{
+    right:42px;
+}
+
+.control-wrapper > div.PasswordTextBox:after {
+    right: 40px;
+}
+
+.control-wrapper > div.dxbs-combobox.invalid ~ span.mytext:not(:empty) {
+    bottom: 55%;
+    top:unset;
+}
+

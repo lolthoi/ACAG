@@ -1,0 +1,169 @@
+﻿@inject IToastAppService _toastAppService;
+@inject IStringLocalizer<Resource> _localizer;
+@inject IJSRuntime _jSRuntime;
+@inject IApiWrapper _apiWrapper;
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="offset-md-9 col-md-3 col-12">
+            <DxTextBox @bind-Text="@_searchText" 
+                       BindValueMode="BindValueMode.OnInput" 
+                       NullText="@_localizer[LangKey.SEARCH]" 
+                       SizeMode="SizeMode.Medium" 
+                       @onkeyup="(async () => await SearchAsync())" />
+        </div>
+    </div>
+    <div class="row" style="margin-top:5px;">
+        <div class="col-sm-12">
+            <DxDataGrid @ref="@grid"
+                        Data="@dataSource"
+                        AllowColumnDragDrop="false"
+                        RowEditStart="@(async (PayTypeModel item) => await OnEditRowAsync(item))"
+                        CssClass="customPayTypeGrid">
+                <Columns>
+                    <DxDataGridCommandColumn Width="40px">
+                        <HeaderCellTemplate>
+                            <button class="btn btn-outline-primary btn-custom" @onclick="@OnAddNewRow">
+                                <span class="oi oi-plus"></span>
+                            </button>
+                        </HeaderCellTemplate>
+                        <CellTemplate>
+                            <a class="oi oi-pencil" @onclick="@(() => grid.StartRowEdit(context))" href="javascript:void(0);"></a>
+                        </CellTemplate>
+                    </DxDataGridCommandColumn>
+                    <DxDataGridSpinEditColumn Field="@nameof(PayTypeModel.Code)" Caption="@_localizer[LangKey.GRID_PAYTYPECODE]"
+                                              SortIndex="0"
+                                              SortOrder="DataGridColumnSortOrder.Ascending" Width="25"></DxDataGridSpinEditColumn>
+                    <DxDataGridColumn Field="@nameof(PayTypeModel.DisplayName)"
+                                      Caption="@_localizer[LangKey.DISPLAY_NAME]">
+                        <DisplayTemplate>
+                            <ColumnDisplayContentComponent FieldValue="@((context as PayTypeModel).DisplayName)" />
+                        </DisplayTemplate>
+                    </DxDataGridColumn>
+                    <DxDataGridColumn Field="@nameof(PayTypeModel.IsAppointmentPrivate)" Caption="@_localizer[LangKey.PRIVATE]"></DxDataGridColumn>
+                    <DxDataGridColumn Field="@nameof(PayTypeModel.IsAppointmentAwayState)" Caption="@_localizer[LangKey.AWAY]"></DxDataGridColumn>
+                    <DxDataGridColumn Field="@nameof(PayTypeModel.IsEnabled)" Caption="@_localizer[LangKey.STATE]"></DxDataGridColumn>
+                </Columns>
+                <EditFormTemplate>
+                    @if (_editContext == null)
+                    {
+                        @*<p><em>@_localizer[LangKey.MSG_LOADING]</em></p>*@
+                        <LoadingIcon></LoadingIcon>
+                    }
+                    else
+                    {
+                        <EditForm Model="_editContext"
+                                  Context="EditFormContext"
+                                  OnValidSubmit="HandleValidSubmit">
+                            <DataAnnotationsValidator />
+                            <DxFormLayout>
+                                <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                    <Template>
+                                        <label><b>@_localizer[LangKey.CODE] <span class="validation-message">*</span></b></label>
+
+                                        <AbacusToolTip>
+                                            <Control>
+                                                <DxSpinEdit @bind-Value="@_editContext.Code" />
+                                            </Control>
+                                            <ErrorMessage>
+                                                <ValidationMessage For="(() => _editContext.Code)" />
+                                            </ErrorMessage>
+                                        </AbacusToolTip>
+                                    </Template>
+                                </DxFormLayoutItem>
+                                <DxFormLayoutItem ColSpanMd="6" Context="FormLayoutContext">
+                                    <Template>
+                                        <label><b>@_localizer[LangKey.DISPLAY_NAME] <span class="validation-message">*</span></b></label>
+                                        <AbacusToolTip>
+                                            <Control>
+                                                <DxTextBox @bind-Text="@_editContext.DisplayName">
+                                                </DxTextBox>
+                                            </Control>
+                                            <ErrorMessage>
+                                                <ValidationMessage For="(() => _editContext.DisplayName)" />
+                                            </ErrorMessage>
+                                        </AbacusToolTip>
+                                    </Template>
+                                </DxFormLayoutItem>
+                                <DxFormLayoutItem ColSpanMd="4" Context="FormLayoutContext">
+                                    <Template>
+                                        <label><b>@_localizer[LangKey.IS_APPOINTMENT_PRIVATE]</b></label>
+                                        <AbacusToolTip>
+                                            <Control>
+                                                <DxCheckBox @bind-Checked="@_editContext.IsAppointmentPrivate">
+                                                </DxCheckBox>
+                                            </Control>
+                                            <ErrorMessage>
+                                                <ValidationMessage For="(() => _editContext.IsAppointmentPrivate)" />
+                                            </ErrorMessage>
+                                        </AbacusToolTip>
+                                    </Template>
+                                </DxFormLayoutItem>
+                                <DxFormLayoutItem ColSpanMd="4" Context="FormLayoutContext">
+                                    <Template>
+                                        <label><b>@_localizer[LangKey.IS_APPOINTMENT_AWAY_STATE]</b></label>
+                                        <AbacusToolTip>
+                                            <Control>
+                                                <DxCheckBox @bind-Checked="@_editContext.IsAppointmentAwayState">
+                                                </DxCheckBox>
+                                            </Control>
+                                            <ErrorMessage>
+                                                <ValidationMessage For="(() => _editContext.IsAppointmentAwayState)" />
+                                            </ErrorMessage>
+                                        </AbacusToolTip>
+                                    </Template>
+                                </DxFormLayoutItem>
+                                <DxFormLayoutItem ColSpanMd="4" Context="FormLayoutContext">
+                                    <Template>
+                                        <label><b>@_localizer[LangKey.STATUS]</b></label>
+                                        <AbacusToolTip>
+                                            <Control>
+                                                <DxCheckBox @bind-Checked="@_editContext.IsEnabled">
+                                                </DxCheckBox>
+                                            </Control>
+                                            <ErrorMessage>
+                                                <ValidationMessage For="(() => _editContext.IsEnabled)" />
+                                            </ErrorMessage>
+                                        </AbacusToolTip>
+                                    </Template>
+                                </DxFormLayoutItem>
+                                <DxFormLayoutItem ColSpanMd="12" Context="FormLayoutContext">
+                                    <Template>
+                                        @if (_editContext.Id > 0)
+                                        {
+                                            <div class="text-right">
+                                                <DxButton RenderStyle="ButtonRenderStyle.Primary" SubmitFormOnClick="true" Text="@_localizer[LangKey.UPDATE]" />
+                                                <DxButton RenderStyle="ButtonRenderStyle.Danger" Text="@_localizer[LangKey.DELETE]" @onclick="OnShowPopupDelete" />
+                                                <DxButton RenderStyle="ButtonRenderStyle.Warning" Text="@_localizer[LangKey.CANCEL]" @onclick="OnCancelButtonClick" />
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="text-right">
+                                                <DxButton RenderStyle="ButtonRenderStyle.Primary" SubmitFormOnClick="true" Text="@_localizer[LangKey.CREATE]" />
+                                                <DxButton RenderStyle="ButtonRenderStyle.Warning" Text="@_localizer[LangKey.CANCEL]" @onclick="OnCancelButtonClick" />
+                                            </div>
+                                        }
+                                    </Template>
+                                </DxFormLayoutItem>
+                            </DxFormLayout>
+                        </EditForm>
+                    }
+                </EditFormTemplate>
+            </DxDataGrid>
+        </div>
+    </div>
+</div>
+
+<DxPopup HeaderText="@_titleDelete"
+         @bind-Visible="@isVisiblePopupConfirmDeleteRow">
+    <Content>
+        <div class="text-center">
+            @_localizer[LangKey.ARE_YOU_SURE_WANT_TO_DELETE_THIS_PAYTYPE_SETTING]
+        </div>
+    </Content>
+    <FooterTemplate>
+        <DxButton RenderStyle="ButtonRenderStyle.Danger" Text="@_localizer[LangKey.DELETE]" @onclick="(async () => await DeleteRowAsync())" />
+        <DxButton RenderStyle="ButtonRenderStyle.Warning" @onclick="OnHidePopupDelete" Text="@_localizer[LangKey.POPUP_CANCEL]" />
+    </FooterTemplate>
+</DxPopup>

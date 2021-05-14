@@ -1,0 +1,13 @@
+﻿@inject IJSRuntime _jSRuntime
+@inject IStringLocalizer<Resource> _localizer;
+
+<DxTreeView AllowSelectNodes="true" CssClass="app-sidebar">
+    <Nodes>
+        <AuthorizeView Roles="@AppDefiner.Roles.ADMINISTRATOR_SYSADMIN">
+            <DxTreeViewNode NavigateUrl="user" Text="@_localizer[LangKey.MENU_USER]"></DxTreeViewNode>
+        </AuthorizeView>
+        <AuthorizeView>
+            <DxTreeViewNode NavigateUrl="tenant" Text="@_localizer[LangKey.MENU_TENANT]"></DxTreeViewNode>
+        </AuthorizeView>
+    </Nodes>
+</DxTreeView>

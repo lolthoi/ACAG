@@ -1,0 +1,12 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration _configuration
+@inject IStringLocalizer<Resource> _localizer
+
+<div class="app-footer">
+    <div class="info-wrapper">
+        <div class="copyright">
+            <span>@_localizer[LangKey.APP_FOOTER_TITLE]</span>
+        </div>
+        <div class="version">@_localizer[LangKey.PRODUCT_VERSION]: @_configuration["AppVersion"]</div>
+    </div>
+</div>

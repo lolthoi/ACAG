@@ -1,0 +1,14 @@
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\ACAG.Abacus.CalendarConnector.Models.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\ACAG.Abacus.CalendarConnector.Models.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\ACAG.Abacus.CalendarConnector.Language.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\ACAG.Abacus.CalendarConnector.Language.pdb
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\de\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\fr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\it\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\tr\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\bin\Release\vi\ACAG.Abacus.CalendarConnector.Language.resources.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\obj\Release\ACAG.Abacus.CalendarConnector.Models.csprojAssemblyReference.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\obj\Release\ACAG.Abacus.CalendarConnector.Models.csproj.CoreCompileInputs.cache
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\obj\Release\ACAG.Abacus.CalendarConnector.Models.csproj.CopyComplete
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\obj\Release\ACAG.Abacus.CalendarConnector.Models.dll
+E:\ACG-Dev\Projects\ACAG.Abacus.CalendarConnector\V2-BlazorWebAssemblyApp\ACAG.Abacus.CalendarConnector.Models\obj\Release\ACAG.Abacus.CalendarConnector.Models.pdb

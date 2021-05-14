@@ -1,0 +1,6 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\hoang.thai.duong\Desktop\New folder (2)\ACAG.Abacus.CalendarConnector.Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/DevExpress.Blazor" Path="C:\Program Files (x86)\DevExpress 20.2\Components\Offline Packages\devexpress.blazor\20.2.5\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication" Path="C:\Users\hoang.thai.duong\.nuget\packages\microsoft.aspnetcore.components.webassembly.authentication\5.0.1\build\..\staticwebassets\" />
+</StaticWebAssets>
